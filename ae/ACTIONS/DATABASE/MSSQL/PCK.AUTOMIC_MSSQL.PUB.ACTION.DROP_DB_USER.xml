@@ -60,7 +60,7 @@
 <UC4RB_DB_DRIVER_CLASSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_CLASS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
 <UC4RB_DB_DRIVER_JARs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_JAR#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
 <UC4RB_DB_DROP_USER_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DROP_USER_NAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
-<UC4RB_DB_JDBC_CONN_STRINGs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_JDBC_CONN_STRING#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
+<UC4RB_DB_JDBC_CONNs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_JDBC_CONN#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
 <UC4RB_DB_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_PASSWORD#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER">--10</UC4RB_DB_PASSWORDs.00>
 <UC4RB_DB_USERNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_USERNAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
 <UC4RB_FAIL_IF_NOT_EXISTSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_FAIL_IF_NOT_EXISTS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER">NO</UC4RB_FAIL_IF_NOT_EXISTSs.00>
@@ -123,7 +123,7 @@
 <UC4RB_DB_DRIVER_CLASSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_CLASS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
 <UC4RB_DB_DRIVER_JARs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_JAR#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
 <UC4RB_DB_DROP_USER_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DROP_USER_NAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
-<UC4RB_DB_JDBC_CONN_STRINGs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_JDBC_CONN_STRING#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
+<UC4RB_DB_JDBC_CONNs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_JDBC_CONN#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
 <UC4RB_DB_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_PASSWORD#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER">--10</UC4RB_DB_PASSWORDs.00>
 <UC4RB_DB_USERNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_USERNAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
 <UC4RB_FAIL_IF_NOT_EXISTSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_FAIL_IF_NOT_EXISTS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER">NO</UC4RB_FAIL_IF_NOT_EXISTSs.00>
@@ -172,7 +172,7 @@
 <UC4RB_DB_DRIVER_CLASSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_CLASS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
 <UC4RB_DB_DRIVER_JARs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_JAR#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
 <UC4RB_DB_DROP_USER_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DROP_USER_NAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
-<UC4RB_DB_JDBC_CONN_STRINGs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_JDBC_CONN_STRING#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
+<UC4RB_DB_JDBC_CONNs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_JDBC_CONN#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
 <UC4RB_DB_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_PASSWORD#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER">--10</UC4RB_DB_PASSWORDs.00>
 <UC4RB_DB_USERNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_USERNAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
 <UC4RB_FAIL_IF_NOT_EXISTSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_FAIL_IF_NOT_EXISTS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER">NO</UC4RB_FAIL_IF_NOT_EXISTSs.00>
@@ -204,7 +204,7 @@
 <MaxRetCode>0</MaxRetCode>
 <MrcExecute/>
 <MrcElseE>0</MrcElseE>
-<FcstStatus>0|U00000000 ??? ""</FcstStatus>
+<FcstStatus>0| |</FcstStatus>
 
 <ErtMethodDef>1</ErtMethodDef>
 <ErtMethodFix>0</ErtMethodFix>

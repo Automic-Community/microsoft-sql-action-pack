@@ -59,7 +59,7 @@
 <UC4RB_DB_DATABASE_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DATABASE_NAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_LOGIN"/>
 <UC4RB_DB_DRIVER_CLASSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_CLASS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_LOGIN"/>
 <UC4RB_DB_DRIVER_JARs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_JAR#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_LOGIN"/>
-<UC4RB_DB_JDBC_CONN_STRINGs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_JDBC_CONN_STRING#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_LOGIN"/>
+<UC4RB_DB_JDBC_CONNs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_JDBC_CONN#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_LOGIN"/>
 <UC4RB_DB_LOGIN_CHK_EXPRs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_LOGIN_CHK_EXPR#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_LOGIN">NO</UC4RB_DB_LOGIN_CHK_EXPRs.00>
 <UC4RB_DB_LOGIN_CHK_POLICYs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_LOGIN_CHK_POLICY#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_LOGIN">YES</UC4RB_DB_LOGIN_CHK_POLICYs.00>
 <UC4RB_DB_LOGIN_FROM_WIN_SRCs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_LOGIN_FROM_WIN_SRC#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_LOGIN">NO</UC4RB_DB_LOGIN_FROM_WIN_SRCs.00>
@@ -127,7 +127,7 @@
 <UC4RB_DB_DATABASE_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DATABASE_NAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_LOGIN"/>
 <UC4RB_DB_DRIVER_CLASSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_CLASS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_LOGIN"/>
 <UC4RB_DB_DRIVER_JARs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_JAR#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_LOGIN"/>
-<UC4RB_DB_JDBC_CONN_STRINGs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_JDBC_CONN_STRING#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_LOGIN"/>
+<UC4RB_DB_JDBC_CONNs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_JDBC_CONN#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_LOGIN"/>
 <UC4RB_DB_LOGIN_CHK_EXPRs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_LOGIN_CHK_EXPR#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_LOGIN">NO</UC4RB_DB_LOGIN_CHK_EXPRs.00>
 <UC4RB_DB_LOGIN_CHK_POLICYs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_LOGIN_CHK_POLICY#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_LOGIN">YES</UC4RB_DB_LOGIN_CHK_POLICYs.00>
 <UC4RB_DB_LOGIN_FROM_WIN_SRCs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_LOGIN_FROM_WIN_SRC#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_LOGIN">NO</UC4RB_DB_LOGIN_FROM_WIN_SRCs.00>
@@ -181,7 +181,7 @@
 <UC4RB_DB_DATABASE_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DATABASE_NAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_LOGIN"/>
 <UC4RB_DB_DRIVER_CLASSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_CLASS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_LOGIN"/>
 <UC4RB_DB_DRIVER_JARs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_JAR#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_LOGIN"/>
-<UC4RB_DB_JDBC_CONN_STRINGs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_JDBC_CONN_STRING#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_LOGIN"/>
+<UC4RB_DB_JDBC_CONNs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_JDBC_CONN#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_LOGIN"/>
 <UC4RB_DB_LOGIN_CHK_EXPRs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_LOGIN_CHK_EXPR#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_LOGIN">NO</UC4RB_DB_LOGIN_CHK_EXPRs.00>
 <UC4RB_DB_LOGIN_CHK_POLICYs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_LOGIN_CHK_POLICY#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_LOGIN">YES</UC4RB_DB_LOGIN_CHK_POLICYs.00>
 <UC4RB_DB_LOGIN_FROM_WIN_SRCs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_LOGIN_FROM_WIN_SRC#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_LOGIN">NO</UC4RB_DB_LOGIN_FROM_WIN_SRCs.00>
@@ -219,7 +219,7 @@
 <MaxRetCode>0</MaxRetCode>
 <MrcExecute/>
 <MrcElseE>0</MrcElseE>
-<FcstStatus>0|U00000000 ??? ""</FcstStatus>
+<FcstStatus>0| |</FcstStatus>
 
 <ErtMethodDef>1</ErtMethodDef>
 <ErtMethodFix>0</ErtMethodFix>

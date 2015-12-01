@@ -55,11 +55,6 @@
 <node content="1" id="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP" name="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">
 <PRPTBOX promptset="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">
-<UC4RB_DB_BACKUPSET_COPY_ONLYs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUPSET_COPY_ONLY#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">NO</UC4RB_DB_BACKUPSET_COPY_ONLYs.00>
-<UC4RB_DB_BACKUPSET_DESCRIPTIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUPSET_DESCRIPTION#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP"/>
-<UC4RB_DB_BACKUPSET_DIFFs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUPSET_DIFF#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">NO</UC4RB_DB_BACKUPSET_DIFFs.00>
-<UC4RB_DB_BACKUPSET_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUPSET_NAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP"/>
-<UC4RB_DB_BACKUPSET_RETAIN_DAYSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUPSET_RETAIN_DAYS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">-1</UC4RB_DB_BACKUPSET_RETAIN_DAYSs.00>
 <UC4RB_DB_BACKUP_DATABASE_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUP_DATABASE_NAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP"/>
 <UC4RB_DB_BACKUP_EXPIRE_DATEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUP_EXPIRE_DATE#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">2012-04-10</UC4RB_DB_BACKUP_EXPIRE_DATEs.00>
 <UC4RB_DB_BACKUP_EXPIRE_ON_DATEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUP_EXPIRE_ON_DATE#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">NO</UC4RB_DB_BACKUP_EXPIRE_ON_DATEs.00>
@@ -67,6 +62,11 @@
 <UC4RB_DB_BACKUP_FILESs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUP_FILES#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP"/>
 <UC4RB_DB_BACKUP_TO_DISKSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUP_TO_DISKS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP"/>
 <UC4RB_DB_BACKUP_TO_TAPEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUP_TO_TAPE#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP"/>
+<UC4RB_DB_BACKUPSET_COPY_ONLYs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUPSET_COPY_ONLY#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">NO</UC4RB_DB_BACKUPSET_COPY_ONLYs.00>
+<UC4RB_DB_BACKUPSET_DESCRIPTIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUPSET_DESCRIPTION#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP"/>
+<UC4RB_DB_BACKUPSET_DIFFs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUPSET_DIFF#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">NO</UC4RB_DB_BACKUPSET_DIFFs.00>
+<UC4RB_DB_BACKUPSET_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUPSET_NAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP"/>
+<UC4RB_DB_BACKUPSET_RETAIN_DAYSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUPSET_RETAIN_DAYS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">-1</UC4RB_DB_BACKUPSET_RETAIN_DAYSs.00>
 <UC4RB_DB_CONN_INTRVLs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_CONN_INTRVL#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">10</UC4RB_DB_CONN_INTRVLs.00>
 <UC4RB_DB_DATATF_BUFFERCOUNTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DATATF_BUFFERCOUNT#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">-1</UC4RB_DB_DATATF_BUFFERCOUNTs.00>
 <UC4RB_DB_DATATF_MAXTRFSIZEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DATATF_MAXTRFSIZE#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">-1</UC4RB_DB_DATATF_MAXTRFSIZEs.00>
@@ -74,7 +74,7 @@
 <UC4RB_DB_DRIVER_JARs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_JAR#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP"/>
 <UC4RB_DB_ERRMGMT_CHECKSUMs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_ERRMGMT_CHECKSUM#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">NO</UC4RB_DB_ERRMGMT_CHECKSUMs.00>
 <UC4RB_DB_ERRMGMT_STOP_ON_ERRs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_ERRMGMT_STOP_ON_ERR#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">YES</UC4RB_DB_ERRMGMT_STOP_ON_ERRs.00>
-<UC4RB_DB_JDBC_CONN_STRINGs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_JDBC_CONN_STRING#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP"/>
+<UC4RB_DB_JDBC_CONNs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_JDBC_CONN#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP"/>
 <UC4RB_DB_MEDIASET_BLOCKSIZEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_MEDIASET_BLOCKSIZE#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">-1</UC4RB_DB_MEDIASET_BLOCKSIZEs.00>
 <UC4RB_DB_MEDIASET_DSCRs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_MEDIASET_DSCR#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP"/>
 <UC4RB_DB_MEDIASET_FORMATs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_MEDIASET_FORMAT#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">NO</UC4RB_DB_MEDIASET_FORMATs.00>
@@ -141,11 +141,6 @@
 <node content="1" id="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP" name="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">
 <PRPTBOX promptset="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">
-<UC4RB_DB_BACKUPSET_COPY_ONLYs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUPSET_COPY_ONLY#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">NO</UC4RB_DB_BACKUPSET_COPY_ONLYs.00>
-<UC4RB_DB_BACKUPSET_DESCRIPTIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUPSET_DESCRIPTION#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP"/>
-<UC4RB_DB_BACKUPSET_DIFFs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUPSET_DIFF#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">NO</UC4RB_DB_BACKUPSET_DIFFs.00>
-<UC4RB_DB_BACKUPSET_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUPSET_NAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP"/>
-<UC4RB_DB_BACKUPSET_RETAIN_DAYSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUPSET_RETAIN_DAYS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">-1</UC4RB_DB_BACKUPSET_RETAIN_DAYSs.00>
 <UC4RB_DB_BACKUP_DATABASE_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUP_DATABASE_NAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP"/>
 <UC4RB_DB_BACKUP_EXPIRE_DATEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUP_EXPIRE_DATE#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">2012-04-10</UC4RB_DB_BACKUP_EXPIRE_DATEs.00>
 <UC4RB_DB_BACKUP_EXPIRE_ON_DATEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUP_EXPIRE_ON_DATE#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">NO</UC4RB_DB_BACKUP_EXPIRE_ON_DATEs.00>
@@ -153,6 +148,11 @@
 <UC4RB_DB_BACKUP_FILESs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUP_FILES#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP"/>
 <UC4RB_DB_BACKUP_TO_DISKSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUP_TO_DISKS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP"/>
 <UC4RB_DB_BACKUP_TO_TAPEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUP_TO_TAPE#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP"/>
+<UC4RB_DB_BACKUPSET_COPY_ONLYs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUPSET_COPY_ONLY#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">NO</UC4RB_DB_BACKUPSET_COPY_ONLYs.00>
+<UC4RB_DB_BACKUPSET_DESCRIPTIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUPSET_DESCRIPTION#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP"/>
+<UC4RB_DB_BACKUPSET_DIFFs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUPSET_DIFF#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">NO</UC4RB_DB_BACKUPSET_DIFFs.00>
+<UC4RB_DB_BACKUPSET_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUPSET_NAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP"/>
+<UC4RB_DB_BACKUPSET_RETAIN_DAYSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUPSET_RETAIN_DAYS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">-1</UC4RB_DB_BACKUPSET_RETAIN_DAYSs.00>
 <UC4RB_DB_CONN_INTRVLs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_CONN_INTRVL#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">10</UC4RB_DB_CONN_INTRVLs.00>
 <UC4RB_DB_DATATF_BUFFERCOUNTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DATATF_BUFFERCOUNT#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">-1</UC4RB_DB_DATATF_BUFFERCOUNTs.00>
 <UC4RB_DB_DATATF_MAXTRFSIZEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DATATF_MAXTRFSIZE#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">-1</UC4RB_DB_DATATF_MAXTRFSIZEs.00>
@@ -160,7 +160,7 @@
 <UC4RB_DB_DRIVER_JARs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_JAR#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP"/>
 <UC4RB_DB_ERRMGMT_CHECKSUMs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_ERRMGMT_CHECKSUM#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">NO</UC4RB_DB_ERRMGMT_CHECKSUMs.00>
 <UC4RB_DB_ERRMGMT_STOP_ON_ERRs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_ERRMGMT_STOP_ON_ERR#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">YES</UC4RB_DB_ERRMGMT_STOP_ON_ERRs.00>
-<UC4RB_DB_JDBC_CONN_STRINGs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_JDBC_CONN_STRING#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP"/>
+<UC4RB_DB_JDBC_CONNs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_JDBC_CONN#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP"/>
 <UC4RB_DB_MEDIASET_BLOCKSIZEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_MEDIASET_BLOCKSIZE#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">-1</UC4RB_DB_MEDIASET_BLOCKSIZEs.00>
 <UC4RB_DB_MEDIASET_DSCRs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_MEDIASET_DSCR#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP"/>
 <UC4RB_DB_MEDIASET_FORMATs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_MEDIASET_FORMAT#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">NO</UC4RB_DB_MEDIASET_FORMATs.00>
@@ -213,11 +213,6 @@
 <node content="1" id="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP" name="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">
 <PRPTBOX promptset="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">
-<UC4RB_DB_BACKUPSET_COPY_ONLYs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUPSET_COPY_ONLY#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">NO</UC4RB_DB_BACKUPSET_COPY_ONLYs.00>
-<UC4RB_DB_BACKUPSET_DESCRIPTIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUPSET_DESCRIPTION#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP"/>
-<UC4RB_DB_BACKUPSET_DIFFs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUPSET_DIFF#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">NO</UC4RB_DB_BACKUPSET_DIFFs.00>
-<UC4RB_DB_BACKUPSET_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUPSET_NAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP"/>
-<UC4RB_DB_BACKUPSET_RETAIN_DAYSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUPSET_RETAIN_DAYS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">-1</UC4RB_DB_BACKUPSET_RETAIN_DAYSs.00>
 <UC4RB_DB_BACKUP_DATABASE_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUP_DATABASE_NAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP"/>
 <UC4RB_DB_BACKUP_EXPIRE_DATEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUP_EXPIRE_DATE#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">2012-04-10</UC4RB_DB_BACKUP_EXPIRE_DATEs.00>
 <UC4RB_DB_BACKUP_EXPIRE_ON_DATEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUP_EXPIRE_ON_DATE#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">NO</UC4RB_DB_BACKUP_EXPIRE_ON_DATEs.00>
@@ -225,6 +220,11 @@
 <UC4RB_DB_BACKUP_FILESs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUP_FILES#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP"/>
 <UC4RB_DB_BACKUP_TO_DISKSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUP_TO_DISKS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP"/>
 <UC4RB_DB_BACKUP_TO_TAPEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUP_TO_TAPE#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP"/>
+<UC4RB_DB_BACKUPSET_COPY_ONLYs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUPSET_COPY_ONLY#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">NO</UC4RB_DB_BACKUPSET_COPY_ONLYs.00>
+<UC4RB_DB_BACKUPSET_DESCRIPTIONs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUPSET_DESCRIPTION#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP"/>
+<UC4RB_DB_BACKUPSET_DIFFs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUPSET_DIFF#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">NO</UC4RB_DB_BACKUPSET_DIFFs.00>
+<UC4RB_DB_BACKUPSET_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUPSET_NAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP"/>
+<UC4RB_DB_BACKUPSET_RETAIN_DAYSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUPSET_RETAIN_DAYS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">-1</UC4RB_DB_BACKUPSET_RETAIN_DAYSs.00>
 <UC4RB_DB_CONN_INTRVLs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_CONN_INTRVL#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">10</UC4RB_DB_CONN_INTRVLs.00>
 <UC4RB_DB_DATATF_BUFFERCOUNTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DATATF_BUFFERCOUNT#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">-1</UC4RB_DB_DATATF_BUFFERCOUNTs.00>
 <UC4RB_DB_DATATF_MAXTRFSIZEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DATATF_MAXTRFSIZE#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">-1</UC4RB_DB_DATATF_MAXTRFSIZEs.00>
@@ -232,7 +232,7 @@
 <UC4RB_DB_DRIVER_JARs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_JAR#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP"/>
 <UC4RB_DB_ERRMGMT_CHECKSUMs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_ERRMGMT_CHECKSUM#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">NO</UC4RB_DB_ERRMGMT_CHECKSUMs.00>
 <UC4RB_DB_ERRMGMT_STOP_ON_ERRs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_ERRMGMT_STOP_ON_ERR#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">YES</UC4RB_DB_ERRMGMT_STOP_ON_ERRs.00>
-<UC4RB_DB_JDBC_CONN_STRINGs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_JDBC_CONN_STRING#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP"/>
+<UC4RB_DB_JDBC_CONNs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_JDBC_CONN#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP"/>
 <UC4RB_DB_MEDIASET_BLOCKSIZEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_MEDIASET_BLOCKSIZE#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">-1</UC4RB_DB_MEDIASET_BLOCKSIZEs.00>
 <UC4RB_DB_MEDIASET_DSCRs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_MEDIASET_DSCR#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP"/>
 <UC4RB_DB_MEDIASET_FORMATs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_MEDIASET_FORMAT#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">NO</UC4RB_DB_MEDIASET_FORMATs.00>
@@ -273,7 +273,7 @@
 <MaxRetCode>0</MaxRetCode>
 <MrcExecute/>
 <MrcElseE>0</MrcElseE>
-<FcstStatus>0|U00000000 ??? ""</FcstStatus>
+<FcstStatus>0| |</FcstStatus>
 
 <ErtMethodDef>1</ErtMethodDef>
 <ErtMethodFix>0</ErtMethodFix>
