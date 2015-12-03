@@ -56,6 +56,7 @@
 <PROMPTSET name="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER">
 <PRPTBOX promptset="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER">
 <UC4RB_DB_CONN_INTRVLs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_CONN_INTRVL#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER">10</UC4RB_DB_CONN_INTRVLs.00>
+<UC4RB_DB_CONN_RETRYs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_CONN_RETRY#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER">5</UC4RB_DB_CONN_RETRYs.00>
 <UC4RB_DB_DATABASE_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DATABASE_NAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
 <UC4RB_DB_DRIVER_CLASSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_CLASS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
 <UC4RB_DB_DRIVER_JARs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_JAR#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
@@ -119,6 +120,7 @@
 <PROMPTSET name="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER">
 <PRPTBOX promptset="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER">
 <UC4RB_DB_CONN_INTRVLs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_CONN_INTRVL#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER">10</UC4RB_DB_CONN_INTRVLs.00>
+<UC4RB_DB_CONN_RETRYs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_CONN_RETRY#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER">5</UC4RB_DB_CONN_RETRYs.00>
 <UC4RB_DB_DATABASE_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DATABASE_NAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
 <UC4RB_DB_DRIVER_CLASSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_CLASS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
 <UC4RB_DB_DRIVER_JARs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_JAR#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
@@ -168,6 +170,7 @@
 <PROMPTSET name="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER">
 <PRPTBOX promptset="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER">
 <UC4RB_DB_CONN_INTRVLs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_CONN_INTRVL#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER">10</UC4RB_DB_CONN_INTRVLs.00>
+<UC4RB_DB_CONN_RETRYs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_CONN_RETRY#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER">5</UC4RB_DB_CONN_RETRYs.00>
 <UC4RB_DB_DATABASE_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DATABASE_NAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
 <UC4RB_DB_DRIVER_CLASSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_CLASS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
 <UC4RB_DB_DRIVER_JARs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_JAR#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
@@ -274,7 +277,34 @@
 <MSCRI/>
 </SCRIPT>
 <DOCU_Docu state="1" type="text">
-<DOC><![CDATA[Removes a user from a database. ]]></DOC>
+<DOC><![CDATA[= RB name =
+PCK.AUTOMIC_MSSQL.PUB.ACTION.CREATE_DB_USER
+ 
+= General description =
+Removes a user from a database. 
+= Inputs =
+Username: Username used to authenticate with the DB server.
+Password: Password used to authenticate with the DB server.
+JDBC Connection String: JDBC connection string (E.g.:jdbc:sqlserver://myServer:1433;databaseName=myDB)
+JDBC Driver JAR: URI pointing to the vendor-specific JDBC jar-file.
+JDBC Driver Class: Name of the class to load when initializing the JDBC connection. E.g "com.microsoft.sqlserver.jdbc.SQLServerDriver"
+Connection Interval: Time interval in seconds during which ARATools.jar tries to establish a connection to the database.
+Number of Connection Retries: The number that is specified in this parameter determines how often ARATools.jar tries to connect to the database. After the nth failure, the ARATools ends with a failure code.
+DB name: Name of the database to connect to and from which the user shell be dropped. E.g master
+Name of the user to create: Specifies the name by which the user is identified inside this database. user_name is a sysname. It can be up to 128 characters long
+Map user to login name: Specifies the SQL Server login for which the database user is being created. login_name must be a valid login in the server. When this SQL Server login enters the database it will acquire the name and ID of the database user that is being created. If empty, the user is created without mapping him/her to an existing login.
+Default schema: Specifies the first schema that will be searched by the server when it resolves the names of objects for this database user.
+Fail if not exists: Fail if User object does not exist.
+= Behavior =
+Removes a user from a database. 
+= Outputs =
+(none)
+= Rollback =
+(none)
+= Logging =
+(none)
+= Example =
+(none)]]></DOC>
 </DOCU_Docu>
 </JOBP>
 </uc-export>
