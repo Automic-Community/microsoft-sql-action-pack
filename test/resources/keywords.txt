@@ -49,7 +49,7 @@ Action Return Variable Should Be Equal As Integers
     ${out}=    Action Get Variable    ${variableName}
     Should Be Equal As Integers    ${out}    ${variableValue}
 
-Oracle Common Setting
+MSSQL Common Setting
     Action Set    ${PRT_CREATE_USER_DB_USERNAME_LG}    ${DB_USERNAME}
     Action Set    ${PRT_CREATE_USER_DB_PASSWORD_LG}    ${DB_PASSWORD}
     Action Set    ${PRT_CREATE_USER_DB_JDBC_CONN_STRING}    ${CONN_STRING}
