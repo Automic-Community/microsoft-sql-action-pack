@@ -94,7 +94,7 @@
             <entry name="onchangereset"/>
             <entry name="resetable">1</entry>
          </properties>
-      </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_DB_DRIVER_JARs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="JDBC Driver JAR URI" tooltip="URI pointing to the vendor-specific JDBC jar-file." upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+      </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_DB_DRIVER_JARs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" separator=";" showaspassword="0" text="JDBC Driver JAR URI" tooltip="URI pointing to the vendor-specific JDBC jar-file." upper="0" required="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
          
          <properties>
             <entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
@@ -113,7 +113,7 @@
             <entry name="customfield"/>
             <entry name="modifiable">1</entry>
             <entry name="regex"/>
-            <entry name="required">0</entry>
+            <entry name="required">1</entry>
             <entry name="initvalue"/>
             <entry name="xmlkey"/>
             <entry name="xmlpath"/>
@@ -122,7 +122,7 @@
             <entry name="onchangereset"/>
             <entry name="resetable">1</entry>
          </properties>
-      </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_DB_DRIVER_CLASSs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="JDBC Driver Class" tooltip="Name of the class to load when initializing the JDBC connection. E.g &quot;com.microsoft.sqlserver.jdbc.SQLServerDriver&quot;" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+      </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_DB_DRIVER_CLASSs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" separator=";" showaspassword="0" text="JDBC Driver Class" tooltip="Name of the class to load when initializing the JDBC connection. E.g &quot;com.microsoft.sqlserver.jdbc.SQLServerDriver&quot;" upper="0" required="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
          
          <properties>
             <entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
@@ -141,7 +141,7 @@
             <entry name="customfield"/>
             <entry name="modifiable">1</entry>
             <entry name="regex"/>
-            <entry name="required">0</entry>
+            <entry name="required">1</entry>
             <entry name="initvalue"/>
             <entry name="xmlkey"/>
             <entry name="xmlpath"/>
