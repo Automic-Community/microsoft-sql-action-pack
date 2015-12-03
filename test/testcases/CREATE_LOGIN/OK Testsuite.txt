@@ -1,0 +1,54 @@
+*** Settings ***
+Documentation     NOTE:
+...               add note here
+Suite Setup       Setup_suite
+Force Tags        windows
+Test Template     Create Login
+Resource          ../../resources/keywords.txt
+Resource          ../../resources/context.txt
+
+*** Test Cases ***    Username           Password           JDBC Connection String    JDBC Driver JAR URI    JDBC Driver Class    Connection Interval    No of Connection Retries    DB Name        Login Name     Use Windows Login    Login Password    Password must change    Check password expiration    Check password policy    Fail if exists    RETCODE    STATUS
+1. Success with normal case
+                      ${_DB_USERNAME}    ${_DB_PASSWORD}    ${_CONN_STRING}           ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}    TEST_LOGIN1    NO                   TEST_LOGIN        NO                      NO                           NO                       NO                0          ${ENDED_OK}
+
+2. Success with case LOGIN is existed with Fail_If_Exists = NO
+                      ${_DB_USERNAME}    ${_DB_PASSWORD}    ${_CONN_STRING}           ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}    TEST_LOGIN2    NO                   TEST_LOGIN        NO                      NO                           NO                       NO                0          ${ENDED_OK}
+
+3. Success with case create LOGIN with Check_Password_Expiration = YES
+                      ${_DB_USERNAME}    ${_DB_PASSWORD}    ${_CONN_STRING}           ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}    TEST_LOGIN3    NO                   TEST_LOGIN        NO                      NO                           NO                       NO                0          ${ENDED_OK}
+
+4. Success with case create LOGIN with Password_Must_Change = YES (Check_Password_Expiration = YES & Check_Password_Policy = YES)
+                      ${_DB_USERNAME}    ${_DB_PASSWORD}    ${_CONN_STRING}           ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}    TEST_LOGIN4    NO                   TEST_LOGIN        NO                      NO                           NO                       NO                0          ${ENDED_OK}
+
+5. Success with case create LOGIN with Check_Password_Policy = YES
+                      ${_DB_USERNAME}    ${_DB_PASSWORD}    ${_CONN_STRING}           ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}    TEST_LOGIN5    NO                   Ventum2011@       NO                      NO                           NO                       NO                0          ${ENDED_OK}
+
+*** Keywords ***
+Create Login
+    [Arguments]    ${username}    ${password}    ${jdbc_conn}    ${jdbc_jar}    ${jdbc_class}    ${interval}
+    ...    ${retries}    ${db_name}    ${login_name}    ${use_win_login}    ${login_pass}    ${pass_must_change}
+    ...    ${check_pass_exp}    ${check_pass_policy}    ${fail_if_exists}    ${returnCode}    ${returnStatus}
+    Init Action    ${ACTION_CREATE_LOGIN}
+    Action Set    ${PRT_CREATE_LOGIN_USERNAME}    ${username}
+    Action Set    ${PRT_CREATE_LOGIN_PASSWORD}    ${password}
+    Action Set    ${PRT_CREATE_LOGIN_JDBC_CONN}    ${jdbc_conn}
+    Action Set    ${PRT_CREATE_LOGIN_DRIVER_JAR}    ${jdbc_jar}
+    Action Set    ${PRT_CREATE_LOGIN_DRIVER_CLASS}    ${jdbc_class}
+    Action Set    ${PRT_CREATE_LOGIN_CONN_INTRVL}    ${interval}
+    Action Set    ${PRT_CREATE_LOGIN_CONN_RETRY}    ${retries}
+    Action Set    ${PRT_CREATE_LOGIN_DATABASE_NAME}    ${db_name}
+    Action Set    ${PRT_CREATE_LOGIN_LOGIN_NAME}    ${login_name}
+    Action Set    ${PRT_CREATE_LOGIN_USE_WIN_LOGIN}    ${use_win_login}
+    Action Set    ${PRT_CREATE_LOGIN_LOGIN_PWD}    ${login_pass}
+    Action Set    ${PRT_CREATE_LOGIN_PWD_MUST_CHNG}    ${pass_must_change}
+    Action Set    ${PRT_CREATE_LOGIN_CHK_EXPR}    ${check_pass_exp}
+    Action Set    ${PRT_CREATE_LOGIN_CHK_POLICY}    ${check_pass_policy}
+    Action Set    ${PRT_CREATE_LOGIN_FAIL_IF_EXIST}    ${fail_if_exists}
+    Action Execute
+    Action Report Should Be Found
+    Action Return Code Should Be    ${returnCode}
+    Action Return Status Should Be    ${returnStatus}
+
+Setup_suite
+    [Documentation]    TODO: Write all steps need prepare before testing here
+    Log    Start testing for Create Login Template
