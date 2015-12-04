@@ -7,30 +7,31 @@ Test Template     Create DB User
 Resource          ../../resources/keywords.txt
 Resource          ../../resources/context.txt
 
-*** Test Cases ***    FLAG                                                              Username                   Password                   JDBC Connection String     JDBC Driver JAR URI    JDBC Driver Class    Connection Interval    No of Connection Retries    DB Name                Name of User to Create    Map User to Login Name    Default Schema    Fail If Exists    RETCODE    STATUS
+*** Test Cases ***    FLAG     Username                   Password                   JDBC Connection String     JDBC Driver JAR URI    JDBC Driver Class    Connection Interval    No of Connection Retries    DB Name                Name of User to Create    Map User to Login Name    Default Schema    Fail If Exists    RETCODE    STATUS
 1. Fail with invalid username
-                      TEST                                                              ${_DB_USERNAME}_invalid    ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST_CREATE_DB_USER       TEST                      ${EMPTY}          NO                0          ${ENDED_NOK}
+                      TEST     ${_DB_USERNAME}_invalid    ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST_CREATE_DB_USER       TEST                      ${EMPTY}          NO                0          ${ENDED_NOK}
 
 2. Fail with invalid password
-                      TEST                                                              ${_DB_USERNAME}            ${_DB_PASSWORD}_invalid    ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST_CREATE_DB_USER       TEST                      ${EMPTY}          NO                0          ${ENDED_NOK}
+                      TEST     ${_DB_USERNAME}            ${_DB_PASSWORD}_invalid    ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST_CREATE_DB_USER       TEST                      ${EMPTY}          NO                0          ${ENDED_NOK}
 
 3. Fail with invalid jdbc connection string
-                      TEST                                                              ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}_invalid    ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST_CREATE_DB_USER       TEST                      ${EMPTY}          NO                0          ${ENDED_NOK}
+                      TEST     ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}_invalid    ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST_CREATE_DB_USER       TEST                      ${EMPTY}          NO                0          ${ENDED_NOK}
 
 4. Fail with invalid JDBC Driver Jar URI
-                      TEST                                                              ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}_invalid        ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST_CREATE_DB_USER       TEST                      ${EMPTY}          NO                0          ${ENDED_NOK}
+                      TEST     ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}_invalid        ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST_CREATE_DB_USER       TEST                      ${EMPTY}          NO                0          ${ENDED_NOK}
 
 5. Fail with invalid JDBC Driver Class
-                      TEST                                                              ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}_invalid    ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST_CREATE_DB_USER       TEST                      ${EMPTY}          NO                0          ${ENDED_NOK}
+                      TEST     ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}_invalid    ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST_CREATE_DB_USER       TEST                      ${EMPTY}          NO                0          ${ENDED_NOK}
 
 6. Fail with invalid DB Name and Fail If Exists = YES
-                      TEST                                                              ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}_invalid    TEST_CREATE_DB_USER       TEST                      ${EMPTY}          YES               0          ${ENDED_NOK}
+                      TEST     ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}_invalid    TEST_CREATE_DB_USER       TEST                      ${EMPTY}          YES               0          ${ENDED_NOK}
 
 7. Fail with invalid Login Name
-                      TEST                                                              ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST_CREATE_DB_USER       _invalid                  ${EMPTY}          NO                0          ${ENDED_NOK}
-                      #8. Fail with case DB User is existed and Fail If Exists = YES
-                      #TEST                                                             ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            ${_DB_USERNAME}           DEV                       ${EMPTY}          YES               1          ${ENDED_OK}
-                      #FINAL                                                            ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            ${_DB_USERNAME}           DEV                       ${EMPTY}          YES               0          ${ENDED_NOK}
+                      TEST     ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST_CREATE_DB_USER       _invalid                  ${EMPTY}          NO                0          ${ENDED_NOK}
+
+8. Fail with case DB User is existed and Fail If Exists = YES
+                      TEST     ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            ${_DB_USERNAME}           TEST                      ${EMPTY}          YES               1          ${ENDED_OK}
+                      FINAL    ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            ${_DB_USERNAME}           TEST                      ${EMPTY}          YES               0          ${ENDED_NOK}
 
 *** Keywords ***
 Create DB User
@@ -61,4 +62,3 @@ Create DB User
 Setup_suite
     [Documentation]    TODO: Write all steps need prepare before testing here
     Log    Start testing for Create DB User Template
-    ${_CURRENT_TIMESTAMP_}    Get Time    epoch
