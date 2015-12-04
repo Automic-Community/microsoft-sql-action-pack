@@ -63,7 +63,7 @@
 <MaxRetCode>0</MaxRetCode>
 <MrcExecute/>
 <MrcElseE>0</MrcElseE>
-<FcstStatus>0|U00000000 ??? ""</FcstStatus>
+<FcstStatus>0| |</FcstStatus>
 
 <ErtMethodDef>1</ErtMethodDef>
 <ErtMethodFix>0</ErtMethodFix>
@@ -115,7 +115,10 @@
 <PSCRI><![CDATA[:INCLUDE PCK.ITPA_SHARED.PRV.INCLUDE.PREPARE_JOB]]></PSCRI>
 </PRE_SCRIPT>
 <SCRIPT mode="1" state="1">
-<MSCRI><![CDATA[!restores a backup of a given database with the given options
+<MSCRI><![CDATA[@echo off
+setlocal enabledelayedexpansion
+:INC PCK.AUTOMIC_MSSQL.PRV.INCLUDE.RESTORE_DB_FROM_BACKUP_PARAMS
+!restores a backup of a given database with the given options
 :SET &UC4RB_SQL_CONTENT# = ""
 :INCLUDE PCK.AUTOMIC_MSSQL.PRV.INCLUDE.WRAP_DB_NAME_IN_BRACKETS "UC4RB_DB_NAME" = "UC4RB_DB_RESTORE_DB_NAME"
 :SET &UC4RB_SQL_CONTENT# = STR_CAT(&UC4RB_SQL_CONTENT#, "restore database &UC4RB_DB_RESTORE_DB_NAME# ")

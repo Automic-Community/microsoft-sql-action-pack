@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="11.0.0">
 <JOBP AllowExternal="1" name="PCK.AUTOMIC_MSSQL.PUB.ACTION.CREATE_DB_BACKUP">
 <XHEADER state="1">
-<Title/>
+<Title>Creates a backup of the database</Title>
 <ArchiveKey1/>
 <ArchiveKey2/>
 <Active>1</Active>
@@ -68,6 +68,7 @@
 <UC4RB_DB_BACKUPSET_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUPSET_NAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP"/>
 <UC4RB_DB_BACKUPSET_RETAIN_DAYSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUPSET_RETAIN_DAYS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">-1</UC4RB_DB_BACKUPSET_RETAIN_DAYSs.00>
 <UC4RB_DB_CONN_INTRVLs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_CONN_INTRVL#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">10</UC4RB_DB_CONN_INTRVLs.00>
+<UC4RB_DB_CONN_RETRYs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_CONN_RETRY#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">5</UC4RB_DB_CONN_RETRYs.00>
 <UC4RB_DB_DATATF_BUFFERCOUNTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DATATF_BUFFERCOUNT#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">-1</UC4RB_DB_DATATF_BUFFERCOUNTs.00>
 <UC4RB_DB_DATATF_MAXTRFSIZEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DATATF_MAXTRFSIZE#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">-1</UC4RB_DB_DATATF_MAXTRFSIZEs.00>
 <UC4RB_DB_DRIVER_CLASSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_CLASS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP"/>
@@ -154,6 +155,7 @@
 <UC4RB_DB_BACKUPSET_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUPSET_NAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP"/>
 <UC4RB_DB_BACKUPSET_RETAIN_DAYSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUPSET_RETAIN_DAYS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">-1</UC4RB_DB_BACKUPSET_RETAIN_DAYSs.00>
 <UC4RB_DB_CONN_INTRVLs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_CONN_INTRVL#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">10</UC4RB_DB_CONN_INTRVLs.00>
+<UC4RB_DB_CONN_RETRYs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_CONN_RETRY#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">5</UC4RB_DB_CONN_RETRYs.00>
 <UC4RB_DB_DATATF_BUFFERCOUNTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DATATF_BUFFERCOUNT#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">-1</UC4RB_DB_DATATF_BUFFERCOUNTs.00>
 <UC4RB_DB_DATATF_MAXTRFSIZEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DATATF_MAXTRFSIZE#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">-1</UC4RB_DB_DATATF_MAXTRFSIZEs.00>
 <UC4RB_DB_DRIVER_CLASSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_CLASS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP"/>
@@ -226,6 +228,7 @@
 <UC4RB_DB_BACKUPSET_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUPSET_NAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP"/>
 <UC4RB_DB_BACKUPSET_RETAIN_DAYSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUPSET_RETAIN_DAYS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">-1</UC4RB_DB_BACKUPSET_RETAIN_DAYSs.00>
 <UC4RB_DB_CONN_INTRVLs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_CONN_INTRVL#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">10</UC4RB_DB_CONN_INTRVLs.00>
+<UC4RB_DB_CONN_RETRYs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_CONN_RETRY#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">5</UC4RB_DB_CONN_RETRYs.00>
 <UC4RB_DB_DATATF_BUFFERCOUNTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DATATF_BUFFERCOUNT#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">-1</UC4RB_DB_DATATF_BUFFERCOUNTs.00>
 <UC4RB_DB_DATATF_MAXTRFSIZEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DATATF_MAXTRFSIZE#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP">-1</UC4RB_DB_DATATF_MAXTRFSIZEs.00>
 <UC4RB_DB_DRIVER_CLASSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_CLASS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.CREATE_DB_BACKUP"/>
@@ -343,10 +346,65 @@
 <MSCRI/>
 </SCRIPT>
 <DOCU_Docu state="1" type="text">
-<DOC><![CDATA[Creates a backup of the database.
+<DOC><![CDATA[= RB name =
+PCK.AUTOMIC_MSSQL.PUB.ACTION.CREATE_DB_BACKUP
 
+= General description =
+Creates a backup of the database.
 You can either create backup of a whole  database  (including logs, full/differential)
-or back up specific files or filegroups (full/differential)]]></DOC>
+or back up specific files or filegroups (full/differential)
+
+= Inputs =
+* SQL User : Username used to authenticate with the DB server.
+* SQL Password : Password used to authenticate with the DB server.
+* JDBC Connection String : JDBC connection string. E.g.:jdbc:sqlserver://myServer:1433;databaseName=myDB
+* JDBC Driver JAR : URI pointing to the vendor-specific JDBC jar-file.
+* JDBC Driver Class : Name of the class to load when initializing the JDBC connection. E.g "com.microsoft.jdbc.sqlserver.SQLServerDriver"
+* Connection Interval : Time interval in seconds during which ARATools.jar tries to establish a connection to the database.
+* Number of Connection Retries : The number that is specified in this parameter determines how often ARATools.jar tries to connect to the database. After the nth failure, the ARATools ends with a failure code.
+* Backup DB name : name of the database to backup
+* Files to include in backup : Is the logical name of a file that is to be included in the backup.
+* Filegroups to include in the backup : Is the logical name of a file that is to be included in the backup.
+* list of target disks : Specifies disk device(s) as backup target(s). Example:"'Z:\SQLServerBackups\SalesFiles1.bck', 'Z:\SQLServerBackups\SalesFiles2.bck'"
+* list of mirror disks : Specifies a set of up to three secondary backup devices, each of which will mirror the backups devices specified in the TO clause. The MIRROR TO clause must be specify the same type and number of the backup devices as the TO clause. The maximum number of MIRROR TO clauses is three. Example: 'Z:\SQLServerBackups\SalesFiles1.bck', 'Z:\SQLServerBackups\SalesFiles2.bck'
+* list of target tapes : Specifies tape device(s) as backup target(s). Example:" '\\.\tape1', '\\.\tape2'"
+* list of mirror tapes : Specifies a set of up to three secondary backup devices, each of which will mirror the backups devices specified in the TO clause. The MIRROR TO clause must be specify the same type and number of the backup devices as the TO clause. The maximum number of MIRROR TO clauses is three.Example:'\\.\tape1', '\\.\tape2'
+* differential backup : specifies that the database or file backup should consist only of the portions of the database or file changed since the last full backup. Default: "no"
+* copy-only backup : Specifies that the backup is acopy-only backup.
+* description : Specifies the free-form text describing the backup set. The string can have a maximum of 255 characters.
+* backupset name : Specifies the name of the backup set. Names can have a maximum of 128 characters. If NAME is not specified, it is blank.
+* expires : Specifies, if the backup set expires on a fixed date. Default: no (never expires)
+* expire date : Specifies when the backup set expires and can be overwritten. Examples:'Dec 31, 2020 11:59 PM' or '1/1/2021'
+* retain days : Specifies the number of days that must elapse before this backup media set can be overwritten.
+* mediaset init : Controls whether the backup operation appends to or overwrites the existing backup sets on the backup media. The default is to append to the most recent backup set on the media (no/NOINIT).
+* mediaset skip : Controls whether a backup operation checks the expiration date and time of the backup sets on the media before overwriting them. (default: no, NOSKIP)
+* mediaset format : Specifies whether the media header should be written on the volumes used for this backup operation, overwriting any existing media header and backup sets. (default: no/NOFORMAT)
+* mediaset description : Specifies the free-form text description, maximum of 255 characters, of the media set.
+* name of media : Specifies the media name for the entire backup media set. The media name must be no longer than 128 characters, If MEDIANAME is specified, it must match the previously specified media name already existing on the backup volumes
+* media blocksize : Specifies the physical block size, in bytes. The supported sizes are 512, 1024, 2048, 4096, 8192, 16384, 32768, and 65536 (64 KB) bytes.Explicitly stating a block size overrides the automatic selection of block size. If -1, the default value is taken.
+* datatransfer blockcount : Specifies the total number of I/O buffers to be used for the backup operation.If -1, the default value is taken.
+* datatransfer maximum transfer size : Specifies the largest unit of transfer in bytes to be used between SQL Server and the backup media. The possible values are multiples of 65536 bytes (64 KB) ranging up to 4194304 bytes (4 MB).If -1, the default value is taken.
+* error management checksum : Controls whether backup checksums are enabled.
+* error management, stop on error : Controls whether a backup operation stops or continues after encountering a page checksum error.
+* tape rewind : These options are used only for TAPE devices. If a nontape device is being used, these options are ignored.Specifies that SQL Server will release and rewind the tape. REWIND is the default.
+* tape unload : These options are used only for TAPE devices. If a nontape device is being used, these options are ignored.Specifies that the tape is automatically rewound and unloaded when the backup is finished. UNLOAD is the default when a session begins.
+
+= Behavior =
+Return 0 if database is created successfully.
+Return 999 (with SQL exception) if failed because of any exception getting from SQL server.
+Return 4 for other failure.
+
+= Outputs =
+None 
+
+= Rollback =
+None
+
+= Logging =
+None
+
+= Example =
+None]]></DOC>
 </DOCU_Docu>
 </JOBP>
 </uc-export>

@@ -63,7 +63,7 @@
 <MaxRetCode>0</MaxRetCode>
 <MrcExecute/>
 <MrcElseE>0</MrcElseE>
-<FcstStatus>0|U00000000 ??? ""</FcstStatus>
+<FcstStatus>0| |</FcstStatus>
 
 <ErtMethodDef>1</ErtMethodDef>
 <ErtMethodFix>0</ErtMethodFix>
@@ -115,7 +115,10 @@
 <PSCRI><![CDATA[:INCLUDE PCK.ITPA_SHARED.PRV.INCLUDE.PREPARE_JOB]]></PSCRI>
 </PRE_SCRIPT>
 <SCRIPT mode="1" state="1">
-<MSCRI><![CDATA[:SET &UC4RB_SQL_DATABASENAME# = &UC4RB_DB_OLD_DATABASE_NAME#
+<MSCRI><![CDATA[@echo off
+setlocal enabledelayedexpansion
+:INC PCK.AUTOMIC_MSSQL.PRV.INCLUDE.RENAME_DB_PARAMS
+:SET &UC4RB_SQL_DATABASENAME# = &UC4RB_DB_OLD_DATABASE_NAME#
 :SET &UC4RB_SQL_SID# = ""
 :SET &UC4RB_SQL_SEPARATOR# = ","
 :SET &UC4RB_DB_SCRIPT_SEPR# = "GO"

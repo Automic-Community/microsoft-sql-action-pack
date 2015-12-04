@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="11.0.0">
 <JOBP AllowExternal="1" name="PCK.AUTOMIC_MSSQL.PUB.ACTION.RESTORE_DB_FROM_BACKUP">
 <XHEADER state="1">
-<Title/>
+<Title>Restore Database from backup</Title>
 <ArchiveKey1/>
 <ArchiveKey2/>
 <Active>1</Active>
@@ -55,27 +55,28 @@
 <node content="1" id="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP" name="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">
 <PRPTBOX promptset="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">
-<UC4RB_DB_BACKUPSET_FILE_NRs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUPSET_FILE_NR#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">1</UC4RB_DB_BACKUPSET_FILE_NRs.00>
-<UC4RB_DB_CONN_INTRVLs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_CONN_INTRVL#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">10</UC4RB_DB_CONN_INTRVLs.00>
-<UC4RB_DB_DRIVER_CLASSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_CLASS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
-<UC4RB_DB_DRIVER_JARs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_JAR#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
-<UC4RB_DB_JDBC_CONN_STRINGs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_JDBC_CONN_STRING#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
-<UC4RB_DB_MEDIANAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_MEDIANAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
-<UC4RB_DB_PARTIALs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_PARTIAL#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">NO</UC4RB_DB_PARTIALs.00>
-<UC4RB_DB_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_PASSWORD#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">--10</UC4RB_DB_PASSWORDs.00>
-<UC4RB_DB_RECOVERYs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_RECOVERY#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">YES</UC4RB_DB_RECOVERYs.00>
-<UC4RB_DB_REPLACEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_REPLACE#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">YES</UC4RB_DB_REPLACEs.00>
-<UC4RB_DB_RESTARTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_RESTART#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">NO</UC4RB_DB_RESTARTs.00>
-<UC4RB_DB_RESTORE_DB_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_RESTORE_DB_NAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
-<UC4RB_DB_RESTORE_FILEGROUPSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_RESTORE_FILEGROUPS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
-<UC4RB_DB_RESTORE_FILESs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_RESTORE_FILES#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
-<UC4RB_DB_RESTORE_FROM_DISKSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_RESTORE_FROM_DISKS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
-<UC4RB_DB_RESTORE_FROM_TAPESs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_RESTORE_FROM_TAPES#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
-<UC4RB_DB_STOP_ON_ERRORs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_STOP_ON_ERROR#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">YES</UC4RB_DB_STOP_ON_ERRORs.00>
-<UC4RB_DB_TAPE_REWINDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_TAPE_REWIND#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">YES</UC4RB_DB_TAPE_REWINDs.00>
-<UC4RB_DB_TAPE_UNLOADs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_TAPE_UNLOAD#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">YES</UC4RB_DB_TAPE_UNLOADs.00>
-<UC4RB_DB_USERNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_USERNAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
-<UC4RB_DB_VERIFY_CHECKSUMs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_VERIFY_CHECKSUM#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">NO</UC4RB_DB_VERIFY_CHECKSUMs.00>
+<UC4RB_DB_BACKUPSET_FILE_NRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUPSET_FILE_NR#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">1</UC4RB_DB_BACKUPSET_FILE_NRs.00>
+<UC4RB_DB_CONN_INTRVLs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_CONN_INTRVL#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">10</UC4RB_DB_CONN_INTRVLs.00>
+<UC4RB_DB_CONN_RETRYs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_CONN_RETRY#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">5</UC4RB_DB_CONN_RETRYs.00>
+<UC4RB_DB_DRIVER_CLASSs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_CLASS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
+<UC4RB_DB_DRIVER_JARs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_JAR#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
+<UC4RB_DB_JDBC_CONNs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_JDBC_CONN#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
+<UC4RB_DB_MEDIANAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_MEDIANAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
+<UC4RB_DB_PARTIALs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_PARTIAL#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">NO</UC4RB_DB_PARTIALs.00>
+<UC4RB_DB_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_PASSWORD#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">--10</UC4RB_DB_PASSWORDs.00>
+<UC4RB_DB_RECOVERYs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_RECOVERY#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">YES</UC4RB_DB_RECOVERYs.00>
+<UC4RB_DB_REPLACEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_REPLACE#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">YES</UC4RB_DB_REPLACEs.00>
+<UC4RB_DB_RESTARTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_RESTART#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">NO</UC4RB_DB_RESTARTs.00>
+<UC4RB_DB_RESTORE_DB_NAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_RESTORE_DB_NAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
+<UC4RB_DB_RESTORE_FILEGROUPSs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_RESTORE_FILEGROUPS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
+<UC4RB_DB_RESTORE_FILESs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_RESTORE_FILES#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
+<UC4RB_DB_RESTORE_FROM_DISKSs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_RESTORE_FROM_DISKS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
+<UC4RB_DB_RESTORE_FROM_TAPESs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_RESTORE_FROM_TAPES#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
+<UC4RB_DB_STOP_ON_ERRORs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_STOP_ON_ERROR#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">YES</UC4RB_DB_STOP_ON_ERRORs.00>
+<UC4RB_DB_TAPE_REWINDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_TAPE_REWIND#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">YES</UC4RB_DB_TAPE_REWINDs.00>
+<UC4RB_DB_TAPE_UNLOADs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_TAPE_UNLOAD#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">YES</UC4RB_DB_TAPE_UNLOADs.00>
+<UC4RB_DB_USERNAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_USERNAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
+<UC4RB_DB_VERIFY_CHECKSUMs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_VERIFY_CHECKSUM#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">NO</UC4RB_DB_VERIFY_CHECKSUMs.00>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -130,27 +131,28 @@
 <node content="1" id="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP" name="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">
 <PRPTBOX promptset="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">
-<UC4RB_DB_BACKUPSET_FILE_NRs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUPSET_FILE_NR#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">1</UC4RB_DB_BACKUPSET_FILE_NRs.00>
-<UC4RB_DB_CONN_INTRVLs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_CONN_INTRVL#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">10</UC4RB_DB_CONN_INTRVLs.00>
-<UC4RB_DB_DRIVER_CLASSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_CLASS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
-<UC4RB_DB_DRIVER_JARs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_JAR#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
-<UC4RB_DB_JDBC_CONN_STRINGs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_JDBC_CONN_STRING#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
-<UC4RB_DB_MEDIANAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_MEDIANAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
-<UC4RB_DB_PARTIALs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_PARTIAL#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">NO</UC4RB_DB_PARTIALs.00>
-<UC4RB_DB_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_PASSWORD#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">--10</UC4RB_DB_PASSWORDs.00>
-<UC4RB_DB_RECOVERYs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_RECOVERY#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">YES</UC4RB_DB_RECOVERYs.00>
-<UC4RB_DB_REPLACEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_REPLACE#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">YES</UC4RB_DB_REPLACEs.00>
-<UC4RB_DB_RESTARTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_RESTART#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">NO</UC4RB_DB_RESTARTs.00>
-<UC4RB_DB_RESTORE_DB_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_RESTORE_DB_NAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
-<UC4RB_DB_RESTORE_FILEGROUPSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_RESTORE_FILEGROUPS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
-<UC4RB_DB_RESTORE_FILESs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_RESTORE_FILES#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
-<UC4RB_DB_RESTORE_FROM_DISKSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_RESTORE_FROM_DISKS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
-<UC4RB_DB_RESTORE_FROM_TAPESs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_RESTORE_FROM_TAPES#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
-<UC4RB_DB_STOP_ON_ERRORs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_STOP_ON_ERROR#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">YES</UC4RB_DB_STOP_ON_ERRORs.00>
-<UC4RB_DB_TAPE_REWINDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_TAPE_REWIND#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">YES</UC4RB_DB_TAPE_REWINDs.00>
-<UC4RB_DB_TAPE_UNLOADs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_TAPE_UNLOAD#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">YES</UC4RB_DB_TAPE_UNLOADs.00>
-<UC4RB_DB_USERNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_USERNAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
-<UC4RB_DB_VERIFY_CHECKSUMs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_VERIFY_CHECKSUM#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">NO</UC4RB_DB_VERIFY_CHECKSUMs.00>
+<UC4RB_DB_BACKUPSET_FILE_NRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUPSET_FILE_NR#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">1</UC4RB_DB_BACKUPSET_FILE_NRs.00>
+<UC4RB_DB_CONN_INTRVLs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_CONN_INTRVL#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">10</UC4RB_DB_CONN_INTRVLs.00>
+<UC4RB_DB_CONN_RETRYs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_CONN_RETRY#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">5</UC4RB_DB_CONN_RETRYs.00>
+<UC4RB_DB_DRIVER_CLASSs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_CLASS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
+<UC4RB_DB_DRIVER_JARs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_JAR#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
+<UC4RB_DB_JDBC_CONNs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_JDBC_CONN#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
+<UC4RB_DB_MEDIANAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_MEDIANAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
+<UC4RB_DB_PARTIALs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_PARTIAL#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">NO</UC4RB_DB_PARTIALs.00>
+<UC4RB_DB_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_PASSWORD#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">--10</UC4RB_DB_PASSWORDs.00>
+<UC4RB_DB_RECOVERYs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_RECOVERY#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">YES</UC4RB_DB_RECOVERYs.00>
+<UC4RB_DB_REPLACEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_REPLACE#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">YES</UC4RB_DB_REPLACEs.00>
+<UC4RB_DB_RESTARTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_RESTART#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">NO</UC4RB_DB_RESTARTs.00>
+<UC4RB_DB_RESTORE_DB_NAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_RESTORE_DB_NAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
+<UC4RB_DB_RESTORE_FILEGROUPSs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_RESTORE_FILEGROUPS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
+<UC4RB_DB_RESTORE_FILESs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_RESTORE_FILES#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
+<UC4RB_DB_RESTORE_FROM_DISKSs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_RESTORE_FROM_DISKS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
+<UC4RB_DB_RESTORE_FROM_TAPESs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_RESTORE_FROM_TAPES#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
+<UC4RB_DB_STOP_ON_ERRORs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_STOP_ON_ERROR#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">YES</UC4RB_DB_STOP_ON_ERRORs.00>
+<UC4RB_DB_TAPE_REWINDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_TAPE_REWIND#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">YES</UC4RB_DB_TAPE_REWINDs.00>
+<UC4RB_DB_TAPE_UNLOADs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_TAPE_UNLOAD#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">YES</UC4RB_DB_TAPE_UNLOADs.00>
+<UC4RB_DB_USERNAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_USERNAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
+<UC4RB_DB_VERIFY_CHECKSUMs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_VERIFY_CHECKSUM#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">NO</UC4RB_DB_VERIFY_CHECKSUMs.00>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -191,27 +193,28 @@
 <node content="1" id="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP" name="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP" parent="PPRPTS" type="PPROMPTSET">
 <PROMPTSET name="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">
 <PRPTBOX promptset="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">
-<UC4RB_DB_BACKUPSET_FILE_NRs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUPSET_FILE_NR#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">1</UC4RB_DB_BACKUPSET_FILE_NRs.00>
-<UC4RB_DB_CONN_INTRVLs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_CONN_INTRVL#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">10</UC4RB_DB_CONN_INTRVLs.00>
-<UC4RB_DB_DRIVER_CLASSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_CLASS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
-<UC4RB_DB_DRIVER_JARs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_JAR#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
-<UC4RB_DB_JDBC_CONN_STRINGs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_JDBC_CONN_STRING#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
-<UC4RB_DB_MEDIANAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_MEDIANAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
-<UC4RB_DB_PARTIALs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_PARTIAL#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">NO</UC4RB_DB_PARTIALs.00>
-<UC4RB_DB_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_PASSWORD#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">--10</UC4RB_DB_PASSWORDs.00>
-<UC4RB_DB_RECOVERYs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_RECOVERY#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">YES</UC4RB_DB_RECOVERYs.00>
-<UC4RB_DB_REPLACEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_REPLACE#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">YES</UC4RB_DB_REPLACEs.00>
-<UC4RB_DB_RESTARTs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_RESTART#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">NO</UC4RB_DB_RESTARTs.00>
-<UC4RB_DB_RESTORE_DB_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_RESTORE_DB_NAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
-<UC4RB_DB_RESTORE_FILEGROUPSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_RESTORE_FILEGROUPS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
-<UC4RB_DB_RESTORE_FILESs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_RESTORE_FILES#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
-<UC4RB_DB_RESTORE_FROM_DISKSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_RESTORE_FROM_DISKS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
-<UC4RB_DB_RESTORE_FROM_TAPESs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_RESTORE_FROM_TAPES#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
-<UC4RB_DB_STOP_ON_ERRORs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_STOP_ON_ERROR#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">YES</UC4RB_DB_STOP_ON_ERRORs.00>
-<UC4RB_DB_TAPE_REWINDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_TAPE_REWIND#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">YES</UC4RB_DB_TAPE_REWINDs.00>
-<UC4RB_DB_TAPE_UNLOADs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_TAPE_UNLOAD#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">YES</UC4RB_DB_TAPE_UNLOADs.00>
-<UC4RB_DB_USERNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_USERNAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
-<UC4RB_DB_VERIFY_CHECKSUMs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_VERIFY_CHECKSUM#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">NO</UC4RB_DB_VERIFY_CHECKSUMs.00>
+<UC4RB_DB_BACKUPSET_FILE_NRs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_BACKUPSET_FILE_NR#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">1</UC4RB_DB_BACKUPSET_FILE_NRs.00>
+<UC4RB_DB_CONN_INTRVLs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_CONN_INTRVL#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">10</UC4RB_DB_CONN_INTRVLs.00>
+<UC4RB_DB_CONN_RETRYs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_CONN_RETRY#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">5</UC4RB_DB_CONN_RETRYs.00>
+<UC4RB_DB_DRIVER_CLASSs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_CLASS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
+<UC4RB_DB_DRIVER_JARs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_JAR#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
+<UC4RB_DB_JDBC_CONNs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_JDBC_CONN#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
+<UC4RB_DB_MEDIANAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_MEDIANAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
+<UC4RB_DB_PARTIALs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_PARTIAL#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">NO</UC4RB_DB_PARTIALs.00>
+<UC4RB_DB_PASSWORDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_PASSWORD#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">--10</UC4RB_DB_PASSWORDs.00>
+<UC4RB_DB_RECOVERYs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_RECOVERY#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">YES</UC4RB_DB_RECOVERYs.00>
+<UC4RB_DB_REPLACEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_REPLACE#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">YES</UC4RB_DB_REPLACEs.00>
+<UC4RB_DB_RESTARTs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_RESTART#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">NO</UC4RB_DB_RESTARTs.00>
+<UC4RB_DB_RESTORE_DB_NAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_RESTORE_DB_NAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
+<UC4RB_DB_RESTORE_FILEGROUPSs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_RESTORE_FILEGROUPS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
+<UC4RB_DB_RESTORE_FILESs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_RESTORE_FILES#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
+<UC4RB_DB_RESTORE_FROM_DISKSs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_RESTORE_FROM_DISKS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
+<UC4RB_DB_RESTORE_FROM_TAPESs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_RESTORE_FROM_TAPES#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
+<UC4RB_DB_STOP_ON_ERRORs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_STOP_ON_ERROR#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">YES</UC4RB_DB_STOP_ON_ERRORs.00>
+<UC4RB_DB_TAPE_REWINDs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_TAPE_REWIND#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">YES</UC4RB_DB_TAPE_REWINDs.00>
+<UC4RB_DB_TAPE_UNLOADs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_TAPE_UNLOAD#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">YES</UC4RB_DB_TAPE_UNLOADs.00>
+<UC4RB_DB_USERNAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_USERNAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP"/>
+<UC4RB_DB_VERIFY_CHECKSUMs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_VERIFY_CHECKSUM#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP">NO</UC4RB_DB_VERIFY_CHECKSUMs.00>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -240,7 +243,7 @@
 <MaxRetCode>0</MaxRetCode>
 <MrcExecute/>
 <MrcElseE>0</MrcElseE>
-<FcstStatus>0|U00000000 ??? ""</FcstStatus>
+<FcstStatus>0| |</FcstStatus>
 
 <ErtMethodDef>1</ErtMethodDef>
 <ErtMethodFix>0</ErtMethodFix>
@@ -280,7 +283,29 @@
 </node>
 <node content="1" id="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP" name="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP" parent="PRPTS" type="PROMPTSET">
 <PROMPTSET name="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP" ontop="1">
-<PRPTBOX promptset="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP" prptmode="1"/>
+<PRPTBOX promptset="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.RESTORE_DB_FROM_BACKUP" prptmode="1">
+<UC4RB_DB_USERNAMEs.00 altview="0" haslist="0"/>
+<UC4RB_DB_PASSWORDs.00 altview="0" haslist="0">--10</UC4RB_DB_PASSWORDs.00>
+<UC4RB_DB_JDBC_CONNs.00 altview="0" haslist="0"/>
+<UC4RB_DB_DRIVER_JARs.00 altview="0" haslist="0"/>
+<UC4RB_DB_DRIVER_CLASSs.00 altview="0" haslist="0"/>
+<UC4RB_DB_CONN_INTRVLs.00 altview="0" haslist="0">10</UC4RB_DB_CONN_INTRVLs.00>
+<UC4RB_DB_RESTORE_DB_NAMEs.00 altview="0" haslist="0"/>
+<UC4RB_DB_RESTORE_FILESs.00 altview="0" haslist="0"/>
+<UC4RB_DB_RESTORE_FILEGROUPSs.00 altview="0" haslist="0"/>
+<UC4RB_DB_RESTORE_FROM_DISKSs.00 altview="0" haslist="0"/>
+<UC4RB_DB_RESTORE_FROM_TAPESs.00 altview="0" haslist="0"/>
+<UC4RB_DB_VERIFY_CHECKSUMs.00 altview="0" haslist="0">NO</UC4RB_DB_VERIFY_CHECKSUMs.00>
+<UC4RB_DB_STOP_ON_ERRORs.00 altview="0" haslist="0">YES</UC4RB_DB_STOP_ON_ERRORs.00>
+<UC4RB_DB_BACKUPSET_FILE_NRs.00 altview="0" haslist="0">1</UC4RB_DB_BACKUPSET_FILE_NRs.00>
+<UC4RB_DB_MEDIANAMEs.00 altview="0" haslist="0"/>
+<UC4RB_DB_RECOVERYs.00 altview="0" haslist="0">YES</UC4RB_DB_RECOVERYs.00>
+<UC4RB_DB_PARTIALs.00 altview="0" haslist="0">NO</UC4RB_DB_PARTIALs.00>
+<UC4RB_DB_REPLACEs.00 altview="0" haslist="0">YES</UC4RB_DB_REPLACEs.00>
+<UC4RB_DB_RESTARTs.00 altview="0" haslist="0">NO</UC4RB_DB_RESTARTs.00>
+<UC4RB_DB_TAPE_REWINDs.00 altview="0" haslist="0">YES</UC4RB_DB_TAPE_REWINDs.00>
+<UC4RB_DB_TAPE_UNLOADs.00 altview="0" haslist="0">YES</UC4RB_DB_TAPE_UNLOADs.00>
+</PRPTBOX>
 </PROMPTSET>
 </node>
 <node content="1" id="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT" name="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT" parent="PRPTS" type="PROMPTSET">
