@@ -13,8 +13,6 @@ setlocal enabledelayedexpansion
 !executes a given sql script file
 :INCLUDE PCK.ITPA_SHARED.PRV.INCLUDE.CHANGE_DIRECTORY_TO_AGENT_BIN
 
-:SET &UC4RB_SQL_COMMAND# = ""
-
 :IF &UC4RB_DB_USERNAME# <> ""
 : SET &UC4RB_SQL_COMMAND# = STR_CAT(&UC4RB_SQL_COMMAND#, ' -usr "&UC4RB_DB_USERNAME#"')
 :ENDIF

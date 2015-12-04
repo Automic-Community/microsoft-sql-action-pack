@@ -3,7 +3,7 @@ Documentation     NOTE:
 ...               add note here
 Suite Setup       Setup_suite
 Force Tags        windows
-Test Template     Add Member To DB Role
+Test Template     Drop Member From DB Role
 Resource          ../../resources/keywords.txt
 Resource          ../../resources/context.txt
 
@@ -36,20 +36,20 @@ Resource          ../../resources/context.txt
                       TEST                       TEST                       ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   master                 ${_ROLE_NAME}            ${_DB_USERNAME}    0          ${ENDED_NOK}
 
 *** Keywords ***
-Add Member To DB Role
+Drop Member From DB Role
     [Arguments]    ${username}    ${password}    ${jdbc_conn}    ${jdbc_jar}    ${jdbc_class}    ${interval}
     ...    ${retries}    ${db_name}    ${role_name}    ${member_name}    ${returnCode}    ${returnStatus}
-    Init Action    ${ACTION_ADD_MEMBER_TO_DB_ROLE}
-    Action Set    ${PRT_ADD_MEMBER_TO_DB_ROLE_USERNAME}    ${username}
-    Action Set    ${PRT_ADD_MEMBER_TO_DB_ROLE_PASSWORD}    ${password}
-    Action Set    ${PRT_ADD_MEMBER_TO_DB_ROLE_JDBC_CONN}    ${jdbc_conn}
-    Action Set    ${PRT_ADD_MEMBER_TO_DB_ROLE_DRIVER_JAR}    ${jdbc_jar}
-    Action Set    ${PRT_ADD_MEMBER_TO_DB_ROLE_DRIVER_CLASS}    ${jdbc_class}
-    Action Set    ${PRT_ADD_MEMBER_TO_DB_ROLE_CONN_INTRVL}    ${interval}
-    Action Set    ${PRT_ADD_MEMBER_TO_DB_ROLE_CONN_RETRY}    ${retries}
-    Action Set    ${PRT_ADD_MEMBER_TO_DB_ROLE_DATABASE_NAME}    ${db_name}
-    Action Set    ${PRT_ADD_MEMBER_TO_DB_ROLE_ROLE_NAME}    ${role_name}
-    Action Set    ${PRT_ADD_MEMBER_TO_DB_ROLE_MEMBER_NAME}    ${member_name}
+    Init Action    ${ACTION_DROP_MEMBER_FROM_DB_ROLE}
+    Action Set    ${PRT_DROP_MEMBER_FROM_DB_ROLE_USERNAME}    ${username}
+    Action Set    ${PRT_DROP_MEMBER_FROM_DB_ROLE_PASSWORD}    ${password}
+    Action Set    ${PRT_DROP_MEMBER_FROM_DB_ROLE_JDBC_CONN}    ${jdbc_conn}
+    Action Set    ${PRT_DROP_MEMBER_FROM_DB_ROLE_DRIVER_JAR}    ${jdbc_jar}
+    Action Set    ${PRT_DROP_MEMBER_FROM_DB_ROLE_DRIVER_CLASS}    ${jdbc_class}
+    Action Set    ${PRT_DROP_MEMBER_FROM_DB_ROLE_CONN_INTRVL}    ${interval}
+    Action Set    ${PRT_DROP_MEMBER_FROM_DB_ROLE_CONN_RETRY}    ${retries}
+    Action Set    ${PRT_DROP_MEMBER_FROM_DB_ROLE_DATABASE_NAME}    ${db_name}
+    Action Set    ${PRT_DROP_MEMBER_FROM_DB_ROLE_ROLE_NAME}    ${role_name}
+    Action Set    ${PRT_DROP_MEMBER_FROM_DB_ROLE_MEMBER_NAME}    ${member_name}
     Action Execute
     Action Report Should Be Found
     Action Return Code Should Not Equal    ${returnCode}
@@ -57,4 +57,4 @@ Add Member To DB Role
 
 Setup_suite
     [Documentation]    TODO: Write all steps need prepare before testing here
-    Log    Start testing for Add Member To DB Role Template
+    Log    Start testing for Drop Member From DB Role Template
