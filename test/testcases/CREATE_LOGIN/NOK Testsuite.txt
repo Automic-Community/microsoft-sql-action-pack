@@ -7,52 +7,51 @@ Test Template     Create Login
 Resource          ../../resources/keywords.txt
 Resource          ../../resources/context.txt
 
-*** Test Cases ***    Username                   Password                   JDBC Connection String     JDBC Driver JAR URI    JDBC Driver Class    Connection Interval    No of Connection Retries    DB Name                Login Name                          Use Windows Login    Login Password    Password must change    Check password expiration    Check password policy    Fail if exists    RETCODE    STATUS
+*** Test Cases ***    Flag     Username                   Password                   JDBC Connection String     JDBC Driver JAR URI    JDBC Driver Class    Connection Interval    No of Connection Retries    DB Name                Login Name     Use Windows Login    Login Password    Password must change    Check password expiration    Check password policy    Fail if exists    RETCODE    STATUS
 1. Fail with invalid username
-                      ${_DB_USERNAME}_invalid    ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST_LOGIN${_CURRENT_TIMESTAMP_}    NO                   123               NO                      NO                           NO                       NO                0          ${ENDED_NOK}
+                      TEST     ${_DB_USERNAME}_invalid    ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST_LOGIN$    NO                   123               NO                      NO                           NO                       NO                0          ${ENDED_NOK}
 
 2. Fail with invalid password
-                      ${_DB_USERNAME}            ${_DB_PASSWORD}_invalid    ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST_LOGIN${_CURRENT_TIMESTAMP_}    NO                   123               NO                      NO                           NO                       NO                0          ${ENDED_NOK}
+                      TEST     ${_DB_USERNAME}            ${_DB_PASSWORD}_invalid    ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST_LOGIN     NO                   123               NO                      NO                           NO                       NO                0          ${ENDED_NOK}
 
 3. Fail with invalid jdbc connection string
-                      ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}_invalid    ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST_LOGIN${_CURRENT_TIMESTAMP_}    NO                   123               NO                      NO                           NO                       NO                0          ${ENDED_NOK}
+                      TEST     ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}_invalid    ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST_LOGIN     NO                   123               NO                      NO                           NO                       NO                0          ${ENDED_NOK}
 
 4. Fail with invalid JDBC Driver Jar URI
-                      ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}_invalid        ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST_LOGIN${_CURRENT_TIMESTAMP_}    NO                   123               NO                      NO                           NO                       NO                0          ${ENDED_NOK}
+                      TEST     ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}_invalid        ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST_LOGIN     NO                   123               NO                      NO                           NO                       NO                0          ${ENDED_NOK}
 
 5. Fail with invalid JDBC Driver Class
-                      ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}_invalid    ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST_LOGIN${_CURRENT_TIMESTAMP_}    NO                   123               NO                      NO                           NO                       NO                0          ${ENDED_NOK}
+                      TEST     ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}_invalid    ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST_LOGIN     NO                   123               NO                      NO                           NO                       NO                0          ${ENDED_NOK}
 
 6. Fail with invalid DB Name
-                      ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}_invalid    TEST_LOGIN${_CURRENT_TIMESTAMP_}    NO                   123               NO                      NO                           NO                       NO                0          ${ENDED_NOK}
+                      TEST     ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}_invalid    TEST_LOGIN     NO                   123               NO                      NO                           NO                       NO                0          ${ENDED_NOK}
 
 7. Fail with invalid Password with Check_Password_Policy = YES
-                      ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST_LOGIN${_CURRENT_TIMESTAMP_}    NO                   123               NO                      NO                           NO                       NO                0          ${ENDED_NOK}
+                      TEST     ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST_LOGIN     NO                   123               NO                      NO                           NO                       NO                0          ${ENDED_NOK}
 
-8. Fail with invalid Member Name
-                      ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST_LOGIN${_CURRENT_TIMESTAMP_}    NO                   123               NO                      NO                           NO                       NO                0          ${ENDED_NOK}
+8. Fail with case LOGIN is existed with Fail_If_Exists = YES
+                      TEST     ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            DEV            NO                   123               NO                      NO                           NO                       NO                1          ${ENDED_OK}
+                      FINAL    ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            DEV            NO                   123               NO                      NO                           NO                       YES               0          ${ENDED_NOK}
 
-9. Fail with case LOGIN is existed with Fail_If_Exists = YES
-                      ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            DEV                                 NO                   123               NO                      NO                           NO                       YES               0          ${ENDED_NOK}
+9. Fail with case create LOGIN with Password_Must_Change = YES & Check_Password_Expiration = NO
+                      TEST     ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST_LOGIN     NO                   123               YES                     NO                           YES                      NO                0          ${ENDED_NOK}
 
-10. Fail with case create LOGIN with Password_Must_Change = YES & Check_Password_Expiration = NO
-                      ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST_LOGIN${_CURRENT_TIMESTAMP_}    NO                   123               YES                     NO                           YES                      NO                0          ${ENDED_NOK}
+10. Fail with case create LOGIN with Password_Must_Change = YES & Check_Password_Policy = NO
+                      TEST     ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST_LOGIN     NO                   123               YES                     YES                          NO                       NO                0          ${ENDED_NOK}
 
-11. Fail with case create LOGIN with Password_Must_Change = YES & Check_Password_Policy = NO
-                      ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST_LOGIN${_CURRENT_TIMESTAMP_}    NO                   123               YES                     YES                          NO                       NO                0          ${ENDED_NOK}
+11. Fail with case create LOGIN with Password_Must_Change = YES & Check_Password_Policy = NO & Check_Password_Expiration = NO
+                      TEST     ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST_LOGIN     NO                   123               YES                     NO                           NO                       NO                0          ${ENDED_NOK}
 
-12. Fail with case create LOGIN with Password_Must_Change = YES & Check_Password_Policy = NO & Check_Password_Expiration = NO
-                      ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST_LOGIN${_CURRENT_TIMESTAMP_}    NO                   123               YES                     NO                           NO                       NO                0          ${ENDED_NOK}
-
-13. Fail with case create LOGIN with Check_Password_Policy = NO & Check_Password_Expiration = YES
-                      ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST_LOGIN${_CURRENT_TIMESTAMP_}    NO                   123               NO                      YES                          NO                       NO                0          ${ENDED_NOK}
+12. Fail with case create LOGIN with Check_Password_Policy = NO & Check_Password_Expiration = YES
+                      TEST     ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST_LOGIN     NO                   123               NO                      YES                          NO                       NO                0          ${ENDED_NOK}
 
 *** Keywords ***
 Create Login
-    [Arguments]    ${username}    ${password}    ${jdbc_conn}    ${jdbc_jar}    ${jdbc_class}    ${interval}
-    ...    ${retries}    ${db_name}    ${login_name}    ${use_win_login}    ${login_pass}    ${pass_must_change}
-    ...    ${check_pass_exp}    ${check_pass_policy}    ${fail_if_exists}    ${returnCode}    ${returnStatus}
+    [Arguments]    ${FLAG}    ${username}    ${password}    ${jdbc_conn}    ${jdbc_jar}    ${jdbc_class}
+    ...    ${interval}    ${retries}    ${db_name}    ${login_name}    ${use_win_login}    ${login_pass}
+    ...    ${pass_must_change}    ${check_pass_exp}    ${check_pass_policy}    ${fail_if_exists}    ${returnCode}    ${returnStatus}
     ${_CURRENT_TIMESTAMP_}    Get Time    epoch
+    Run Keyword If    '${FLAG}' == 'TEST'    Set Suite Variable    ${login_with_timestamp}    ${login_name}${_CURRENT_TIMESTAMP_}
     Init Action    ${ACTION_CREATE_LOGIN}
     Action Set    ${PRT_CREATE_LOGIN_USERNAME}    ${username}
     Action Set    ${PRT_CREATE_LOGIN_PASSWORD}    ${password}
@@ -62,7 +61,7 @@ Create Login
     Action Set    ${PRT_CREATE_LOGIN_CONN_INTRVL}    ${interval}
     Action Set    ${PRT_CREATE_LOGIN_CONN_RETRY}    ${retries}
     Action Set    ${PRT_CREATE_LOGIN_DATABASE_NAME}    ${db_name}
-    Action Set    ${PRT_CREATE_LOGIN_LOGIN_NAME}    ${login_name}
+    Action Set    ${PRT_CREATE_LOGIN_LOGIN_NAME}    ${login_with_timestamp}
     Action Set    ${PRT_CREATE_LOGIN_USE_WIN_LOGIN}    ${use_win_login}
     Action Set    ${PRT_CREATE_LOGIN_LOGIN_PWD}    ${login_pass}
     Action Set    ${PRT_CREATE_LOGIN_PWD_MUST_CHNG}    ${pass_must_change}
@@ -73,6 +72,7 @@ Create Login
     Action Report Should Be Found
     Action Return Code Should Not Equal    ${returnCode}
     Action Return Status Should Be    ${returnStatus}
+    Set suite variable    ${login_with_timestamp}    ${login_name}${_CURRENT_TIMESTAMP_}
 
 Setup_suite
     [Documentation]    TODO: Write all steps need prepare before testing here
