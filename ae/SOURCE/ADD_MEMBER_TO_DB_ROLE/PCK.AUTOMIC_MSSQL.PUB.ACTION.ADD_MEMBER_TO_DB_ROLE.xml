@@ -283,8 +283,8 @@ PCK.AUTOMIC_MSSQL.PUB.ACTION.ADD_MEMBER_TO_DB_ROLE
 = General description =
 Adds a member (=database user, database role, Windows login, or Windows group) to a database role in the current database.
 = Inputs =
-Username: Username used to authenticate with the DB server.
-Password: Password used to authenticate with the DB server.
+SQL User: Username used to authenticate with the DB server.
+SQL Password: Password used to authenticate with the DB server.
 JDBC Connection String: JDBC connection string (E.g.:jdbc:sqlserver://myServer:1433;databaseName=myDB)
 JDBC Driver JAR: URI pointing to the vendor-specific JDBC jar-file.
 JDBC Driver Class: Name of the class to load when initializing the JDBC connection. E.g "com.microsoft.sqlserver.jdbc.SQLServerDriver"
@@ -295,7 +295,9 @@ Role name: Is the name of the database role in the current database. role is a s
 Member name: Is the security account being added to the role. security_account is a sysname, with no default. security_account can be a database user, database role, Windows login, or Windows group.
  
 = Behavior =
-Adds a member (=database user, database role, Windows login, or Windows group) to a database role in the current database.Adds a member (=database user, database role, Windows login, or Windows group) to a database role in the current database.
+Return 0 if member is added to database role successfully.
+Return 999 (with SQL exception) if failed because of any exception getting from SQL server.
+Return 4 for other failure
 = Outputs =
 (none)
 = Rollback =
