@@ -1,0 +1,60 @@
+*** Settings ***
+Documentation     NOTE:
+...               add note here
+Suite Setup       Setup_suite
+Force Tags        windows
+Test Template     Add Member To DB Role
+Resource          ../../resources/keywords.txt
+Resource          ../../resources/context.txt
+
+*** Test Cases ***    Username                   Password                   JDBC Connection String     JDBC Driver JAR URI    JDBC Driver Class    Connection Interval    No of Connection Retries    DB Name                Role Name                Member Name        RETCODE    STATUS
+1. Fail with invalid username
+                      ${_DB_USERNAME}_invalid    ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            ${_ROLE_NAME}            TEST               0          ${ENDED_NOK}
+
+2. Fail with invalid password
+                      ${_DB_USERNAME}            ${_DB_PASSWORD}_invalid    ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            ${_ROLE_NAME}            TEST               0          ${ENDED_NOK}
+
+3. Fail with invalid jdbc connection string
+                      ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}_invalid    ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            ${_ROLE_NAME}            TEST               0          ${ENDED_NOK}
+
+4. Fail with invalid JDBC Driver Jar URI
+                      ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}_invalid        ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            ${_ROLE_NAME}            TEST               0          ${ENDED_NOK}
+
+5. Fail with invalid JDBC Driver Class
+                      ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}_invalid    ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            ${_ROLE_NAME}            TEST               0          ${ENDED_NOK}
+
+6. Fail with invalid DB Name
+                      ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}_invalid    ${_ROLE_NAME}            TEST               0          ${ENDED_NOK}
+
+7. Fail with invalid Role Name
+                      ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            ${_ROLE_NAME}_invalid    TEST               0          ${ENDED_NOK}
+
+8. Fail with invalid Member Name
+                      ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            ${_ROLE_NAME}            _invalid           0          ${ENDED_NOK}
+
+9. Fail with case user does not exist in the target DB
+                      TEST                       TEST                       ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   master                 ${_ROLE_NAME}            ${_DB_USERNAME}    0          ${ENDED_NOK}
+
+*** Keywords ***
+Add Member To DB Role
+    [Arguments]    ${username}    ${password}    ${jdbc_conn}    ${jdbc_jar}    ${jdbc_class}    ${interval}
+    ...    ${retries}    ${db_name}    ${role_name}    ${member_name}    ${returnCode}    ${returnStatus}
+    Init Action    ${ACTION_ADD_MEMBER_TO_DB_ROLE}
+    Action Set    ${PRT_ADD_MEMBER_TO_DB_ROLE_USERNAME}    ${username}
+    Action Set    ${PRT_ADD_MEMBER_TO_DB_ROLE_PASSWORD}    ${password}
+    Action Set    ${PRT_ADD_MEMBER_TO_DB_ROLE_JDBC_CONN}    ${jdbc_conn}
+    Action Set    ${PRT_ADD_MEMBER_TO_DB_ROLE_DRIVER_JAR}    ${jdbc_jar}
+    Action Set    ${PRT_ADD_MEMBER_TO_DB_ROLE_DRIVER_CLASS}    ${jdbc_class}
+    Action Set    ${PRT_ADD_MEMBER_TO_DB_ROLE_CONN_INTRVL}    ${interval}
+    Action Set    ${PRT_ADD_MEMBER_TO_DB_ROLE_CONN_RETRY}    ${retries}
+    Action Set    ${PRT_ADD_MEMBER_TO_DB_ROLE_DATABASE_NAME}    ${db_name}
+    Action Set    ${PRT_ADD_MEMBER_TO_DB_ROLE_ROLE_NAME}    ${role_name}
+    Action Set    ${PRT_ADD_MEMBER_TO_DB_ROLE_MEMBER_NAME}    ${member_name}
+    Action Execute
+    Action Report Should Be Found
+    Action Return Code Should Not Equal    ${returnCode}
+    Action Return Status Should Be    ${returnStatus}
+
+Setup_suite
+    [Documentation]    TODO: Write all steps need prepare before testing here
+    Log    Start testing for Add Member To DB Role Template

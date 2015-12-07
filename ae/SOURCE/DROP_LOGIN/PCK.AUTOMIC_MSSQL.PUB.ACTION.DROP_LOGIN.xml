@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="11.0.0">
 <JOBP AllowExternal="1" name="PCK.AUTOMIC_MSSQL.PUB.ACTION.DROP_LOGIN">
 <XHEADER state="1">
-<Title/>
+<Title>Drop Login</Title>
 <ArchiveKey1/>
 <ArchiveKey2/>
 <Active>1</Active>
@@ -56,10 +56,11 @@
 <PROMPTSET name="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_LOGIN">
 <PRPTBOX promptset="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_LOGIN">
 <UC4RB_DB_CONN_INTRVLs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_CONN_INTRVL#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_LOGIN">10</UC4RB_DB_CONN_INTRVLs.00>
+<UC4RB_DB_CONN_RETRYs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_CONN_RETRY#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_LOGIN">5</UC4RB_DB_CONN_RETRYs.00>
 <UC4RB_DB_DRIVER_CLASSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_CLASS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_LOGIN"/>
 <UC4RB_DB_DRIVER_JARs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_JAR#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_LOGIN"/>
 <UC4RB_DB_DROP_LOGIN_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DROP_LOGIN_NAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_LOGIN"/>
-<UC4RB_DB_JDBC_CONN_STRINGs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_JDBC_CONN_STRING#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_LOGIN"/>
+<UC4RB_DB_JDBC_CONNs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_JDBC_CONN#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_LOGIN"/>
 <UC4RB_DB_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_PASSWORD#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_LOGIN">--10</UC4RB_DB_PASSWORDs.00>
 <UC4RB_DB_USERNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_USERNAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_LOGIN"/>
 <UC4RB_FAIL_IF_NOT_EXISTSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_FAIL_IF_NOT_EXISTS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_LOGIN">NO</UC4RB_FAIL_IF_NOT_EXISTSs.00>
@@ -118,10 +119,11 @@
 <PROMPTSET name="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_LOGIN">
 <PRPTBOX promptset="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_LOGIN">
 <UC4RB_DB_CONN_INTRVLs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_CONN_INTRVL#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_LOGIN">10</UC4RB_DB_CONN_INTRVLs.00>
+<UC4RB_DB_CONN_RETRYs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_CONN_RETRY#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_LOGIN">5</UC4RB_DB_CONN_RETRYs.00>
 <UC4RB_DB_DRIVER_CLASSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_CLASS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_LOGIN"/>
 <UC4RB_DB_DRIVER_JARs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_JAR#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_LOGIN"/>
 <UC4RB_DB_DROP_LOGIN_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DROP_LOGIN_NAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_LOGIN"/>
-<UC4RB_DB_JDBC_CONN_STRINGs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_JDBC_CONN_STRING#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_LOGIN"/>
+<UC4RB_DB_JDBC_CONNs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_JDBC_CONN#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_LOGIN"/>
 <UC4RB_DB_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_PASSWORD#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_LOGIN">--10</UC4RB_DB_PASSWORDs.00>
 <UC4RB_DB_USERNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_USERNAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_LOGIN"/>
 <UC4RB_FAIL_IF_NOT_EXISTSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_FAIL_IF_NOT_EXISTS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_LOGIN">NO</UC4RB_FAIL_IF_NOT_EXISTSs.00>
@@ -166,10 +168,11 @@
 <PROMPTSET name="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_LOGIN">
 <PRPTBOX promptset="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_LOGIN">
 <UC4RB_DB_CONN_INTRVLs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_CONN_INTRVL#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_LOGIN">10</UC4RB_DB_CONN_INTRVLs.00>
+<UC4RB_DB_CONN_RETRYs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_CONN_RETRY#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_LOGIN">5</UC4RB_DB_CONN_RETRYs.00>
 <UC4RB_DB_DRIVER_CLASSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_CLASS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_LOGIN"/>
 <UC4RB_DB_DRIVER_JARs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_JAR#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_LOGIN"/>
 <UC4RB_DB_DROP_LOGIN_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DROP_LOGIN_NAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_LOGIN"/>
-<UC4RB_DB_JDBC_CONN_STRINGs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_JDBC_CONN_STRING#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_LOGIN"/>
+<UC4RB_DB_JDBC_CONNs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_JDBC_CONN#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_LOGIN"/>
 <UC4RB_DB_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_PASSWORD#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_LOGIN">--10</UC4RB_DB_PASSWORDs.00>
 <UC4RB_DB_USERNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_USERNAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_LOGIN"/>
 <UC4RB_FAIL_IF_NOT_EXISTSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_FAIL_IF_NOT_EXISTS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_LOGIN">NO</UC4RB_FAIL_IF_NOT_EXISTSs.00>
@@ -201,7 +204,7 @@
 <MaxRetCode>0</MaxRetCode>
 <MrcExecute/>
 <MrcElseE>0</MrcElseE>
-<FcstStatus>0|U00000000 ??? ""</FcstStatus>
+<FcstStatus>0| |</FcstStatus>
 
 <ErtMethodDef>1</ErtMethodDef>
 <ErtMethodFix>0</ErtMethodFix>
@@ -271,7 +274,37 @@
 <MSCRI/>
 </SCRIPT>
 <DOCU_Docu state="1" type="text">
-<DOC><![CDATA[Drops a login from the DB server.]]></DOC>
+<DOC><![CDATA[= RB name =
+PCK.AUTOMIC_MSSQL.PUB.ACTION.DROP_LOGIN
+ 
+= General description =
+Drops a login from the DB server
+= Inputs =
+SQL User: Username used to authenticate with the DB server.
+SQL Password: Password used to authenticate with the DB server.
+JDBC Connection String: JDBC connection string (E.g.:jdbc:sqlserver://myServer:1433;databaseName=myDB)
+JDBC Driver JAR: URI pointing to the vendor-specific JDBC jar-file.
+JDBC Driver Class: Name of the class to load when initializing the JDBC connection. E.g "com.microsoft.sqlserver.jdbc.SQLServerDriver"
+Connection Interval: Time interval in seconds during which ARATools.jar tries to establish a connection to the database.
+Number of Connection Retries: The number that is specified in this parameter determines how often ARATools.jar tries to connect to the database. After the nth failure, the ARATools ends with a failure code.
+Login to drop: Specifies the name of the login to be dropped.
+Fail if not exists: Fails if Login object does not exist.
+ 
+= Behavior =
+Return 0 if login is dropped successfully.
+Return 999 (with SQL exception) if failed because of any exception getting from SQL server.
+If the login is not already existed and
+"Fail if not exists" flag set to YES: Return 12 with properly exception
+"Fail if not exists" flag set to NO: Return 0 but still message the object existed
+Return 4 for other failure
+= Outputs =
+(none)
+= Rollback =
+(none)
+= Logging =
+(none)
+= Example =
+(none)]]></DOC>
 </DOCU_Docu>
 </JOBP>
 </uc-export>
