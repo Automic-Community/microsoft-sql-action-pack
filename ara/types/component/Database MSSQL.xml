@@ -7,6 +7,9 @@
 	<Properties> 
 
 		<Group name="connectivity" displayName="Management Connection">
+			<Property name="database_name" displayName="Database Name" mode="EDITABLE" type="SingleLineText">
+				<Description>Name of the database.</Description>
+			</Property>
             <Property name="jdbc_connection_string" type="SingleLineText" mode="EDITABLE" displayName="JDBC Connection String">
 				<Defaultvalue>jdbc:sqlserver://[insert-host]:[insert-port];databaseName=[insert-DB-name]</Defaultvalue>
 				<Description>JDBC connection string. E.g.: jdbc:sqlserver://myServer:1433;databaseName=myDB</Description>
@@ -83,6 +86,10 @@
             <Value>{@target/custom/password}</Value>
             <Description>Password used to authenticate with the Database server</Description>
         </Property>
+		<Property name="/mssql/name/database_name" protected="false" highlighted="false" type="SingleLineText" allowCustomValues="false" caption="Database Name">
+		  <Value>{/custom/database_name}</Value>
+		  <Description>Name of the database.</Description>
+		</Property>
 	
 		<!-- FILESPECS -->
 		<Property name="/mssql/spec/file_spec" highlighted="false">
