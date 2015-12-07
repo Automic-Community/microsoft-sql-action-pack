@@ -15,7 +15,10 @@ You can for example create new databases, backups etc. You can also execute arbi
 
 The runbook functions use standard SQL queries executed over a JDBC connection to the database. The following system was tested:
 
+* MSSQL on Windows Server 2005
+* MSSQL on Windows Server 2008
 * MSSQL on Windows Server 2008 R2
+* MSSQL on Windows Server 2012
 
 =Setup=
 
