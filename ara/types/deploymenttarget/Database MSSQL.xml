@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Version: 5.0 -->
 <DeploymentTargetType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Deployment_Target.xsd">
-	<Name>MSSQL</Name>
+	<Name>Database MSSQL</Name>
 
   	<Properties>
 
