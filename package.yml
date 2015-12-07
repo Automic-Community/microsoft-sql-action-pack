@@ -8,11 +8,11 @@ binaries:
   - object: RESOURCES/PCK.AUTOMIC_MSSQL.PRV.CUSTOM_TYPES
     timestamp: disabled
     resources: 
-    - name: DEPLOYMENTTARGET#MSSQL#1
+    - name: DEPLOYMENTTARGET#DATABASE_MSSQL#1
       type: TEXT
-      path: ara/types/deploymenttarget/MSSQL.xml
+      path: ara/types/deploymenttarget/Database MSSQL.xml
       version: 6.0
-    - name: COMPONENT#MSSQL#2
+    - name: COMPONENT#DATABASE_MSSQL#2
       type: TEXT
-      path: ara/types/component/MSSQL.xml
+      path: ara/types/component/Database MSSQL.xml
       version: 6.0
