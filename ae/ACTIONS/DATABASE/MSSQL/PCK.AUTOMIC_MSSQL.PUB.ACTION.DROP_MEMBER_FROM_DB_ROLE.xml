@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="11.0.0">
 <JOBP AllowExternal="1" name="PCK.AUTOMIC_MSSQL.PUB.ACTION.DROP_MEMBER_FROM_DB_ROLE">
 <XHEADER state="1">
-<Title/>
+<Title>Drop Member from Database Role</Title>
 <ArchiveKey1/>
 <ArchiveKey2/>
 <Active>1</Active>

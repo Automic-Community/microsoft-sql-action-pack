@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="11.0.0">
 <JOBP AllowExternal="1" name="PCK.AUTOMIC_MSSQL.PUB.ACTION.DROP_LOGIN">
 <XHEADER state="1">
-<Title/>
+<Title>Drop Login</Title>
 <ArchiveKey1/>
 <ArchiveKey2/>
 <Active>1</Active>
@@ -287,7 +287,6 @@ JDBC Driver JAR: URI pointing to the vendor-specific JDBC jar-file.
 JDBC Driver Class: Name of the class to load when initializing the JDBC connection. E.g "com.microsoft.sqlserver.jdbc.SQLServerDriver"
 Connection Interval: Time interval in seconds during which ARATools.jar tries to establish a connection to the database.
 Number of Connection Retries: The number that is specified in this parameter determines how often ARATools.jar tries to connect to the database. After the nth failure, the ARATools ends with a failure code.
-DB name: Name of the database to connect to. E.g master
 Login to drop: Specifies the name of the login to be dropped.
 Fail if not exists: Fails if Login object does not exist.
  

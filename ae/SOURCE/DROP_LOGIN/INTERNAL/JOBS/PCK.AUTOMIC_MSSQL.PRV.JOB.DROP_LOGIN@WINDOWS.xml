@@ -116,6 +116,9 @@
 </PRE_SCRIPT>
 <SCRIPT mode="1" state="1">
 <MSCRI><![CDATA[@echo off
+setlocal enabledelayedexpansion
+:INC PCK.AUTOMIC_JDBC.PRV.INCLUDE.ATTACH_RESOURCES
+
 :INC PCK.AUTOMIC_MSSQL.PRV.INCLUDE.DROP_LOGIN_LOGGING_PARAMS
 !drops a given login object
 :SET &UC4RB_SQL_CONTENT# = "USE master; GO "

@@ -117,6 +117,8 @@
 <SCRIPT mode="1" state="1">
 <MSCRI><![CDATA[@echo off
 setlocal enabledelayedexpansion
+:INC PCK.AUTOMIC_JDBC.PRV.INCLUDE.ATTACH_RESOURCES
+
 :INC PCK.AUTOMIC_MSSQL.PRV.INCLUDE.RESTORE_DB_FROM_BACKUP_PARAMS
 !restores a backup of a given database with the given options
 :SET &UC4RB_SQL_CONTENT# = ""

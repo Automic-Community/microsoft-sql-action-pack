@@ -116,6 +116,9 @@
 </PRE_SCRIPT>
 <SCRIPT mode="1" state="1">
 <MSCRI><![CDATA[@echo off
+setlocal enabledelayedexpansion
+:INC PCK.AUTOMIC_JDBC.PRV.INCLUDE.ATTACH_RESOURCES
+
 :INC PCK.AUTOMIC_MSSQL.PRV.INCLUDE.CREATE_LOGIN_LOGGING_PARAMS
 
 !creates a database login with the given options

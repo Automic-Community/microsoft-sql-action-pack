@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-15" standalone="no"?><uc-export clientvers="11.0.0">
 <JOBP AllowExternal="1" name="PCK.AUTOMIC_MSSQL.PUB.ACTION.DROP_DB_USER">
 <XHEADER state="1">
-<Title/>
+<Title>Drop Database User</Title>
 <ArchiveKey1/>
 <ArchiveKey2/>
 <Active>1</Active>
@@ -57,14 +57,14 @@
 <PRPTBOX promptset="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER">
 <UC4RB_DB_CONN_INTRVLs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_CONN_INTRVL#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER">10</UC4RB_DB_CONN_INTRVLs.00>
 <UC4RB_DB_CONN_RETRYs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_CONN_RETRY#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER">5</UC4RB_DB_CONN_RETRYs.00>
-<UC4RB_DB_DATABASE_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DATABASE_NAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
+<UC4RB_DB_DATABASE_NAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DATABASE_NAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
 <UC4RB_DB_DRIVER_CLASSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_CLASS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
 <UC4RB_DB_DRIVER_JARs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_JAR#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
-<UC4RB_DB_DROP_USER_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DROP_USER_NAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
+<UC4RB_DB_DROP_USER_NAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DROP_USER_NAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
 <UC4RB_DB_JDBC_CONNs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_JDBC_CONN#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
 <UC4RB_DB_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_PASSWORD#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER">--10</UC4RB_DB_PASSWORDs.00>
 <UC4RB_DB_USERNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_USERNAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
-<UC4RB_FAIL_IF_NOT_EXISTSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_FAIL_IF_NOT_EXISTS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER">NO</UC4RB_FAIL_IF_NOT_EXISTSs.00>
+<UC4RB_FAIL_IF_NOT_EXISTSs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_FAIL_IF_NOT_EXISTS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER">NO</UC4RB_FAIL_IF_NOT_EXISTSs.00>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -121,14 +121,14 @@
 <PRPTBOX promptset="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER">
 <UC4RB_DB_CONN_INTRVLs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_CONN_INTRVL#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER">10</UC4RB_DB_CONN_INTRVLs.00>
 <UC4RB_DB_CONN_RETRYs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_CONN_RETRY#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER">5</UC4RB_DB_CONN_RETRYs.00>
-<UC4RB_DB_DATABASE_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DATABASE_NAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
+<UC4RB_DB_DATABASE_NAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DATABASE_NAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
 <UC4RB_DB_DRIVER_CLASSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_CLASS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
 <UC4RB_DB_DRIVER_JARs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_JAR#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
-<UC4RB_DB_DROP_USER_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DROP_USER_NAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
+<UC4RB_DB_DROP_USER_NAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DROP_USER_NAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
 <UC4RB_DB_JDBC_CONNs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_JDBC_CONN#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
 <UC4RB_DB_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_PASSWORD#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER">--10</UC4RB_DB_PASSWORDs.00>
 <UC4RB_DB_USERNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_USERNAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
-<UC4RB_FAIL_IF_NOT_EXISTSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_FAIL_IF_NOT_EXISTS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER">NO</UC4RB_FAIL_IF_NOT_EXISTSs.00>
+<UC4RB_FAIL_IF_NOT_EXISTSs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_FAIL_IF_NOT_EXISTS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER">NO</UC4RB_FAIL_IF_NOT_EXISTSs.00>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -171,14 +171,14 @@
 <PRPTBOX promptset="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER">
 <UC4RB_DB_CONN_INTRVLs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_CONN_INTRVL#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER">10</UC4RB_DB_CONN_INTRVLs.00>
 <UC4RB_DB_CONN_RETRYs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_CONN_RETRY#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER">5</UC4RB_DB_CONN_RETRYs.00>
-<UC4RB_DB_DATABASE_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DATABASE_NAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
+<UC4RB_DB_DATABASE_NAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DATABASE_NAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
 <UC4RB_DB_DRIVER_CLASSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_CLASS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
 <UC4RB_DB_DRIVER_JARs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DRIVER_JAR#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
-<UC4RB_DB_DROP_USER_NAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DROP_USER_NAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
+<UC4RB_DB_DROP_USER_NAMEs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_DROP_USER_NAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
 <UC4RB_DB_JDBC_CONNs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_JDBC_CONN#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
 <UC4RB_DB_PASSWORDs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_PASSWORD#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER">--10</UC4RB_DB_PASSWORDs.00>
 <UC4RB_DB_USERNAMEs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_DB_USERNAME#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER"/>
-<UC4RB_FAIL_IF_NOT_EXISTSs.00 ReadFromTable="OPSE" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_FAIL_IF_NOT_EXISTS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER">NO</UC4RB_FAIL_IF_NOT_EXISTSs.00>
+<UC4RB_FAIL_IF_NOT_EXISTSs.00 ReadFromTable="OPUD" altview="0" haslist="0" msginsert="" msgnr="" promptname="UC4RB_FAIL_IF_NOT_EXISTS#" promptsetname="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER">NO</UC4RB_FAIL_IF_NOT_EXISTSs.00>
 </PRPTBOX>
 </PROMPTSET>
 </node>
@@ -247,7 +247,11 @@
 </node>
 <node content="1" id="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER" name="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER" parent="PRPTS" type="PROMPTSET">
 <PROMPTSET name="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER" ontop="1">
-<PRPTBOX promptset="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER" prptmode="1"/>
+<PRPTBOX promptset="PCK.AUTOMIC_MSSQL.PRV.PROMPTSET.DROP_DB_USER" prptmode="1">
+<UC4RB_DB_DROP_USER_NAMEs.00 altview="0" haslist="0"/>
+<UC4RB_DB_DATABASE_NAMEs.00 altview="0" haslist="0"/>
+<UC4RB_FAIL_IF_NOT_EXISTSs.00 altview="0" haslist="0">NO</UC4RB_FAIL_IF_NOT_EXISTSs.00>
+</PRPTBOX>
 </PROMPTSET>
 </node>
 <node content="1" id="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT" name="PCK.ITPA_SHARED.PRV.PROMPTSET.OVERWRITE_AGENT" parent="PRPTS" type="PROMPTSET">
@@ -291,9 +295,7 @@ JDBC Driver Class: Name of the class to load when initializing the JDBC connecti
 Connection Interval: Time interval in seconds during which ARATools.jar tries to establish a connection to the database.
 Number of Connection Retries: The number that is specified in this parameter determines how often ARATools.jar tries to connect to the database. After the nth failure, the ARATools ends with a failure code.
 DB name: Name of the database to connect to and from which the user shell be dropped. E.g master
-Name of the user to create: Specifies the name by which the user is identified inside this database. user_name is a sysname. It can be up to 128 characters long
-Map user to login name: Specifies the SQL Server login for which the database user is being created. login_name must be a valid login in the server. When this SQL Server login enters the database it will acquire the name and ID of the database user that is being created. If empty, the user is created without mapping him/her to an existing login.
-Default schema: Specifies the first schema that will be searched by the server when it resolves the names of objects for this database user.
+User to drop: Specifies the name by which the user is identified inside this database.
 Fail if not exists: Fail if User object does not exist.
 = Behavior =
 Removes a user from a database. 
