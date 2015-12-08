@@ -7,7 +7,7 @@ Test Template     Rename a database
 Resource          ../../resources/keywords.txt
 Resource          ../../resources/context.txt
 
-*** Test Cases ***    Username           Password           JDBC Connection String    JDBC Driver JAR URI    JDBC Driver Class    Connection Interval    No of Connection Retries    Old DB Name	New DB Name    			Fail if old DB not exits	Fail if new DB exits    RETCODE    STATUS
+*** Test Cases ***    Username           Password           JDBC Connection String    JDBC Driver JAR URI    JDBC Driver Class    Connection Interval    No of Connection Retries    Old DB Name		New DB Name    			Fail if old DB not exits	Fail if new DB exits    RETCODE    STATUS
 1. Normal case success with only required fields
                       ${_DB_USERNAME}    ${_DB_PASSWORD}    ${_CONN_STRING}           ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}        ${_DB_NAME}_NEW		NO							NO	                    0          ${ENDED_OK}
 
