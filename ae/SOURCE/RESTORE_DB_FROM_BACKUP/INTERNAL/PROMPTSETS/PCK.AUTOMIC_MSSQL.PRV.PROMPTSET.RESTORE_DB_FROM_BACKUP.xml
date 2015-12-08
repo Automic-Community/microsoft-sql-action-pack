@@ -178,7 +178,8 @@
         <entry name="tooltip">The number that is specified in this parameter determines how often ARATools.jar tries to connect to the database. After the nth failure, the ARATools ends with a failure code.</entry>
         <entry name="modifiable">1</entry>
         <entry name="customfield"/>
-      <entry name="initvalue">0</entry></properties>
+      <entry name="initvalue">0</entry>
+         </properties>
     </integer><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_DB_RESTORE_DB_NAMEs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Restore DB name" tooltip="name of the database to restore" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
          
          <properties>
@@ -207,11 +208,11 @@
             <entry name="onchangereset"/>
             <entry name="resetable">1</entry>
          </properties>
-      </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_DB_RESTORE_FILESs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Files to include in backup" tooltip="Specifies the name of a logical file to include in a RESTORE" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+      </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_DB_RESTORE_FILESs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Files to include in restore" tooltip="Specifies the name of a logical file to include in a RESTORE" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
          
          <properties>
             <entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
-            <entry name="text">Files to include in backup</entry>
+            <entry name="text">Files to include in restore</entry>
             <entry name="multiselect">0</entry>
             <entry name="separator">;</entry>
             <entry name="len"/>
@@ -235,11 +236,11 @@
             <entry name="onchangereset"/>
             <entry name="resetable">1</entry>
          </properties>
-      </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_DB_RESTORE_FILEGROUPSs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Filegroups to include in the backup" tooltip="Specifies the name of a logical filegroups to include in a RESTORE" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+      </text><text alt="1" enabled="1" fill="b" focus="0" id="UC4RB_DB_RESTORE_FILEGROUPSs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Filegroups to include in the restore" tooltip="Specifies the name of a logical filegroups to include in a RESTORE" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
          
          <properties>
             <entry listparam="C" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
-            <entry name="text">Filegroups to include in the backup</entry>
+            <entry name="text">Filegroups to include in the restore</entry>
             <entry name="multiselect">0</entry>
             <entry name="separator">;</entry>
             <entry name="len"/>

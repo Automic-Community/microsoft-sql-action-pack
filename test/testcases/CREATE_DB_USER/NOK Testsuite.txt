@@ -30,7 +30,7 @@ Resource          ../../resources/context.txt
                       TEST     ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST_CREATE_DB_USER       _invalid                  ${EMPTY}          NO                0          ${ENDED_NOK}
 
 8. Fail with case DB User is existed and Fail If Exists = YES
-                      TEST     ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            ${_DB_USERNAME}           TEST                      ${EMPTY}          YES               1          ${ENDED_OK}
+                      TEST     ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            ${_DB_USERNAME}           TEST                      ${EMPTY}          YES               1          ${ENDED_NOK}
                       FINAL    ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            ${_DB_USERNAME}           TEST                      ${EMPTY}          YES               0          ${ENDED_NOK}
 
 *** Keywords ***

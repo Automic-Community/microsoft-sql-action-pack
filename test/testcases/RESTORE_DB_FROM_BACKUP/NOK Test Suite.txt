@@ -1,0 +1,65 @@
+*** Settings ***
+Documentation     NOTE:
+...               add note here
+Suite Setup       Setup_suite
+Force Tags        windows
+Test Template     Restore a database
+Resource          ../../resources/keywords.txt
+Resource          ../../resources/context.txt
+
+*** Test Cases ***    Username    Password    JDBC Connection String                JDBC Driver JAR URI    JDBC Driver Class    Connection Interval    No of Connection Retries    Restore DB Name    Files to restore    File groups to restore    Disk sources                Tape sources    Verify checksum    Stop on error    File number in Backup set    Name of media    Roll back uncommitted transactions    Partial restore    Replace existing database    Restart an interrupted restore    Rewind tape    Unload tape    RETCODE    STATUS
+Wrong User Input Should Fail
+                      a           at          jdbc:sqlserver://VVNARASQL04:1433;    ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ATDB               ${EMPTY}            ${EMPTY}                  C:\\temp\\at20151207.bck    ${EMPTY}        NO                 YES              1                            ${EMPTY}         YES                                   NO                 YES                          NO                                YES            YES            0          ${ENDED_NOK}
+
+Wrong Password Input Should Fail
+                      at          b           jdbc:sqlserver://VVNARASQL04:1433;    ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ATDB               ${EMPTY}            ${EMPTY}                  C:\\temp\\at20151207.bck    ${EMPTY}        NO                 YES              1                            ${EMPTY}         YES                                   NO                 YES                          NO                                YES            YES            0          ${ENDED_NOK}
+
+Wrong JDBC Conn String Input Should Fail
+                      at          at          c                                     ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ATDB               ${EMPTY}            ${EMPTY}                  C:\\temp\\at20151207.bck    ${EMPTY}        NO                 YES              1                            ${EMPTY}         YES                                   NO                 YES                          NO                                YES            YES            0          ${ENDED_NOK}
+
+Wrong Jar UI Input Should Fail
+                      at          at          jdbc:sqlserver://VVNARASQL04:1433;    d                      ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ATDB               ${EMPTY}            ${EMPTY}                  C:\\temp\\at20151207.bck    ${EMPTY}        NO                 YES              1                            ${EMPTY}         YES                                   NO                 YES                          NO                                YES            YES            0          ${ENDED_NOK}
+
+Wrong JDBC Driver Class Input Should Fail
+                      at          at          jdbc:sqlserver://VVNARASQL04:1433;    ${_JAR}                e                    ${_INTRVL}             ${_RETRY}                   ATDB               ${EMPTY}            ${EMPTY}                  C:\\temp\\at20151207.bck    ${EMPTY}        NO                 YES              1                            ${EMPTY}         YES                                   NO                 YES                          NO                                YES            YES            0          ${ENDED_NOK}
+
+Wrong Restore DB Input Should Fail
+                      at          at          jdbc:sqlserver://VVNARASQL04:1433;    ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ATDB               $p3ci@l N@m3        ${EMPTY}                  C:\\temp\\at20151207.bck    ${EMPTY}        NO                 YES              1                            ${EMPTY}         YES                                   NO                 YES                          NO                                YES            YES            0          ${ENDED_NOK}
+
+*** Keywords ***
+Restore a database
+    [Arguments]    ${username}    ${password}    ${jdbc_conn}    ${jdbc_jar}    ${jdbc_class}    ${interval}
+    ...    ${retries}    ${db_name}    ${file_to_restore}    ${file_group_to_restore}    ${disk_sources}    ${tape_sources}
+    ...    ${verify_checksum}    ${stop_on_error}    ${file_no_in_backupset}    ${name_of_media}    ${rb_uncommitted_trans}    ${partial_restore}
+    ...    ${replace_exist_db}    ${restart_interrupted}    ${tape_rewind}    ${tape_unload}    ${returnCode}    ${returnStatus}
+    Init Action    ${ACTION_RESTORE_DB_FROM_BACKUP}
+    Action Set    ${PRT_RESTORE_DB_USERNAME}    ${username}
+    Action Set    ${PRT_RESTORE_DB_PASSWORD}    ${password}
+    Action Set    ${PRT_RESTORE_DB_JDBC_CONN_STRING}    ${jdbc_conn}
+    Action Set    ${PRT_RESTORE_DB_DRIVER_JAR}    ${jdbc_jar}
+    Action Set    ${PRT_RESTORE_DB_DRIVER_CLASS}    ${jdbc_class}
+    Action Set    ${PRT_RESTORE_DB_CONN_INTRVL}    ${interval}
+    Action Set    ${PRT_RESTORE_DB_CONN_RETRY}    ${retries}
+    Action Set    ${PRT_RESTORE_DB_RESTORE_DB_NAME}    ${db_name}
+    Action Set    ${PRT_RESTORE_DB_RESTORE_FILES}    ${file_to_restore}
+    Action Set    ${PRT_RESTORE_DB_RESTORE_FILEGROUPS}    ${file_group_to_restore}
+    Action Set    ${PRT_RESTORE_DB_RESTORE_FROM_DISKS}    ${disk_sources}
+    Action Set    ${PRT_RESTORE_DB_RESTORE_FROM_TAPES}    ${tape_sources}
+    Action Set    ${PRT_RESTORE_DB_VERIFY_CHECKSUM}    ${verify_checksum}
+    Action Set    ${PRT_RESTORE_DB_STOP_ON_ERROR}    ${stop_on_error}
+    Action Set    ${PRT_RESTORE_DB_BACKUPSET_FILE_NR}    ${file_no_in_backupset}
+    Action Set    ${PRT_RESTORE_DB_MEDIANAME}    ${name_of_media}
+    Action Set    ${PRT_RESTORE_DB_RECOVERY}    ${rb_uncommitted_trans}
+    Action Set    ${PRT_RESTORE_DB_PARTIAL}    ${partial_restore}
+    Action Set    ${PRT_RESTORE_DB_REPLACE}    ${replace_exist_db}
+    Action Set    ${PRT_RESTORE_DB_RESTART}    ${restart_interrupted}
+    Action Set    ${PRT_RESTORE_DB_TAPE_REWIND}    ${tape_rewind}
+    Action Set    ${PRT_RESTORE_DB_TAPE_UNLOAD}    ${tape_unload}
+    Action Execute
+    Action Report Should Be Found
+    Action Return Code Should Not Equal    ${returnCode}
+    Action Return Status Should Be    ${returnStatus}
+
+Setup_suite
+    [Documentation]    TODO: Write all steps need prepare before testing here
+    Log    Start testing for Restore a database

@@ -3,32 +3,38 @@ Documentation     NOTE:
 ...               add note here
 Suite Setup       Setup_suite
 Force Tags        windows
-Test Template     Add Member To DB Role
+Test Template     Create a database
 Resource          ../../resources/keywords.txt
 Resource          ../../resources/context.txt
 
-*** Test Cases ***    Username           Password           JDBC Connection String    JDBC Driver JAR URI    JDBC Driver Class    Connection Interval    No of Connection Retries    DB Name        Role Name        Member Name    RETCODE    STATUS
-1. Success with normal case
-                      ${_DB_USERNAME}    ${_DB_PASSWORD}    ${_CONN_STRING}           ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}    ${_ROLE_NAME}    TEST           0          ${ENDED_OK}
-
-2. Success with case member already is assigned the target role
-                      ${_DB_USERNAME}    ${_DB_PASSWORD}    ${_CONN_STRING}           ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}    ${_ROLE_NAME}    TEST           0          ${ENDED_OK}
+*** Test Cases ***    Username                                    Password              JDBC Connection String    JDBC Driver JAR URI    JDBC Driver Class    Connection Interval    No of Connection Retries    DB Name to create    File spec    Group file spec    Log         Fail if DB exits    Thrustworthy    DB changing    RETCODE    STATUS
+1. Normal case success with only required fields
+                      ${_DB_USERNAME_AT}                          ${_DB_PASSWORD_AT}    ${_CONN_STRING_AT}        ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME_AT}       ${EMPTY}     ${EMPTY}           ${EMPTY}    NO                  OFF             OFF            0          ${ENDED_OK}
+                      #2. Normal case success with full fields
+                      ${_DB_USERNAME_AT}                          ${_DB_PASSWORD_AT}    ${_CONN_STRING_AT}        ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME_AT}       ${EMPTY}     ${EMPTY}           ${EMPTY}    NO                  OFF             OFF            0          ${ENDED_OK}
 
 *** Keywords ***
-Add Member To DB Role
+Create a database
     [Arguments]    ${username}    ${password}    ${jdbc_conn}    ${jdbc_jar}    ${jdbc_class}    ${interval}
-    ...    ${retries}    ${db_name}    ${role_name}    ${member_name}    ${returnCode}    ${returnStatus}
-    Init Action    ${ACTION_ADD_MEMBER_TO_DB_ROLE}
-    Action Set    ${PRT_ADD_MEMBER_TO_DB_ROLE_USERNAME}    ${username}
-    Action Set    ${PRT_ADD_MEMBER_TO_DB_ROLE_PASSWORD}    ${password}
-    Action Set    ${PRT_ADD_MEMBER_TO_DB_ROLE_JDBC_CONN}    ${jdbc_conn}
-    Action Set    ${PRT_ADD_MEMBER_TO_DB_ROLE_DRIVER_JAR}    ${jdbc_jar}
-    Action Set    ${PRT_ADD_MEMBER_TO_DB_ROLE_DRIVER_CLASS}    ${jdbc_class}
-    Action Set    ${PRT_ADD_MEMBER_TO_DB_ROLE_CONN_INTRVL}    ${interval}
-    Action Set    ${PRT_ADD_MEMBER_TO_DB_ROLE_CONN_RETRY}    ${retries}
-    Action Set    ${PRT_ADD_MEMBER_TO_DB_ROLE_DATABASE_NAME}    ${db_name}
-    Action Set    ${PRT_ADD_MEMBER_TO_DB_ROLE_ROLE_NAME}    ${role_name}
-    Action Set    ${PRT_ADD_MEMBER_TO_DB_ROLE_MEMBER_NAME}    ${member_name}
+    ...    ${retries}    ${db_name}    ${file_spec}    ${file_group_spec}    ${log_on_file_spec}    ${fail_if_exists}
+    ...    ${trust_worthy_on}    ${db_changing_on}    ${returnCode}    ${returnStatus}
+    Drop Database    ${_DB_USERNAME_AT}    ${_DB_PASSWORD_AT}    ${_CONN_STRING_AT}    ${_JAR}    ${_CLASS}    ${_INTRVL}
+    ...    ${_RETRY}    ${_DB_NAME_AT}    NO    0    ${ENDED_OK}
+    Init Action    ${ACTION_CREATE_DB}
+    Action Set    ${PRT_CREATE_DB_USERNAME}    ${username}
+    Action Set    ${PRT_CREATE_DB_PASSWORD}    ${password}
+    Action Set    ${PRT_CREATE_DB_JDBC_CONN}    ${jdbc_conn}
+    Action Set    ${PRT_CREATE_DB_DRIVER_JAR}    ${jdbc_jar}
+    Action Set    ${PRT_CREATE_DB_DRIVER_CLASS}    ${jdbc_class}
+    Action Set    ${PRT_CREATE_DB_CONN_INTRVL}    ${interval}
+    Action Set    ${PRT_CREATE_DB_CONN_RETRY}    ${retries}
+    Action Set    ${PRT_CREATE_DB_CREATE_DB_NAME}    ${db_name}
+    Action Set    ${PRT_CREATE_DB_FILE_SPEC}    ${file_spec}
+    Action Set    ${PRT_CREATE_DB_FILEGROUP_SPEC}    ${file_group_spec}
+    Action Set    ${PRT_CREATE_DB_LOG_ON_FILE_SPEC}    ${log_on_file_spec}
+    Action Set    ${PRT_CREATE_DB_FAIL_IF_DB_EXISTS}    ${fail_if_exists}
+    Action Set    ${PRT_CREATE_DB_TRUSTWORTHY_ON}    ${trust_worthy_on}
+    Action Set    ${PRT_CREATE_DB_DBCHAINING_ON}    ${db_changing_on}
     Action Execute
     Action Report Should Be Found
     Action Return Code Should Be    ${returnCode}
@@ -36,4 +42,4 @@ Add Member To DB Role
 
 Setup_suite
     [Documentation]    TODO: Write all steps need prepare before testing here
-    Log    Start testing for Add Member To DB Role Template
+    Log    Start testing for Create a database
