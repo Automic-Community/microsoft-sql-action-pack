@@ -10,12 +10,16 @@ ${_LOGIN}         /
 ${_CURRENT_TIMESTAMP_}    /
 ${_WORKING_DIR}    /
 ${_CONN_STRING}    /
+${_CONN_STRING_AT}    /
 ${_JAR}           /
 ${_CLASS}         /
 ${_DB_NAME}       /
+${_DB_NAME_AT}    /
 ${_SERVER}        /
 ${_DB_USERNAME}    /
+${_DB_USERNAME_AT}    /
 ${_DB_PASSWORD}    /
+${_DB_PASSWORD_AT}    /
 ${_INTRVL}        /
 ${_RETRY}         /
 ${_ROLE_NAME}     /
@@ -97,8 +101,11 @@ Init MSSQL 2012
     Set Global Variable    ${_WORKING_DIR}    C:/Automic/Agents/windows/temp
     Set Global Variable    ${/}    \\
     Set Global Variable    ${_DB_USERNAME}    DEV
+    Set Global Variable    ${_DB_USERNAME_AT}    AT
     Set Global Variable    ${_DB_PASSWORD}    DEV
+    Set Global Variable    ${_DB_PASSWORD_AT}    AT
     Set Global Variable    ${_CONN_STRING}    jdbc:sqlserver://VVNARASQL04:1433;databaseName=DEV_MSSQL
+    Set Global Variable    ${_CONN_STRING_AT}    jdbc:sqlserver://VVNARASQL04:1433;
     Set Global Variable    ${_JAR}    file:///C:/Automic/Agents/windows/bin/sqljdbc4.jar
     Set Global Variable    ${_CLASS}    com.microsoft.sqlserver.jdbc.SQLServerDriver
     Set Global Variable    ${_INTRVL}    10
@@ -108,3 +115,4 @@ Init MSSQL 2012
     Set Global Variable    ${DB_USERNAME1}    TEST
     Set Global Variable    ${ROLE_NAME}    db_datawriter
     Set Global Variable    ${_DB_NAME}    DEV_MSSQL
+    Set Global Variable    ${_DB_NAME_AT}    ATDB
