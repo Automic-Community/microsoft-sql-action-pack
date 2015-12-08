@@ -5,17 +5,6 @@ Resource          context.txt
 Library           com.automic.robot.itpa.ItpaLibrary
 
 *** Key Words ***
-Drop Database
-    [Arguments]		${username}    ${password}    ${jdbc_conn}    ${jdbc_jar}    ${jdbc_class}    ${interval}	${retries}    ${db_name}
-    ...    ${fail_if_not_exists}    ${returnCode}    ${returnStatus}
-    Init Action		${ACTION_DROP_DB}
-    Action Execute
-Create Database
-    [Arguments]    ${username}    ${password}    ${jdbc_conn}    ${jdbc_jar}    ${jdbc_class}    ${interval}
-    ...    ${retries}    ${db_name}    ${file_spec}    ${file_group_spec}    ${log_on_file_spec}    ${fail_if_exists}
-    ...    ${trust_worthy_on}    ${db_changing_on}    ${returnCode}    ${returnStatus}
-    Init Action		${ACTION_CREATE_DB}
-    Action Execute
 Init Action
     [Arguments]    ${actionName}
     Action Create    ${actionName}
@@ -217,3 +206,86 @@ Create Tablespace
     Action Report Should Be Found
     Action Return Code Should Be    0
     Action Return Status Should Be    ${ENDED_OK}
+Drop Database
+    [Arguments]		${username}    ${password}    ${jdbc_conn}    ${jdbc_jar}    ${jdbc_class}    ${interval}	${retries}    ${db_name}
+    ...    ${fail_if_not_exists}    ${returnCode}    ${returnStatus}
+    Init Action		${ACTION_DROP_DB}
+    Action Set    ${PRT_DROP_DB_USERNAME}    ${username}
+    Action Set    ${PRT_DROP_DB_PASSWORD}    ${password}
+    Action Set    ${PRT_DROP_DB_JDBC_CONN_STRING}    ${jdbc_conn}
+    Action Set    ${PRT_DROP_DB_DRIVER_JAR}    ${jdbc_jar}
+    Action Set    ${PRT_DROP_DB_DRIVER_CLASS}    ${jdbc_class}
+    Action Set    ${PRT_DROP_DB_CONN_INTRVL}    ${interval}
+    Action Set    ${PRT_DROP_DB_CONN_RETRY}    ${retries}
+    Action Set    ${PRT_DROP_DB_DROP_DBNAME}    ${db_name}
+    Action Set    ${PRT_DROP_DB_FAIL_DB_NOT_EXISTS}    ${fail_if_not_exists}
+    Action Execute
+    Action Return Code Should Be    ${returnCode}
+    Action Return Status Should Be    ${returnStatus}
+Create Database
+    [Arguments]    ${username}    ${password}    ${jdbc_conn}    ${jdbc_jar}    ${jdbc_class}    ${interval}
+    ...    ${retries}    ${db_name}    ${file_spec}    ${file_group_spec}    ${log_on_file_spec}    ${fail_if_exists}
+    ...    ${trust_worthy_on}    ${db_changing_on}    ${returnCode}    ${returnStatus}
+    Init Action		${ACTION_CREATE_DB}
+    Action Set    ${PRT_CREATE_DB_USERNAME}    ${username}
+    Action Set    ${PRT_CREATE_DB_PASSWORD}    ${password}
+    Action Set    ${PRT_CREATE_DB_JDBC_CONN}    ${jdbc_conn}
+    Action Set    ${PRT_CREATE_DB_DRIVER_JAR}    ${jdbc_jar}
+    Action Set    ${PRT_CREATE_DB_DRIVER_CLASS}    ${jdbc_class}
+    Action Set    ${PRT_CREATE_DB_CONN_INTRVL}    ${interval}
+    Action Set    ${PRT_CREATE_DB_CONN_RETRY}    ${retries}
+    Action Set    ${PRT_CREATE_DB_CREATE_DB_NAME}    ${db_name}
+    Action Set    ${PRT_CREATE_DB_FILE_SPEC}    ${file_spec}
+    Action Set    ${PRT_CREATE_DB_FILEGROUP_SPEC}    ${file_group_spec}
+    Action Set    ${PRT_CREATE_DB_LOG_ON_FILE_SPEC}    ${log_on_file_spec}
+    Action Set    ${PRT_CREATE_DB_FAIL_IF_DB_EXISTS}    ${fail_if_exists}
+    Action Set    ${PRT_CREATE_DB_TRUSTWORTHY_ON}    ${trust_worthy_on}
+    Action Set    ${PRT_CREATE_DB_DBCHAINING_ON}    ${db_changing_on}
+    Action Execute
+    Action Return Code Should Be    ${returnCode}
+    Action Return Status Should Be    ${returnStatus}
+Backup Database
+    [Arguments]    ${username}    ${password}    ${jdbc_conn}    ${jdbc_jar}    ${jdbc_class}    ${interval}
+    ...    ${retries}    ${db_name}    ${file_to_include}    ${file_group_to_include}    ${target_disks}    ${minor_disks}
+    ...    ${target_tapes}    ${minor_tapes}    ${differential}    ${common_only}    ${description}    ${backupset_name}
+    ...    ${expires}    ${expire_date}    ${retain_days}    ${mediaset_init}    ${mediaset_skip}    ${mediaset_format}
+    ...    ${mediaset_description}    ${name_of_media}    ${media_blocksize}    ${datatransfer_blockcount}    ${datatransfer_maximum}    ${error_management_checksum}
+    ...    ${stop_on_error}    ${tape_rewind}    ${tape_unload}    ${returnCode}    ${returnStatus}
+    Init Action		${ACTION_DB_BACKUP}
+    Init Action    ${ACTION_DB_BACKUP}
+    Action Set    ${PRT_CREATE_DB_BACKUP_DB_USERNAME}    ${username}
+    Action Set    ${PRT_CREATE_DB_BACKUP_DB_PASSWORD}    ${password}
+    Action Set    ${PRT_CREATE_DB_BACKUP_DB_JDBC_CONN_STRING}    ${jdbc_conn}
+    Action Set    ${PRT_CREATE_DB_BACKUP_DB_DRIVER_JAR}    ${jdbc_jar}
+    Action Set    ${PRT_CREATE_DB_BACKUP_DB_DRIVER_CLASS}    ${jdbc_class}
+    Action Set    ${PRT_CREATE_DB_BACKUP_DB_CONN_INTRVL}    ${interval}
+    Action Set    ${PRT_CREATE_DB_BACKUP_DB_CONN_RETRY}    ${retries}
+    Action Set    ${PRT_CREATE_DB_BACKUP_DB_BACKUP_DATABASE_NAME}    ${db_name}
+    Action Set    ${PRT_CREATE_DB_BACKUP_DB_BACKUP_FILES}    ${file_to_include}
+    Action Set    ${PRT_CREATE_DB_BACKUP_DB_BACKUP_FILEGROUPS}    ${file_group_to_include}
+    Action Set    ${PRT_CREATE_DB_BACKUP_DB_BACKUP_TO_DISKS}    ${target_disks}
+    Action Set    ${PRT_CREATE_DB_BACKUP_DB_MIRROR_TO_DISKS}    ${minor_disks}
+    Action Set    ${PRT_CREATE_DB_BACKUP_DB_BACKUP_TO_TAPES}    ${target_tapes}
+    Action Set    ${PRT_CREATE_DB_BACKUP_DB_MIRROR_TO_TAPES}    ${minor_tapes}
+    Action Set    ${PRT_CREATE_DB_BACKUP_DB_BACKUPSET_DIFF}    ${differential}
+    Action Set    ${PRT_CREATE_DB_BACKUP_DB_BACKUPSET_COPY_ONLY}    ${common_only}
+    Action Set    ${PRT_CREATE_DB_BACKUP_DB_BACKUPSET_DESCRIPTION}    ${description}
+    Action Set    ${PRT_CREATE_DB_BACKUP_DB_BACKUPSET_NAME}    ${backupset_name}
+    Action Set    ${PRT_CREATE_DB_BACKUP_DB_BACKUP_EXPIRE_ON_DATE}    ${expires}
+    Action Set    ${PRT_CREATE_DB_BACKUP_DB_BACKUP_EXPIRE_DATE}    ${expire_date}
+    Action Set    ${PRT_CREATE_DB_BACKUP_DB_BACKUPSET_RETAIN_DAYS}    ${retain_days}
+    Action Set    ${PRT_CREATE_DB_BACKUP_DB_MEDIASET_INIT}    ${mediaset_init}
+    Action Set    ${PRT_CREATE_DB_BACKUP_DB_MEDIASET_SKIP}    ${mediaset_skip}
+    Action Set    ${PRT_CREATE_DB_BACKUP_DB_MEDIASET_FORMAT}    ${mediaset_format}
+    Action Set    ${PRT_CREATE_DB_BACKUP_DB_MEDIASET_DSCR}    ${mediaset_description}
+    Action Set    ${PRT_CREATE_DB_BACKUP_DB_MEDIASET_MEDIANAME}    ${name_of_media}
+    Action Set    ${PRT_CREATE_DB_BACKUP_DB_MEDIASET_BLOCKSIZE}    ${media_blocksize}
+    Action Set    ${PRT_CREATE_DB_BACKUP_DB_DATATF_BUFFERCOUNT}    ${datatransfer_blockcount}
+    Action Set    ${PRT_CREATE_DB_BACKUP_DB_DATATF_MAXTRFSIZE}    ${datatransfer_maximum}
+    Action Set    ${PRT_CREATE_DB_BACKUP_DB_ERRMGMT_CHECKSUM}    ${error_management_checksum}
+    Action Set    ${PRT_CREATE_DB_BACKUP_DB_ERRMGMT_STOP_ON_ERR}    ${stop_on_error}
+    Action Set    ${PRT_CREATE_DB_BACKUP_DB_TAPE_REWIND}    ${tape_rewind}
+    Action Set    ${PRT_CREATE_DB_BACKUP_DB_TAPE_UNLOAD}    ${tape_unload}
+    Action Execute
+    Action Return Code Should Be    ${returnCode}
+    Action Return Status Should Be    ${returnStatus}

@@ -17,7 +17,6 @@ Drop a database
     ...    ${retries}    ${db_name}    ${fail_if_not_exists}    ${returnCode}    ${returnStatus}
 	Create Database	${_DB_USERNAME_AT}    ${_DB_PASSWORD_AT}    ${_CONN_STRING_AT}        ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME_AT}       ${EMPTY}         ${EMPTY}           ${EMPTY}    NO                  OFF             OFF            0          ${ENDED_OK}
     Init Action		${ACTION_DROP_DB}
-    Init Action		${ACTION_DROP_DB}
     Action Set    ${PRT_DROP_DB_USERNAME}    ${username}
     Action Set    ${PRT_DROP_DB_PASSWORD}    ${password}
     Action Set    ${PRT_DROP_DB_JDBC_CONN_STRING}    ${jdbc_conn}
