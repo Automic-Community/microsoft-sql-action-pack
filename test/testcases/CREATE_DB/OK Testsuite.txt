@@ -7,12 +7,12 @@ Test Template     Create a database
 Resource          ../../resources/keywords.txt
 Resource          ../../resources/context.txt
 
-*** Test Cases ***    Username           Password           JDBC Connection String    JDBC Driver JAR URI    JDBC Driver Class    Connection Interval    No of Connection Retries    DB Name to create    File spec		Group file spec    Log         Fail if DB exits    Thrustworthy    DB changing    RETCODE    STATUS
+*** Test Cases ***    Username           Password           JDBC Connection String                JDBC Driver JAR URI    JDBC Driver Class    Connection Interval    No of Connection Retries    DB Name to create    File spec        Group file spec    Log         Fail if DB exits    Thrustworthy    DB changing    RETCODE    STATUS
 1. Normal case success with only required fields
-                      ${_DB_USERNAME}    ${_DB_PASSWORD}    ${_CONN_STRING}           ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}          ${EMPTY}		${EMPTY}           ${EMPTY}    NO            OFF             OFF            0          ${ENDED_OK}
+                      at                 at                 jdbc:sqlserver://VVNARASQL04:1433;    ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ATDB                 ${EMPTY}         ${EMPTY}           ${EMPTY}    NO                  OFF             OFF            0          ${ENDED_OK}
 
 2. Success with case member already is assigned the target role
-                      ${_DB_USERNAME}    ${_DB_PASSWORD}    ${_CONN_STRING}           ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}          ${_ROLE_NAME}    TEST               0           ${ENDED_OK}
+                      ${_DB_USERNAME}    ${_DB_PASSWORD}    ${_CONN_STRING}                       ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}          ${_ROLE_NAME}    TEST               0           ${ENDED_OK}
 
 *** Keywords ***
 Create a database
