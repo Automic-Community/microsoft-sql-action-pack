@@ -9,6 +9,7 @@ ${_AGENT}         /
 ${_LOGIN}         /
 ${_CURRENT_TIMESTAMP_}    /
 ${_WORKING_DIR}    /
+${_DATA_DIR}    /
 ${_CONN_STRING}    /
 ${_CONN_STRING_AT}    /
 ${_JAR}           /
@@ -99,6 +100,7 @@ Init MSSQL 2012
     Set Global Variable    ${_AGENT}    VVNARASQL04
     Set Global Variable    ${_LOGIN}    UC4_RL.LOGIN.ALL
     Set Global Variable    ${_WORKING_DIR}    C:/Automic/Agents/windows/temp
+    Set Global Variable    ${_DATA_DIR}    C:\\Program Files\\Microsoft SQL Server\\MSSQL11.MSSQLSERVER\\MSSQL\\DATA\\
     Set Global Variable    ${/}    \\
     Set Global Variable    ${_DB_USERNAME}    DEV
     Set Global Variable    ${_DB_USERNAME_AT}    at
