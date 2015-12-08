@@ -10,8 +10,8 @@ Resource          ../../resources/context.txt
 *** Test Cases ***    Username                                    Password              JDBC Connection String    JDBC Driver JAR URI    JDBC Driver Class    Connection Interval    No of Connection Retries    DB Name to create    File spec    Group file spec    Log         Fail if DB exits    Thrustworthy    DB changing    RETCODE    STATUS
 1. Normal case success with only required fields
                       ${_DB_USERNAME_AT}                          ${_DB_PASSWORD_AT}    ${_CONN_STRING_AT}        ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME_AT}       ${EMPTY}     ${EMPTY}           ${EMPTY}    NO                  OFF             OFF            0          ${ENDED_OK}
-                      #2. Normal case success with full fields
-                      ${_DB_USERNAME_AT}                          ${_DB_PASSWORD_AT}    ${_CONN_STRING_AT}        ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME_AT}       ${EMPTY}     ${EMPTY}           ${EMPTY}    NO                  OFF             OFF            0          ${ENDED_OK}
+2. Normal case success with full fields
+                      ${_DB_USERNAME_AT}                          ${_DB_PASSWORD_AT}    ${_CONN_STRING_AT}        ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME_AT}       ${EMPTY}     ${EMPTY}           ${_DATA_DIR}${_DB_NAME_AT}_log.ldf    YES                 OFF            ON            0          ${ENDED_OK}
 
 *** Keywords ***
 Create a database
@@ -39,6 +39,8 @@ Create a database
     Action Report Should Be Found
     Action Return Code Should Be    ${returnCode}
     Action Return Status Should Be    ${returnStatus}
+    Drop Database    ${_DB_USERNAME_AT}    ${_DB_PASSWORD_AT}    ${_CONN_STRING_AT}    ${_JAR}    ${_CLASS}    ${_INTRVL}
+    ...    ${_RETRY}    ${_DB_NAME_AT}    NO    0    ${ENDED_OK}
 
 Setup_suite
     [Documentation]    TODO: Write all steps need prepare before testing here
