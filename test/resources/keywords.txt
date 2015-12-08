@@ -10,6 +10,12 @@ Drop Database
     ...    ${fail_if_not_exists}    ${returnCode}    ${returnStatus}
     Init Action		${ACTION_DROP_DB}
     Action Execute
+Create Database
+    [Arguments]    ${username}    ${password}    ${jdbc_conn}    ${jdbc_jar}    ${jdbc_class}    ${interval}
+    ...    ${retries}    ${db_name}    ${file_spec}    ${file_group_spec}    ${log_on_file_spec}    ${fail_if_exists}
+    ...    ${trust_worthy_on}    ${db_changing_on}    ${returnCode}    ${returnStatus}
+    Init Action		${ACTION_CREATE_DB}
+    Action Execute
 Init Action
     [Arguments]    ${actionName}
     Action Create    ${actionName}
