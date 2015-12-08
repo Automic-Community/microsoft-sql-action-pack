@@ -107,4 +107,4 @@ Init MSSQL 2012
     Set Global Variable    ${_SERVER}    VVNARASQL04
     Set Global Variable    ${DB_USERNAME1}    TEST
     Set Global Variable    ${ROLE_NAME}    db_datawriter
-    Set Global Variable    ${_DB_NAME}    ATDB_MSSQL
+    Set Global Variable    ${_DB_NAME}    DEV_MSSQL
