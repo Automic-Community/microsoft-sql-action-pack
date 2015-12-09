@@ -170,5 +170,6 @@ Create Login
     Action Set    ${PRT_CREATE_LOGIN_FAIL_IF_EXIST}    ${fail_if_exists}
     Action Execute
     Action Report Should Be Found
-    Action Return Code Should Be    ${returnCode}
+    Run Keyword If    '${OK_NOK}' == 'OK'    Action Return Code Should Be    ${returnCode}
+    Run Keyword If    '${OK_NOK}' == 'NOK'    Action Return Code Should Not Equal    ${returnCode}
     Action Return Status Should Be    ${returnStatus}
