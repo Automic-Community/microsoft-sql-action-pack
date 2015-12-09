@@ -9,21 +9,17 @@ ${_AGENT}         /
 ${_LOGIN}         /
 ${_CURRENT_TIMESTAMP_}    /
 ${_WORKING_DIR}    /
-${_DATA_DIR}      /
 ${_CONN_STRING}    /
-${_CONN_STRING_AT}    /
 ${_JAR}           /
 ${_CLASS}         /
 ${_DB_NAME}       /
-${_DB_NAME_AT}    /
 ${_SERVER}        /
 ${_DB_USERNAME}    /
-${_DB_USERNAME_AT}    /
 ${_DB_PASSWORD}    /
-${_DB_PASSWORD_AT}    /
 ${_INTRVL}        /
 ${_RETRY}         /
 ${_ROLE_NAME}     /
+${_DATA_DIR}      /
 
 *** Key Words ***
 Init Agent
