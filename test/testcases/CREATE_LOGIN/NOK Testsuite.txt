@@ -23,29 +23,32 @@ Resource          ../../resources/context.txt
 5. Fail with invalid JDBC Driver Class
                       NOK       TEST     ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}_invalid    ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST_LOGIN                  NO                   123               NO                      NO                           NO                       NO                0          ${ENDED_NOK}
 
-6. Fail with invalid DB Name
+6. Fail with invalid DB Name & Failed_If_Failed = YES
                       NOK       TEST     ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}_invalid    TEST_LOGIN                  NO                   123               NO                      NO                           NO                       YES               0          ${ENDED_NOK}
 
-7. Fail with invalid Password with Check_Password_Policy = YES
+7. Fail with invalid DB Name & Failed_If_Failed = NO
+                      NOK       TEST     ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}_invalid    TEST_LOGIN                  NO                   123               NO                      NO                           NO                       NO                0          ${ENDED_NOK}
+
+8. Fail with invalid Password with Check_Password_Policy = YES
                       NOK       TEST     ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST_LOGIN                  NO                   123               NO                      NO                           YES                      NO                0          ${ENDED_NOK}
 
-8. Fail with case LOGIN is existed with Fail_If_Exists = YES
-                      NOK       TEST     ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            DEV                         NO                   123               NO                      NO                           NO                       NO                1          ${ENDED_OK}
+9. Fail with case LOGIN is existed with Fail_If_Exists = YES
+                      OK        TEST     ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            DEV                         NO                   123               NO                      NO                           NO                       NO                0          ${ENDED_OK}
                       NOK       FINAL    ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            DEV                         NO                   123               NO                      NO                           NO                       YES               0          ${ENDED_NOK}
 
-9. Fail with case create LOGIN with Password_Must_Change = YES & Check_Password_Expiration = NO
+10. Fail with case create LOGIN with Password_Must_Change = YES & Check_Password_Expiration = NO
                       NOK       TEST     ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST_LOGIN                  NO                   123               YES                     NO                           YES                      NO                0          ${ENDED_NOK}
 
-10. Fail with case create LOGIN with Password_Must_Change = YES & Check_Password_Policy = NO
+11. Fail with case create LOGIN with Password_Must_Change = YES & Check_Password_Policy = NO
                       NOK       TEST     ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST_LOGIN                  NO                   123               YES                     YES                          NO                       NO                0          ${ENDED_NOK}
 
-11. Fail with case create LOGIN with Password_Must_Change = YES & Check_Password_Policy = NO & Check_Password_Expiration = NO
+12. Fail with case create LOGIN with Password_Must_Change = YES & Check_Password_Policy = NO & Check_Password_Expiration = NO
                       NOK       TEST     ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST_LOGIN                  NO                   123               YES                     NO                           NO                       NO                0          ${ENDED_NOK}
 
-12. Fail with case create LOGIN with Check_Password_Policy = NO & Check_Password_Expiration = YES
+13. Fail with case create LOGIN with Check_Password_Policy = NO & Check_Password_Expiration = YES
                       NOK       TEST     ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST_LOGIN                  YES                  S3rv3r@Aut        YES                     YES                          YES                      NO                0          ${ENDED_NOK}
 
-13. Fail with case create LOGIN with Windows = YES & Failed_If_Failed = YES
+14. Fail with case create LOGIN with Windows = YES & Failed_If_Failed = YES
                       NOK       FINAL    ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            ${_AGENT}\\Administrator    YES                  123               NO                      YES                          NO                       YES               0          ${ENDED_NOK}
 
 *** Keywords ***
