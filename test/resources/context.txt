@@ -9,7 +9,7 @@ ${_AGENT}         /
 ${_LOGIN}         /
 ${_CURRENT_TIMESTAMP_}    /
 ${_WORKING_DIR}    /
-${_DATA_DIR}    /
+${_DATA_DIR}      /
 ${_CONN_STRING}    /
 ${_CONN_STRING_AT}    /
 ${_JAR}           /
@@ -44,21 +44,17 @@ Init MSSQL 2005
     Set Global Variable    ${_LOGIN}    UC4_RL.LOGIN.ALL
     Set Global Variable    ${_WORKING_DIR}    C:/Automic/Agents/windows/temp
     Set Global Variable    ${/}    \\
-    Set Global Variable    ${_DB_USERNAME}    DEV
-    Set Global Variable    ${_DB_PASSWORD}    DEV
-    Set Global Variable    ${_CONN_STRING}    jdbc:sqlserver://VVNFIBOTOOL01\SQLSERVER2005:1444;databaseName=master
+    Set Global Variable    ${_DB_USERNAME}    AT
+    Set Global Variable    ${_DB_PASSWORD}    AT
+    Set Global Variable    ${_CONN_STRING}    jdbc:sqlserver://VVNFIBOTOOL01\\SQLSERVER2005:1444;
     Set Global Variable    ${_JAR}    file:///C:/Automic/Agents/windows/bin/sqljdbc4.jar
     Set Global Variable    ${_CLASS}    com.microsoft.sqlserver.jdbc.SQLServerDriver
     Set Global Variable    ${_INTRVL}    10
-    Set Global Variable    ${_RETRY}    5
+    Set Global Variable    ${_RETRY}    2
     Set Global Variable    ${ERROR_CODE}    12
     Set Global Variable    ${_SERVER}    VVNFIBOTOOL01\SQLSERVER2005
-    Set Global Variable    ${DB_USERNAME1}    TEST
     Set Global Variable    ${ROLE_NAME}    db_datawriter
     Set Global Variable    ${_DB_NAME}    DEV_MSSQL
-    Set Global Variable    ${_DB_USERNAME_AT}    DEV
-    Set Global Variable    ${_DB_PASSWORD_AT}    DEV
-    Set Global Variable    ${_CONN_STRING_AT}    jdbc:sqlserver://VVNFIBOTOOL01\SQLSERVER2005:1444;
     Set Global Variable    ${_DB_NAME_AT}    ATDB
     Set Global Variable    ${_DATA_DIR}    C:\\Program Files\\Microsoft SQL Server\\MSSQL11.MSSQLSERVER\\MSSQL\\DATA\\
 
@@ -68,22 +64,17 @@ Init MSSQL 2008
     Set Global Variable    ${_LOGIN}    UC4_RL.LOGIN.ALL
     Set Global Variable    ${_WORKING_DIR}    C:/Automic/Agents/windows/temp
     Set Global Variable    ${/}    \\
-    Set Global Variable    ${_DB_USERNAME}    DEV
-    Set Global Variable    ${_DB_PASSWORD}    DEV
-    Set Global Variable    ${_CONN_STRING}    jdbc:sqlserver://VVNARASQL04\SQLEXPRESS:1444;databaseName=master
+    Set Global Variable    ${_DB_USERNAME}    AT
+    Set Global Variable    ${_DB_PASSWORD}    AT
+    Set Global Variable    ${_CONN_STRING}    jdbc:sqlserver://VVNARASQL04\\SQLEXPRESS:1444;
     Set Global Variable    ${_JAR}    file:///C:/Automic/Agents/windows/bin/sqljdbc4.jar
     Set Global Variable    ${_CLASS}    com.microsoft.sqlserver.jdbc.SQLServerDriver
     Set Global Variable    ${_INTRVL}    10
-    Set Global Variable    ${_RETRY}    5
+    Set Global Variable    ${_RETRY}    2
     Set Global Variable    ${ERROR_CODE}    12
     Set Global Variable    ${_SERVER}    VVNARASQL04\SQLEXPRESS
-    Set Global Variable    ${DB_USERNAME1}    TEST
     Set Global Variable    ${ROLE_NAME}    db_datawriter
     Set Global Variable    ${_DB_NAME}    DEV_MSSQL
-    Set Global Variable    ${_DB_USERNAME_AT}    AT
-    Set Global Variable    ${_DB_PASSWORD_AT}    AT
-    Set Global Variable    ${_CONN_STRING_AT}    jdbc:sqlserver://VVNARASQL04\SQLEXPRESS:1444;
-    Set Global Variable    ${_DB_NAME_AT}    ATDB
     Set Global Variable    ${_DATA_DIR}    C:\\Program Files\\Microsoft SQL Server\\MSSQL11.MSSQLSERVER\\MSSQL\\DATA\\
 
 Init MSSQL 2008 R2
@@ -92,22 +83,17 @@ Init MSSQL 2008 R2
     Set Global Variable    ${_LOGIN}    UC4_RL.LOGIN.ALL
     Set Global Variable    ${_WORKING_DIR}    C:/Automic/Agents/windows/temp
     Set Global Variable    ${/}    \\
-    Set Global Variable    ${_DB_USERNAME}    DEV
-    Set Global Variable    ${_DB_PASSWORD}    DEV
-    Set Global Variable    ${_CONN_STRING}    jdbc:sqlserver://VVNFIBOTOOL01:1433;databaseName=master
+    Set Global Variable    ${_DB_USERNAME}    AT
+    Set Global Variable    ${_DB_PASSWORD}    AT
+    Set Global Variable    ${_CONN_STRING}    jdbc:sqlserver://VVNFIBOTOOL01:1433;
     Set Global Variable    ${_JAR}    file:///C:/Automic/Agents/windows/bin/sqljdbc4.jar
     Set Global Variable    ${_CLASS}    com.microsoft.sqlserver.jdbc.SQLServerDriver
     Set Global Variable    ${_INTRVL}    10
-    Set Global Variable    ${_RETRY}    5
+    Set Global Variable    ${_RETRY}    2
     Set Global Variable    ${ERROR_CODE}    12
     Set Global Variable    ${_SERVER}    VVNFIBOTOOL01
-    Set Global Variable    ${DB_USERNAME1}    TEST
     Set Global Variable    ${ROLE_NAME}    db_datawriter
     Set Global Variable    ${_DB_NAME}    DEV_MSSQL
-    Set Global Variable    ${_DB_USERNAME_AT}    AT
-    Set Global Variable    ${_DB_PASSWORD_AT}    AT
-    Set Global Variable    ${_CONN_STRING_AT}    jdbc:sqlserver://VVNFIBOTOOL01:1433;
-    Set Global Variable    ${_DB_NAME_AT}    ATDB
     Set Global Variable    ${_DATA_DIR}    C:\\Program Files\\Microsoft SQL Server\\MSSQL11.MSSQLSERVER\\MSSQL\\DATA\\
 
 Init MSSQL 2012
@@ -115,21 +101,17 @@ Init MSSQL 2012
     Set Global Variable    ${_AGENT}    VVNARASQL04
     Set Global Variable    ${_LOGIN}    UC4_RL.LOGIN.ALL
     Set Global Variable    ${_WORKING_DIR}    C:/Automic/Agents/windows/temp
-    Set Global Variable    ${_DATA_DIR}    C:\\Program Files\\Microsoft SQL Server\\MSSQL11.MSSQLSERVER\\MSSQL\\DATA\\
     Set Global Variable    ${/}    \\
-    Set Global Variable    ${_DB_USERNAME}    DEV
-    Set Global Variable    ${_DB_USERNAME_AT}    at
-    Set Global Variable    ${_DB_PASSWORD}    DEV
-    Set Global Variable    ${_DB_PASSWORD_AT}    at
-    Set Global Variable    ${_CONN_STRING}    jdbc:sqlserver://VVNARASQL04:1433;databaseName=DEV_MSSQL
+    Set Global Variable    ${_DB_USERNAME}    AT
+    Set Global Variable    ${_DB_PASSWORD}    AT
+    Set Global Variable    ${_CONN_STRING}    jdbc:sqlserver://VVNARASQL04:1433;
     Set Global Variable    ${_CONN_STRING_AT}    jdbc:sqlserver://VVNARASQL04:1433;
     Set Global Variable    ${_JAR}    file:///C:/Automic/Agents/windows/bin/sqljdbc4.jar
     Set Global Variable    ${_CLASS}    com.microsoft.sqlserver.jdbc.SQLServerDriver
     Set Global Variable    ${_INTRVL}    10
-    Set Global Variable    ${_RETRY}    5
+    Set Global Variable    ${_RETRY}    2
     Set Global Variable    ${ERROR_CODE}    12
     Set Global Variable    ${_SERVER}    VVNARASQL04
-    Set Global Variable    ${DB_USERNAME1}    TEST
     Set Global Variable    ${ROLE_NAME}    db_datawriter
     Set Global Variable    ${_DB_NAME}    DEV_MSSQL
-    Set Global Variable    ${_DB_NAME_AT}    ATDB
+    Set Global Variable    ${_DATA_DIR}    C:\\Program Files\\Microsoft SQL Server\\MSSQL11.MSSQLSERVER\\MSSQL\\DATA\\

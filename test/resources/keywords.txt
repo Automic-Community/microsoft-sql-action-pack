@@ -58,158 +58,10 @@ MSSQL Common Setting
     Action Set    ${PRT_CREATE_USER_DB_TNSNAMES_ORA}    ${ORA}
     Action Set    ${PRT_CREATE_USER_DB_CONN_INTRVL}    ${INTRVL}
 
-Create User
-    [Arguments]    ${name}    ${externally}    ${globally}    ${password_expire}    ${account_lock}    ${id}
-    Init Action    ${ACTION_CREATE_USER}
-    Action Set    ${PRT_CREATE_USER_DB_USERNAME_LG}    ${DB_USERNAME}
-    Action Set    ${PRT_CREATE_USER_DB_PASSWORD_LG}    ${DB_PASSWORD}
-    Action Set    ${PRT_CREATE_USER_DB_JDBC_CONN_STRING}    ${CONN_WITHOUTSID}${id}
-    Action Set    ${PRT_CREATE_USER_DB_DRIVER_JAR}    ${JAR}
-    Action Set    ${PRT_CREATE_USER_DB_DRIVER_CLASS}    ${CLASS}
-    Action Set    ${PRT_CREATE_USER_DB_TNSNAMES_ORA}    ${ORA}
-    Action Set    ${PRT_CREATE_USER_DB_CONN_INTRVL}    ${INTRVL}
-    Action Set    &UC4RB_DB_USER_NAME#    ${name}
-    Action Set    ${PRT_CREATE_USER_DB_FAIL_USR_EXISTS}    NO
-    Action Set    ${PRT_CREATE_USER_DB_USER_PASSWORD}    ${DB_PASSWORD}
-    Action Set    ${PRT_CREATE_USER_DB_IDTFT_EXTERNALLY}    ${externally}
-    Action Set    ${PRT_CREATE_USER_DB_IDTFT_CERT_DN}    ${EMPTY}
-    Action Set    ${PRT_CREATE_USER_DB_IDTFT_GLOBALLY}    ${globally}
-    Action Set    ${PRT_CREATE_USER_DB_IDTFT_DIR_DN}    ${EMPTY}
-    Action Set    ${PRT_CREATE_USER_DB_DEFAULT_TABLESPACE}    ${EMPTY}
-    Action Set    ${PRT_CREATE_USER_DB_TEMP_TABLESPACE}    ${EMPTY}
-    Action Set    ${PRT_CREATE_USER_DB_QUOTA_SPEC}    ${EMPTY}
-    Action Set    ${PRT_CREATE_USER_DB_PROFILE}    ${EMPTY}
-    Action Set    ${PRT_CREATE_USER_DB_PASSWORD_EXPIRE}    ${password_expire}
-    Action Set    ${PRT_CREATE_USER_DB_ACCOUNT_LOCK}    ${account_lock}
-    Action Execute
-    Action Report Should Be Found
-    Action Return Code Should Be    0
-    Action Return Status Should Be    ${ENDED_OK}
-
-Drop User
-    [Arguments]    ${userDrop}
-    Init Action    ${ACTION_DROP_USER}
-    Oracle Common Setting
-    Action Set    ${PRT_DROP_USER_DB_DROP_USER}    ${userDrop}
-    Action Set    ${PRT_DROP_USER_DB_FAIL_USR_NOT_EXISTS}    NO
-    Action Set    ${PRT_DROP_USER_DB_CASCADE}    YES
-    Action Execute
-    Action Report Should Be Found
-    Action Return Code Should Be    0
-    Action Return Status Should Be    ${ENDED_OK}
-
-Drop User With Cascade
-    [Arguments]    ${user}
-    Init Action    ${ACTION_DROP_USER}
-    Oracle Common Setting
-    Action Set    ${PRT_DROP_USER_DB_DROP_USER}    ${user}
-    Action Set    ${PRT_DROP_USER_DB_FAIL_USR_NOT_EXISTS}    NO
-    Action Set    ${PRT_DROP_USER_DB_CASCADE}    YES
-    Action Execute
-
-Assign Grant all
-    [Arguments]    ${grant_to_user}    ${sys}    ${user}
-    Init Action    ${ACTION_ASSIGN_GRANT}
-    Oracle Common Setting
-    Action Set    ${PRT_ASSIGN_GRANT_DB_GRANT_SYS_PRIVILEGE}    ${EMPTY}
-    Action Set    ${PRT_ASSIGN_GRANT_DB_GRANT_OBJ_PRIVILEGE}    ${EMPTY}
-    Action Set    ${PRT_ASSIGN_GRANT_DB_GRANT_ROLE_PRIVILEGE}    ${EMPTY}
-    Action Set    ${PRT_ASSIGN_GRANT_DB_GRANT_CUST_ROLE_PRVLG}    ${EMPTY}
-    Action Set    ${PRT_ASSIGN_GRANT_GRANT_ALL_SYS_PRIVILEGES}    ${sys}
-    Action Set    ${PRT_ASSIGN_GRANT_GRANT_ALL_USER_PRVLGS}    ${user}
-    Action Set    ${PRT_ASSIGN_GRANT_DB_GRANT_ON_SCHM_OBJ}    ${EMPTY}
-    Action Set    ${PRT_ASSIGN_GRANT_DB_GRANT_TO_USER}    ${grant_to_user}
-    Action Set    ${PRT_ASSIGN_GRANT_DB_GRANT_TO_ROLE}    ${EMPTY}
-    Action Set    ${PRT_ASSIGN_GRANT_DB_GRANT_TO_PUBLIC}    NO
-    Action Set    ${PRT_ASSIGN_GRANT_DB_WITH_HIERARCHY_OPTION}    NO
-    Action Set    ${PRT_ASSIGN_GRANT_DB_WITH_GRANT_OPTION}    NO
-    Action Set    ${PRT_ASSIGN_GRANT_DB_WITH_ADMIN_OPTION}    NO
-    Action Execute
-    Action Report Should Be Found
-
-Drop TableSpace
-    [Arguments]    ${name}
-    Init Action    ${ACTION_DROP_TABLESPACE}
-    Oracle Common Setting
-    Action Set    ${PRT_DROP_TABLESPACE_DB_DROP_TABLESPACE}    ${name}
-    Action Set    ${PRT_DROP_TABLESPACE_DB_FAIL_TS_NOT_EXISTS}    NO
-    Action Set    ${PRT_DROP_TABLESPACE_DB_DROP_CONTENTS}    YES
-    Action Set    ${PRT_DROP_TABLESPACE_DB_DROP_DATAFILES}    YES
-    Action Set    ${PRT_DROP_TABLESPACE_DB_CASCADE_CNSTR}    YES
-    Action Execute
-    Action Report Should Be Found
-
-Import DB
-    [Arguments]    ${files}    ${from_users}    ${to_users}    ${tables}    ${owner}    ${tableSpace}
-    Init Action    ${ACTION_IMPORT_DB}
-    Action Set    ${PRT_IMPORT_DB_DB_USERNAME}    ${DB_USERNAME2}
-    Action Set    ${PRT_IMPORT_DB_DB_PASSWORD}    ${DB_PASSWORD}
-    Action Set    ${PRT_IMPORT_DB_DB_SID}    ${SID}
-    Action Set    ${PRT_IMPORT_DB_DB_IMPOPT_FILES}    ${files}
-    Action Set    ${PRT_IMPORT_DB_DB_IMPMODE_FROMUSERS}    ${from_users}
-    Action Set    ${PRT_IMPORT_DB_DB_IMPMODE_TOUSERS}    ${to_users}
-    Action Set    ${PRT_IMPORT_DB_DB_IMPMODE_TS_LIST}    ${tableSpace}
-    Action Set    ${PRT_IMPORT_DB_DB_IMPMODE_TRANSP_TS}    NO
-    Action Set    ${PRT_IMPORT_DB_DB_IMPOPT_FILESIZE}    ${EMPTY}
-    Action Set    ${PRT_IMPORT_DB_DB_IMPOPT_VOLSIZE}    ${EMPTY}
-    Action Set    ${PRT_IMPORT_DB_DB_IMP_INVOKE_AS_SYSDBA}    YES
-    Action Set    ${PRT_IMPORT_DB_DB_IMPMODE_FULL}    NO
-    Action Set    ${PRT_IMPORT_DB_DB_IMPMODE_TABLES}    ${tables}
-    Action Set    ${PRT_IMPORT_DB_DB_IMPMODE_TTS_OWNERS}    ${owner}
-    Action Set    ${PRT_IMPORT_DB_DB_IMPMODE_DATAFILES}    ${EMPTY}
-    Action Set    ${PRT_IMPORT_DB_DB_IMPOPT_LOGFILE}    YES
-    Action Set    ${PRT_IMPORT_DB_DB_IMPOPT_RECORDLENGTH}    0
-    Action Set    ${PRT_IMPORT_DB_DB_IMPOPT_ROWS}    YES
-    Action Set    ${PRT_IMPORT_DB_DB_IMPOPT_COMMIT}    NO
-    Action Set    ${PRT_IMPORT_DB_DB_IMPOPT_BUFFER}    0
-    Action Set    ${PRT_IMPORT_DB_DB_IMPOPT_IGNORE_ERR}    YES
-    Action Set    ${PRT_IMPORT_DB_DB_IMPOPT_DESTROY}    NO
-    Action Set    ${PRT_IMPORT_DB_DB_IMPOPT_CONSTRAINTS}    YES
-    Action Set    ${PRT_IMPORT_DB_DB_IMPOPT_STREAMS_CONFIG}    YES
-    Action Set    ${PRT_IMPORT_DB_DB_IMPOPT_STREAMS_INST}    NO
-    Action Set    ${PRT_IMPORT_DB_DB_IMPOPT_GRANTS}    NO
-    Action Set    ${PRT_IMPORT_DB_DB_IMPOPT_STATISTICS}    ALWAYS
-    Action Set    ${PRT_IMPORT_DB_DB_IMPOPT_RESUMABLE}    NO
-    Action Set    ${PRT_IMPORT_DB_DB_IMPOPT_RESUMABLE_NAME}    ${EMPTY}
-    Action Set    ${PRT_IMPORT_DB_DB_IMPOPT_RSMBL_TIMEOUT}    ${EMPTY}
-    Action Set    ${PRT_IMPORT_DB_DB_IMPOPT_COMPILE}    YES
-    Action Execute
-    Action Report Should Be Found
-
-Create Tablespace
-    [Arguments]    ${name}
-    Drop Tablespace    ${name}
-    Init Action    ${ACTION_CREATE_TABLESPACE}
-    Oracle Common Setting
-    Action Set    ${PRT_CREATE_TABLESPACE_DB_TABLESPACE_NAME}    ${name}
-    Action Set    ${PRT_CREATE_TABLESPACE_DB_FAIL_IF_TS_EXISTS}    NO
-    Action Set    ${PRT_CREATE_TABLESPACE_DB_TABLESPACE_TYPE}    Undo
-    Action Set    ${PRT_CREATE_TABLESPACE_DB_SMALLFILE}    DEFAULT
-    Action Set    ${PRT_CREATE_TABLESPACE_DB_LOGGING}    DEFAULT
-    Action Set    ${PRT_CREATE_TABLESPACE_DB_FORCE_LOGGING}    DEFAULT
-    Action Set    ${PRT_CREATE_TABLESPACE_DB_ONLINE}    YES
-    Action Set    ${PRT_CREATE_TABLESPACE_DB_EXT_MGMT_CLAUSE}    Omit
-    Action Set    ${PRT_CREATE_TABLESPACE_DB_EXT_MGMT_TYPE}    Local
-    Action Set    ${PRT_CREATE_TABLESPACE_DB_EXT_MGMT_AUTOALLOC}    YES
-    Action Set    ${PRT_CREATE_TABLESPACE_DB_EXT_MGMT_UNIFORM}    NO
-    Action Set    ${PRT_CREATE_TABLESPACE_DB_SEGM_SPC_AUTO}    YES
-    Action Set    ${PRT_CREATE_TABLESPACE_DB_RETENTION}    NO
-    Action Set    ${PRT_CREATE_TABLESPACE_DB_PERM_DATAFILE_SPEC}    ${EMPTY}
-    Action Set    ${PRT_CREATE_TABLESPACE_DB_TEMPFILE_SPEC}    ${EMPTY}
-    Action Set    ${PRT_CREATE_TABLESPACE_DB_UNDO_DATAFILE_SPEC}    '${DB_FILE_PATH}${/}test_datafile18.dbs' size 10m
-    Action Set    ${PRT_CREATE_TABLESPACE_DB_MIN_EXT_SIZE}    ${EMPTY}
-    Action Set    ${PRT_CREATE_TABLESPACE_DB_BLOCK_SIZE}    ${EMPTY}
-    Action Set    ${PRT_CREATE_TABLESPACE_DB_TS_GROUP_NAME}    ${EMPTY}
-    Action Set    ${PRT_CREATE_TABLESPACE_DB_EXT_UNFRM_MGMT_SIZE}    ${EMPTY}
-    Action Set    ${PRT_CREATE_TABLESPACE_DB_DFLT_STRG_CLAUSE}    ${EMPTY}
-    Action Execute
-    Action Report Should Be Found
-    Action Return Code Should Be    0
-    Action Return Status Should Be    ${ENDED_OK}
 Drop Database
-    [Arguments]		${username}    ${password}    ${jdbc_conn}    ${jdbc_jar}    ${jdbc_class}    ${interval}	${retries}    ${db_name}
-    ...    ${fail_if_not_exists}    ${returnCode}    ${returnStatus}
-    Init Action		${ACTION_DROP_DB}
+    [Arguments]    ${username}    ${password}    ${jdbc_conn}    ${jdbc_jar}    ${jdbc_class}    ${interval}
+    ...    ${retries}    ${db_name}    ${fail_if_not_exists}    ${returnCode}    ${returnStatus}
+    Init Action    ${ACTION_DROP_DB}
     Action Set    ${PRT_DROP_DB_USERNAME}    ${username}
     Action Set    ${PRT_DROP_DB_PASSWORD}    ${password}
     Action Set    ${PRT_DROP_DB_JDBC_CONN_STRING}    ${jdbc_conn}
@@ -222,11 +74,12 @@ Drop Database
     Action Execute
     Action Return Code Should Be    ${returnCode}
     Action Return Status Should Be    ${returnStatus}
+
 Create Database
     [Arguments]    ${username}    ${password}    ${jdbc_conn}    ${jdbc_jar}    ${jdbc_class}    ${interval}
     ...    ${retries}    ${db_name}    ${file_spec}    ${file_group_spec}    ${log_on_file_spec}    ${fail_if_exists}
     ...    ${trust_worthy_on}    ${db_changing_on}    ${returnCode}    ${returnStatus}
-    Init Action		${ACTION_CREATE_DB}
+    Init Action    ${ACTION_CREATE_DB}
     Action Set    ${PRT_CREATE_DB_USERNAME}    ${username}
     Action Set    ${PRT_CREATE_DB_PASSWORD}    ${password}
     Action Set    ${PRT_CREATE_DB_JDBC_CONN}    ${jdbc_conn}
@@ -244,6 +97,7 @@ Create Database
     Action Execute
     Action Return Code Should Be    ${returnCode}
     Action Return Status Should Be    ${returnStatus}
+
 Backup Database
     [Arguments]    ${username}    ${password}    ${jdbc_conn}    ${jdbc_jar}    ${jdbc_class}    ${interval}
     ...    ${retries}    ${db_name}    ${file_to_include}    ${file_group_to_include}    ${target_disks}    ${minor_disks}
@@ -251,7 +105,7 @@ Backup Database
     ...    ${expires}    ${expire_date}    ${retain_days}    ${mediaset_init}    ${mediaset_skip}    ${mediaset_format}
     ...    ${mediaset_description}    ${name_of_media}    ${media_blocksize}    ${datatransfer_blockcount}    ${datatransfer_maximum}    ${error_management_checksum}
     ...    ${stop_on_error}    ${tape_rewind}    ${tape_unload}    ${returnCode}    ${returnStatus}
-    Init Action		${ACTION_DB_BACKUP}
+    Init Action    ${ACTION_DB_BACKUP}
     Init Action    ${ACTION_DB_BACKUP}
     Action Set    ${PRT_CREATE_DB_BACKUP_DB_USERNAME}    ${username}
     Action Set    ${PRT_CREATE_DB_BACKUP_DB_PASSWORD}    ${password}
@@ -287,5 +141,34 @@ Backup Database
     Action Set    ${PRT_CREATE_DB_BACKUP_DB_TAPE_REWIND}    ${tape_rewind}
     Action Set    ${PRT_CREATE_DB_BACKUP_DB_TAPE_UNLOAD}    ${tape_unload}
     Action Execute
+    Action Return Code Should Be    ${returnCode}
+    Action Return Status Should Be    ${returnStatus}
+
+Create Login
+    [Arguments]    ${OK_NOK}    ${FLAG}    ${username}    ${password}    ${jdbc_conn}    ${jdbc_jar}
+    ...    ${jdbc_class}    ${interval}    ${retries}    ${db_name}    ${login_name}    ${use_win_login}
+    ...    ${login_pass}    ${pass_must_change}    ${check_pass_exp}    ${check_pass_policy}    ${fail_if_exists}    ${returnCode}
+    ...    ${returnStatus}
+    ${_CURRENT_TIMESTAMP_}    Get Time    epoch
+    Run Keyword If    '${FLAG}' == 'TEST'    Set Suite Variable    ${login_with_timestamp}    ${login_name}${_CURRENT_TIMESTAMP_}
+    Init Action    ${ACTION_CREATE_LOGIN}
+    Action Set    ${PRT_CREATE_LOGIN_USERNAME}    ${username}
+    Action Set    ${PRT_CREATE_LOGIN_PASSWORD}    ${password}
+    Action Set    ${PRT_CREATE_LOGIN_JDBC_CONN}    ${jdbc_conn}
+    Action Set    ${PRT_CREATE_LOGIN_DRIVER_JAR}    ${jdbc_jar}
+    Action Set    ${PRT_CREATE_LOGIN_DRIVER_CLASS}    ${jdbc_class}
+    Action Set    ${PRT_CREATE_LOGIN_CONN_INTRVL}    ${interval}
+    Action Set    ${PRT_CREATE_LOGIN_CONN_RETRY}    ${retries}
+    Action Set    ${PRT_CREATE_LOGIN_DATABASE_NAME}    ${db_name}
+    Run Keyword If    '${use_win_login}' == 'NO'    Action Set    ${PRT_CREATE_LOGIN_LOGIN_NAME}    ${login_with_timestamp}
+    Run Keyword If    '${use_win_login}' == 'YES'    Action Set    ${PRT_CREATE_LOGIN_LOGIN_NAME}    ${login_name}
+    Action Set    ${PRT_CREATE_LOGIN_USE_WIN_LOGIN}    ${use_win_login}
+    Action Set    ${PRT_CREATE_LOGIN_LOGIN_PWD}    ${login_pass}
+    Action Set    ${PRT_CREATE_LOGIN_PWD_MUST_CHNG}    ${pass_must_change}
+    Action Set    ${PRT_CREATE_LOGIN_CHK_EXPR}    ${check_pass_exp}
+    Action Set    ${PRT_CREATE_LOGIN_CHK_POLICY}    ${check_pass_policy}
+    Action Set    ${PRT_CREATE_LOGIN_FAIL_IF_EXIST}    ${fail_if_exists}
+    Action Execute
+    Action Report Should Be Found
     Action Return Code Should Be    ${returnCode}
     Action Return Status Should Be    ${returnStatus}
