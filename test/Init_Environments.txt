@@ -1,5 +1,5 @@
 *** Settings ***
-Force Tags        IMPORT    EXPORT    OTHER
+Force Tags
 Default Tags
 Resource          resources/context.txt
 
