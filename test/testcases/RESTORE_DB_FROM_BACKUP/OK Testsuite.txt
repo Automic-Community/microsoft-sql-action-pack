@@ -17,6 +17,8 @@ Restore a database
     ...    ${retries}    ${db_name}    ${file_to_restore}    ${file_group_to_restore}    ${disk_sources}    ${tape_sources}
     ...    ${verify_checksum}    ${stop_on_error}    ${file_no_in_backupset}    ${name_of_media}    ${rb_uncommitted_trans}    ${partial_restore}
     ...    ${replace_exist_db}    ${restart_interrupted}    ${tape_rewind}    ${tape_unload}    ${returnCode}    ${returnStatus}
+    Drop Database    ${_DB_USERNAME}    ${_DB_USERNAME}    ${_CONN_STRING}    ${_JAR}    ${_CLASS}    ${_INTRVL}
+    ...    ${_RETRY}    DB_BACKUP    NO    0    ${ENDED_OK}    
     Init Action    ${ACTION_RESTORE_DB_FROM_BACKUP}
     Action Set    ${PRT_RESTORE_DB_USERNAME}    ${username}
     Action Set    ${PRT_RESTORE_DB_PASSWORD}    ${password}
