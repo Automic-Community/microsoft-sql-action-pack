@@ -194,7 +194,18 @@ del "&UC4RB_SQL_FILENAME#"
 </OUTPUTSCAN>
 <POST_SCRIPT mode="1" replacementmode="1" state="1">
 <OSCRI><![CDATA[:IF &UC4RB_FAIL_IF_EXISTS# = "NO"
-:INCLUDE PCK.AUTOMIC_MSSQL.PRV.INCLUDE.CHECK_EXISTING_ERROR@WINDOWS
+:  SET &ERRNR# = GET_UC_OBJECT_STATUS( ,,"RETCODE")
+:  IF &ERRNR# = 12
+:    SET &HND# = PREP_PROCESS_REPORT(,,,"*already exists.*")
+:    PROCESS &HND#
+:      SET &MESS# = GET_PROCESS_LINE(&HND#,1)
+:      SET &POS#=STR_FIND(&MESS#,": The server principal")
+:      IF &POS# > 0
+:           MODIFY_STATE RETCODE=0
+:           TERM_PROCESS
+:      ENDIF
+:    ENDPROCESS
+:  ENDIF
 :ENDIF]]></OSCRI>
 </POST_SCRIPT>
 <DOCU_Docu state="1" type="text">
