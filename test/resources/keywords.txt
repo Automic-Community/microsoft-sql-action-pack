@@ -193,3 +193,28 @@ Drop Login
     Run Keyword If    '${OK_NOK}' == 'OK'    Action Return Code Should Be    ${returnCode}
     Run Keyword If    '${OK_NOK}' == 'NOK'    Action Return Code Should Not Equal    ${returnCode}
     Action Return Status Should Be    ${returnStatus}
+
+Create DB User
+    [Arguments]    ${OK_NOK}    ${FLAG}    ${username}    ${password}    ${jdbc_conn}    ${jdbc_jar}
+    ...    ${jdbc_class}    ${interval}    ${retries}    ${db_name}    ${user_name_to_create}    ${db_login_name}
+    ...    ${default_schema}    ${fail_if_exists}    ${returnCode}    ${returnStatus}
+    ${_CURRENT_TIMESTAMP_}    Get Time    epoch
+    Run Keyword If    '${FLAG}' == 'TEST'    Set Suite Variable    ${user_with_timestamp}    ${user_name_to_create}${_CURRENT_TIMESTAMP_}
+    Init Action    ${ACTION_CREATE_DB_USER}
+    Action Set    ${PRT_CREATE_DB_USER_USERNAME}    ${username}
+    Action Set    ${PRT_CREATE_DB_USER_PASSWORD}    ${password}
+    Action Set    ${PRT_CREATE_DB_USER_JDBC_CONN}    ${jdbc_conn}
+    Action Set    ${PRT_CREATE_DB_USER_DRIVER_JAR}    ${jdbc_jar}
+    Action Set    ${PRT_CREATE_DB_USER_DRIVER_CLASS}    ${jdbc_class}
+    Action Set    ${PRT_CREATE_DB_USER_CONN_INTRVL}    ${interval}
+    Action Set    ${PRT_CREATE_DB_USER_CONN_RETRY}    ${retries}
+    Action Set    ${PRT_CREATE_DB_USER_DATABASE_NAME}    ${db_name}
+    Action Set    ${PRT_CREATE_DB_USER_USER_NAME_TO_CREATE}    ${user_with_timestamp}
+    Action Set    ${PRT_CREATE_DB_USER_DB_LOGIN_NAME}    ${db_login_name}
+    Action Set    ${PRT_CREATE_DB_USER_DEFAULT_SCHEMA}    ${default_schema}
+    Action Set    ${PRT_CREATE_DB_USER_FAIL_IF_EXISTS}    ${fail_if_exists}
+    Action Execute
+    Action Report Should Be Found
+    Run Keyword If    '${OK_NOK}' == 'OK'    Action Return Code Should Be    ${returnCode}
+    Run Keyword If    '${OK_NOK}' == 'NOK'    Action Return Code Should Not Equal    ${returnCode}
+    Action Return Status Should Be    ${returnStatus}
