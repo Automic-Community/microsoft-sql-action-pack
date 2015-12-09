@@ -7,9 +7,9 @@ Test Template     Restore a database
 Resource          ../../resources/keywords.txt
 Resource          ../../resources/context.txt
 
-*** Test Cases ***    Username              Password              JDBC Connection String    JDBC Driver JAR URI    JDBC Driver Class    Connection Interval    No of Connection Retries    Restore DB Name    Files to restore    File groups to restore    Disk sources                                                                    Tape sources    Verify checksum    Stop on error    File number in Backup set    Name of media    Roll back uncommitted transactions    Partial restore    Replace existing database    Restart an interrupted restore    Rewind tape    Unload tape    RETCODE    STATUS
+*** Test Cases ***    Username           Password           JDBC Connection String    JDBC Driver JAR URI    JDBC Driver Class    Connection Interval    No of Connection Retries    Restore DB Name    Files to restore    File groups to restore    Disk sources                                                                           Tape sources    Verify checksum    Stop on error    File number in Backup set    Name of media    Roll back uncommitted transactions    Partial restore    Replace existing database    Restart an interrupted restore    Rewind tape    Unload tape    RETCODE    STATUS
 1. Normal case success with only required fields
-                      ${_DB_USERNAME}    ${_DB_PASSWORD}    ${_CONN_STRING}        ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   DB_RESTORE     ${EMPTY}            ${EMPTY}                  C:\\Automic\\testcases\\PCK.AUTOMIC_MSSQL\\ACTION_RESTORE_DB_FROM_BACKUP_${APP}.bck    ${EMPTY}        NO                 YES              1                            ${EMPTY}         YES                                   NO                 YES                          NO                                YES            YES            0          ${ENDED_OK}
+                      ${_DB_USERNAME}    ${_DB_PASSWORD}    ${_CONN_STRING}           ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   DB_RESTORE         ${EMPTY}            ${EMPTY}                  C:\\Automic\\testcases\\PCK.AUTOMIC_MSSQL\\ACTION_RESTORE_DB_FROM_BACKUP_${APP}.bck    ${EMPTY}        NO                 YES              1                            ${EMPTY}         YES                                   NO                 YES                          NO                                YES            YES            0          ${ENDED_OK}
 
 *** Keywords ***
 Restore a database
@@ -17,8 +17,6 @@ Restore a database
     ...    ${retries}    ${db_name}    ${file_to_restore}    ${file_group_to_restore}    ${disk_sources}    ${tape_sources}
     ...    ${verify_checksum}    ${stop_on_error}    ${file_no_in_backupset}    ${name_of_media}    ${rb_uncommitted_trans}    ${partial_restore}
     ...    ${replace_exist_db}    ${restart_interrupted}    ${tape_rewind}    ${tape_unload}    ${returnCode}    ${returnStatus}
-    Drop Database    ${_DB_USERNAME}    ${_DB_USERNAME}    ${_CONN_STRING}    ${_JAR}    ${_CLASS}    ${_INTRVL}
-    ...    ${_RETRY}    DB_BACKUP    NO    0    ${ENDED_OK}    
     Init Action    ${ACTION_RESTORE_DB_FROM_BACKUP}
     Action Set    ${PRT_RESTORE_DB_USERNAME}    ${username}
     Action Set    ${PRT_RESTORE_DB_PASSWORD}    ${password}
