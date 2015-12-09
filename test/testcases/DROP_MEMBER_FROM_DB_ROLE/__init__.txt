@@ -1,0 +1,2 @@
+*** Settings ***
+Force Tags        DROP_MEMBER_FROM_DB_ROLE

@@ -150,6 +150,7 @@ Create Login
     ...    ${login_pass}    ${pass_must_change}    ${check_pass_exp}    ${check_pass_policy}    ${fail_if_exists}    ${returnCode}
     ...    ${returnStatus}
     ${_CURRENT_TIMESTAMP_}    Get Time    epoch
+    Run Keyword If    '${FLAG}' == 'NO_TIMESTAMP'    Set Suite Variable    ${login_with_timestamp}    ${login_name}
     Run Keyword If    '${FLAG}' == 'TEST'    Set Suite Variable    ${login_with_timestamp}    ${login_name}${_CURRENT_TIMESTAMP_}
     Init Action    ${ACTION_CREATE_LOGIN}
     Action Set    ${PRT_CREATE_LOGIN_USERNAME}    ${username}
