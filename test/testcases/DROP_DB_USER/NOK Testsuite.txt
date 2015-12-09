@@ -1,54 +1,49 @@
 *** Settings ***
 Documentation     NOTE:
 ...               add note here
-Suite Setup       Setup_suite
+Suite Setup       Setup_suite    TEST_LOGIN_DROP_DB_USER_2    TEST_DROP_DB_USER_2
 Force Tags        windows
 Test Template     Drop DB User
 Resource          ../../resources/keywords.txt
 Resource          ../../resources/context.txt
 
-*** Test Cases ***    Username                   Password                   JDBC Connection String     JDBC Driver JAR URI    JDBC Driver Class    Connection Interval    No of Connection Retries    DB Name                Name of User to Drop    Fail If Not Exists    RETCODE    STATUS
+*** Test Cases ***    OK_NOK    Username                   Password                   JDBC Connection String     JDBC Driver JAR URI    JDBC Driver Class    Connection Interval    No of Connection Retries    DB Name                Name of User to Drop    Fail If Not Exists    RETCODE    STATUS
 1. Fail with invalid username
-                      ${_DB_USERNAME}_invalid    ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST                    NO                    0          ${ENDED_NOK}
+                      NOK       ${_DB_USERNAME}_invalid    ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST_DROP_DB_USER_2     NO                    0          ${ENDED_NOK}
 
 2. Fail with invalid password
-                      ${_DB_USERNAME}            ${_DB_PASSWORD}_invalid    ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST                    NO                    0          ${ENDED_NOK}
+                      NOK       ${_DB_USERNAME}            ${_DB_PASSWORD}_invalid    ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST_DROP_DB_USER_2     NO                    0          ${ENDED_NOK}
 
 3. Fail with invalid jdbc connection string
-                      ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}_invalid    ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST                    NO                    0          ${ENDED_NOK}
+                      NOK       ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}_invalid    ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST_DROP_DB_USER_2     NO                    0          ${ENDED_NOK}
 
 4. Fail with invalid JDBC Driver Jar URI
-                      ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}_invalid        ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST                    NO                    0          ${ENDED_NOK}
+                      NOK       ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}_invalid        ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST_DROP_DB_USER_2     NO                    0          ${ENDED_NOK}
 
 5. Fail with invalid JDBC Driver Class
-                      ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}_invalid    ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST                    NO                    0          ${ENDED_NOK}
+                      NOK       ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}_invalid    ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            TEST_DROP_DB_USER_2     NO                    0          ${ENDED_NOK}
 
 6. Fail with invalid DB Name and Fail If Not Exists = YES
-                      ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}_invalid    TEST                    YES                   0          ${ENDED_NOK}
+                      NOK       ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}_invalid    TEST_DROP_DB_USER_2     YES                   0          ${ENDED_NOK}
+
+6. Fail with invalid DB Name and Fail If Not Exists = NO
+                      NOK       ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}_invalid    TEST_DROP_DB_USER_2     NO                    0          ${ENDED_NOK}
 
 7. Fail with not exist user and Fail If not Exist = YES
-                      ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            _invalid                YES                   0          ${ENDED_NOK}
+                      NOK       ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            _invalid                YES                   0          ${ENDED_NOK}
 
 *** Keywords ***
-Drop DB User
-    [Arguments]    ${username}    ${password}    ${jdbc_conn}    ${jdbc_jar}    ${jdbc_class}    ${interval}
-    ...    ${retries}    ${db_name}    ${user_name_to_drop}    ${fail_if_not_exists}    ${returnCode}    ${returnStatus}
-    Init Action    ${ACTION_DROP_DB_USER}
-    Action Set    ${PRT_DROP_DB_USER_USERNAME}    ${username}
-    Action Set    ${PRT_DROP_DB_USER_PASSWORD}    ${password}
-    Action Set    ${PRT_DROP_DB_USER_JDBC_CONN}    ${jdbc_conn}
-    Action Set    ${PRT_DROP_DB_USER_DRIVER_JAR}    ${jdbc_jar}
-    Action Set    ${PRT_DROP_DB_USER_DRIVER_CLASS}    ${jdbc_class}
-    Action Set    ${PRT_DROP_DB_USER_CONN_INTRVL}    ${interval}
-    Action Set    ${PRT_DROP_DB_USER_CONN_RETRY}    ${retries}
-    Action Set    ${PRT_DROP_DB_USER_DATABASE_NAME}    ${db_name}
-    Action Set    ${PRT_DROP_DB_USER_USER_NAME_TO_DROP}    ${user_name_to_drop}
-    Action Set    ${PRT_DROP_DB_USER_FAIL_IF_NOT_EXISTS}    ${fail_if_not_exists}
-    Action Execute
-    Action Report Should Be Found
-    Action Return Code Should Not Equal    ${returnCode}
-    Action Return Status Should Be    ${returnStatus}
-
 Setup_suite
+    [Arguments]    ${setup_login_name}    ${db_user}
     [Documentation]    TODO: Write all steps need prepare before testing here
     Log    Start testing for Drop DB User Template
+    #Prepare DB    AT_DB    AT_LOGIN    AT_USER
+    Drop Login    OK    ${_DB_USERNAME}    ${_DB_PASSWORD}    ${_CONN_STRING}    ${_JAR}    ${_CLASS}
+    ...    ${_INTRVL}    ${_RETRY}    ${setup_login_name}    NO    0    ${ENDED_OK}
+    Create Login    OK    NO_TIMESTAMP    ${_DB_USERNAME}    ${_DB_PASSWORD}    ${_CONN_STRING}    ${_JAR}
+    ...    ${_CLASS}    ${_INTRVL}    ${_RETRY}    ${_DB_NAME}    ${setup_login_name}    NO
+    ...    ${setup_login_name}    NO    NO    NO    NO    0
+    ...    ${ENDED_OK}
+    Create DB User    OK    NO_TIMESTAMP    ${_DB_USERNAME}    ${_DB_PASSWORD}    ${_CONN_STRING}    ${_JAR}
+    ...    ${_CLASS}    ${_INTRVL}    ${_RETRY}    ${_DB_NAME}    ${db_user}    ${setup_login_name}
+    ...    ${EMPTY}    NO    0    ${ENDED_OK}

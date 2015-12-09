@@ -200,6 +200,7 @@ Create DB User
     ...    ${default_schema}    ${fail_if_exists}    ${returnCode}    ${returnStatus}
     ${_CURRENT_TIMESTAMP_}    Get Time    epoch
     Run Keyword If    '${FLAG}' == 'TEST'    Set Suite Variable    ${user_with_timestamp}    ${user_name_to_create}${_CURRENT_TIMESTAMP_}
+    Run Keyword If    '${FLAG}' == 'NO_TIMESTAMP'    Set Suite Variable    ${user_with_timestamp}    ${user_name_to_create}
     Init Action    ${ACTION_CREATE_DB_USER}
     Action Set    ${PRT_CREATE_DB_USER_USERNAME}    ${username}
     Action Set    ${PRT_CREATE_DB_USER_PASSWORD}    ${password}
@@ -218,3 +219,37 @@ Create DB User
     Run Keyword If    '${OK_NOK}' == 'OK'    Action Return Code Should Be    ${returnCode}
     Run Keyword If    '${OK_NOK}' == 'NOK'    Action Return Code Should Not Equal    ${returnCode}
     Action Return Status Should Be    ${returnStatus}
+
+Drop DB User
+    [Arguments]    ${OK_NOK}    ${username}    ${password}    ${jdbc_conn}    ${jdbc_jar}    ${jdbc_class}
+    ...    ${interval}    ${retries}    ${db_name}    ${user_name_to_drop}    ${fail_if_not_exists}    ${returnCode}
+    ...    ${returnStatus}
+    Init Action    ${ACTION_DROP_DB_USER}
+    Action Set    ${PRT_DROP_DB_USER_USERNAME}    ${username}
+    Action Set    ${PRT_DROP_DB_USER_PASSWORD}    ${password}
+    Action Set    ${PRT_DROP_DB_USER_JDBC_CONN}    ${jdbc_conn}
+    Action Set    ${PRT_DROP_DB_USER_DRIVER_JAR}    ${jdbc_jar}
+    Action Set    ${PRT_DROP_DB_USER_DRIVER_CLASS}    ${jdbc_class}
+    Action Set    ${PRT_DROP_DB_USER_CONN_INTRVL}    ${interval}
+    Action Set    ${PRT_DROP_DB_USER_CONN_RETRY}    ${retries}
+    Action Set    ${PRT_DROP_DB_USER_DATABASE_NAME}    ${db_name}
+    Action Set    ${PRT_DROP_DB_USER_USER_NAME_TO_DROP}    ${user_name_to_drop}
+    Action Set    ${PRT_DROP_DB_USER_FAIL_IF_NOT_EXISTS}    ${fail_if_not_exists}
+    Action Execute
+    Action Report Should Be Found
+    Run Keyword If    '${OK_NOK}' == 'OK'    Action Return Code Should Be    ${returnCode}
+    Run Keyword If    '${OK_NOK}' == 'NOK'    Action Return Code Should Not Equal    ${returnCode}
+    Action Return Status Should Be    ${returnStatus}
+
+Prepare DB
+    [Arguments]    ${db_name}    ${login_name}    ${db_user}
+    Create Database    ${_DB_USERNAME}    ${_DB_PASSWORD}    ${_CONN_STRING}    ${_JAR}    ${_CLASS}    ${_INTRVL}
+    ...    ${_RETRY}    ${db_name}    ${EMPTY}    ${EMPTY}    ${EMPTY}    NO
+    ...    OFF    OFF    0    ${ENDED_OK}
+    Create Login    OK    NO_TIMESTAMP    ${_DB_USERNAME}    ${_DB_PASSWORD}    ${_CONN_STRING}    ${_JAR}
+    ...    ${_CLASS}    ${_INTRVL}    ${_RETRY}    ${db_name}    ${login_name}    NO
+    ...    ${login_name}    NO    NO    NO    NO    0
+    ...    ${ENDED_OK}
+    Create DB User    OK    NO_TIMESTAMP    ${_DB_USERNAME}    ${_DB_PASSWORD}    ${_CONN_STRING}    ${_JAR}
+    ...    ${_CLASS}    ${_INTRVL}    ${_RETRY}    ${db_name}    ${db_user}    ${login_name}
+    ...    ${EMPTY}    NO    0    ${ENDED_OK}
