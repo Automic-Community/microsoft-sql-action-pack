@@ -9,7 +9,7 @@ Resource          ../../resources/context.txt
 
 *** Test Cases ***    Username              Password              JDBC Connection String    JDBC Driver JAR URI    JDBC Driver Class    Connection Interval    No of Connection Retries    DB Name to backup    File to include    Group file to include    List of target disks                                List of minor disks    List of target tapes    List of minor tapes    Differential backup    Copy-only backup    Description    Backupset name    Expires    Expires date    Remain days    Mediaset init    Mediaset skip    Mediaset format    Mediaset description    Name of media    Media blocksize    Datatransfer blockcount    Datatransfer maximum transfer size    Error management checksum    Error management stop on error    Tape rewind    Tape unload    RETCODE    STATUS
 1. Normal case success with only required fields
-                      ${_DB_USERNAME_AT}    ${_DB_PASSWORD_AT}    ${_CONN_STRING_AT}        ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME_AT}       ${EMPTY}           ${EMPTY}                 C:\\Automic\\testcases\\PCK.AUTOMIC_MSSQL\\at_backup_db_&$PHYS_DATE_YYYYMMDD#.bck    ${EMPTY}               ${EMPTY}                ${EMPTY}               NO                     NO                  ${EMPTY}       ${EMPTY}          NO         ${EMPTY}        -1             NO               NO               NO                 ${EMPTY}                ${EMPTY}         -1                 -1                         -1                                    NO                           YES                               YES            YES            0          ${ENDED_OK}
+                      ${_DB_USERNAME}    ${_DB_USERNAME}    ${_CONN_STRING}        ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   DB_BACKUP       ${EMPTY}           ${EMPTY}                 C:\\Automic\\testcases\\PCK.AUTOMIC_MSSQL\\at_backup_db_&$PHYS_DATE_YYYYMMDD#.bck    ${EMPTY}               ${EMPTY}                ${EMPTY}               NO                     NO                  ${EMPTY}       ${EMPTY}          NO         ${EMPTY}        -1             NO               NO               NO                 ${EMPTY}                ${EMPTY}         -1                 -1                         -1                                    NO                           YES                               YES            YES            0          ${ENDED_OK}
 
 *** Keywords ***
 Create a database backup
@@ -19,8 +19,8 @@ Create a database backup
     ...    ${expires}    ${expire_date}    ${retain_days}    ${mediaset_init}    ${mediaset_skip}    ${mediaset_format}
     ...    ${mediaset_description}    ${name_of_media}    ${media_blocksize}    ${datatransfer_blockcount}    ${datatransfer_maximum}    ${error_management_checksum}
     ...    ${stop_on_error}    ${tape_rewind}    ${tape_unload}    ${returnCode}    ${returnStatus}
-    Create Database    ${_DB_USERNAME_AT}    ${_DB_PASSWORD_AT}    ${_CONN_STRING_AT}    ${_JAR}    ${_CLASS}    ${_INTRVL}
-    ...    ${_RETRY}    ${_DB_NAME_AT}    ${EMPTY}    ${EMPTY}    ${EMPTY}    NO
+    Create Database    ${_DB_USERNAME}    ${_DB_USERNAME}    ${_CONN_STRING}    ${_JAR}    ${_CLASS}    ${_INTRVL}
+    ...    ${_RETRY}    DB_BACKUP    ${EMPTY}    ${EMPTY}    ${EMPTY}    NO
     ...    OFF    OFF    0    ${ENDED_OK}
     Init Action    ${ACTION_DB_BACKUP}
     Action Set    ${PRT_CREATE_DB_BACKUP_DB_USERNAME}    ${username}
