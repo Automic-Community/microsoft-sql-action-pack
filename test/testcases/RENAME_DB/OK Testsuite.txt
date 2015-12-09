@@ -7,16 +7,20 @@ Test Template     Rename a database
 Resource          ../../resources/keywords.txt
 Resource          ../../resources/context.txt
 
-*** Test Cases ***    Username              Password              JDBC Connection String    JDBC Driver JAR URI    JDBC Driver Class    Connection Interval    No of Connection Retries    Old DB Name       New DB Name           Fail if old DB not exits    Fail if new DB exits    RETCODE    STATUS
+*** Test Cases ***    Username           Password           JDBC Connection String    JDBC Driver JAR URI    JDBC Driver Class    Connection Interval    No of Connection Retries    Old DB Name    New DB Name      Fail if old DB not exits    Fail if new DB exits    RETCODE    STATUS
 1. Normal case success with only required fields
-                      ${_DB_USERNAME}    ${_DB_PASSWORD}    ${_CONN_STRING}        ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   DB_RENAME    DB_RENAME_NEW    NO                          NO                      0          ${ENDED_OK}
+                      ${_DB_USERNAME}    ${_DB_PASSWORD}    ${_CONN_STRING}           ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   DB_RENAME      DB_RENAME_NEW    NO                          NO                      0          ${ENDED_OK}
 
 *** Keywords ***
 Rename a database
     [Arguments]    ${username}    ${password}    ${jdbc_conn}    ${jdbc_jar}    ${jdbc_class}    ${interval}
     ...    ${retries}    ${db_name}    ${db_new_name}    ${fail_if_new_exists}    ${fail_if_not_exists}    ${returnCode}
     ...    ${returnStatus}
-	Create Database	${_DB_USERNAME}    ${_DB_PASSWORD}    ${_CONN_STRING}        ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   DB_RENAME       ${EMPTY}         ${EMPTY}           ${EMPTY}    NO                  OFF             OFF            0          ${ENDED_OK}
+    Drop Database    ${_DB_USERNAME}    ${_DB_USERNAME}    ${_CONN_STRING}    ${_JAR}    ${_CLASS}    ${_INTRVL}
+    ...    ${_RETRY}    DB_RENAME_NEW    NO    0    ${ENDED_OK}
+    Create Database    ${_DB_USERNAME}    ${_DB_PASSWORD}    ${_CONN_STRING}    ${_JAR}    ${_CLASS}    ${_INTRVL}
+    ...    ${_RETRY}    DB_RENAME    ${EMPTY}    ${EMPTY}    ${EMPTY}    NO
+    ...    OFF    OFF    0    ${ENDED_OK}
     Init Action    ${ACTION_RENAME_DB}
     Action Set    ${PRT_RENAME_DB_USERNAME}    ${username}
     Action Set    ${PRT_RENAME_DB_PASSWORD}    ${password}
