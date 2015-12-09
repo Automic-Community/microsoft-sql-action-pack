@@ -60,6 +60,8 @@ Create a database backup
     Action Report Should Be Found
     Action Return Code Should Be    ${returnCode}
     Action Return Status Should Be    ${returnStatus}
+    Drop Database    ${_DB_USERNAME}    ${_DB_USERNAME}    ${_CONN_STRING}    ${_JAR}    ${_CLASS}    ${_INTRVL}
+    ...    ${_RETRY}    DB_BACKUP    NO    0    ${ENDED_OK}
 
 Setup_suite
     [Documentation]    TODO: Write all steps need prepare before testing here
