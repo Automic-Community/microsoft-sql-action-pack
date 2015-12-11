@@ -1,60 +1,51 @@
 *** Settings ***
 Documentation     NOTE:
 ...               add note here
-Suite Setup       Setup_suite
+Suite Setup       Setup_suite    TEST_DROP_MEM_DB_ROLE_3    TEST_DROP_MEM_DB_ROLE_USER_3
 Force Tags        windows
 Test Template     Drop Member From DB Role
 Resource          ../../resources/keywords.txt
 Resource          ../../resources/context.txt
 
-*** Test Cases ***    Username                   Password                   JDBC Connection String     JDBC Driver JAR URI    JDBC Driver Class    Connection Interval    No of Connection Retries    DB Name                Role Name                Member Name        RETCODE    STATUS
+*** Test Cases ***    OK_NOK    Username                   Password                   JDBC Connection String     JDBC Driver JAR URI    JDBC Driver Class    Connection Interval    No of Connection Retries    DB Name                Role Name                Member Name    RETCODE    STATUS
 1. Fail with invalid username
-                      ${_DB_USERNAME}_invalid    ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            ${_ROLE_NAME}            TEST               0          ${ENDED_NOK}
+                      NOK       ${_DB_USERNAME}_invalid    ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            ${_ROLE_NAME}            TEST           0          ${ENDED_NOK}
 
 2. Fail with invalid password
-                      ${_DB_USERNAME}            ${_DB_PASSWORD}_invalid    ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            ${_ROLE_NAME}            TEST               0          ${ENDED_NOK}
+                      NOK       ${_DB_USERNAME}            ${_DB_PASSWORD}_invalid    ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            ${_ROLE_NAME}            TEST           0          ${ENDED_NOK}
 
 3. Fail with invalid jdbc connection string
-                      ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}_invalid    ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            ${_ROLE_NAME}            TEST               0          ${ENDED_NOK}
+                      NOK       ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}_invalid    ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            ${_ROLE_NAME}            TEST           0          ${ENDED_NOK}
 
 4. Fail with invalid JDBC Driver Jar URI
-                      ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}_invalid        ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            ${_ROLE_NAME}            TEST               0          ${ENDED_NOK}
+                      NOK       ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}_invalid        ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            ${_ROLE_NAME}            TEST           0          ${ENDED_NOK}
 
 5. Fail with invalid JDBC Driver Class
-                      ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}_invalid    ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            ${_ROLE_NAME}            TEST               0          ${ENDED_NOK}
+                      NOK       ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}_invalid    ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            ${_ROLE_NAME}            TEST           0          ${ENDED_NOK}
 
 6. Fail with invalid DB Name
-                      ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}_invalid    ${_ROLE_NAME}            TEST               0          ${ENDED_NOK}
+                      NOK       ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}_invalid    ${_ROLE_NAME}            TEST           0          ${ENDED_NOK}
 
 7. Fail with invalid Role Name
-                      ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            ${_ROLE_NAME}_invalid    TEST               0          ${ENDED_NOK}
+                      NOK       ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            ${_ROLE_NAME}_invalid    TEST           0          ${ENDED_NOK}
 
 8. Fail with invalid Member Name
-                      ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            ${_ROLE_NAME}            _invalid           0          ${ENDED_NOK}
-
-9. Fail with case user does not exist in the target DB
-                      TEST                       TEST                       ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   master                 ${_ROLE_NAME}            ${_DB_USERNAME}    0          ${ENDED_NOK}
+                      NOK       ${_DB_USERNAME}            ${_DB_PASSWORD}            ${_CONN_STRING}            ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}            ${_ROLE_NAME}            _invalid       0          ${ENDED_NOK}
 
 *** Keywords ***
-Drop Member From DB Role
-    [Arguments]    ${username}    ${password}    ${jdbc_conn}    ${jdbc_jar}    ${jdbc_class}    ${interval}
-    ...    ${retries}    ${db_name}    ${role_name}    ${member_name}    ${returnCode}    ${returnStatus}
-    Init Action    ${ACTION_DROP_MEMBER_FROM_DB_ROLE}
-    Action Set    ${PRT_DROP_MEMBER_FROM_DB_ROLE_USERNAME}    ${username}
-    Action Set    ${PRT_DROP_MEMBER_FROM_DB_ROLE_PASSWORD}    ${password}
-    Action Set    ${PRT_DROP_MEMBER_FROM_DB_ROLE_JDBC_CONN}    ${jdbc_conn}
-    Action Set    ${PRT_DROP_MEMBER_FROM_DB_ROLE_DRIVER_JAR}    ${jdbc_jar}
-    Action Set    ${PRT_DROP_MEMBER_FROM_DB_ROLE_DRIVER_CLASS}    ${jdbc_class}
-    Action Set    ${PRT_DROP_MEMBER_FROM_DB_ROLE_CONN_INTRVL}    ${interval}
-    Action Set    ${PRT_DROP_MEMBER_FROM_DB_ROLE_CONN_RETRY}    ${retries}
-    Action Set    ${PRT_DROP_MEMBER_FROM_DB_ROLE_DATABASE_NAME}    ${db_name}
-    Action Set    ${PRT_DROP_MEMBER_FROM_DB_ROLE_ROLE_NAME}    ${role_name}
-    Action Set    ${PRT_DROP_MEMBER_FROM_DB_ROLE_MEMBER_NAME}    ${member_name}
-    Action Execute
-    Action Report Should Be Found
-    Action Return Code Should Not Equal    ${returnCode}
-    Action Return Status Should Be    ${returnStatus}
-
 Setup_suite
+    [Arguments]    ${setup_login_name}    ${db_user}
     [Documentation]    TODO: Write all steps need prepare before testing here
     Log    Start testing for Drop Member From DB Role Template
+    Drop Login    OK    ${_DB_USERNAME}    ${_DB_PASSWORD}    ${_CONN_STRING}    ${_JAR}    ${_CLASS}
+    ...    ${_INTRVL}    ${_RETRY}    ${setup_login_name}    NO    0    ${ENDED_OK}
+    Create Login    OK    NO_TIMESTAMP    ${_DB_USERNAME}    ${_DB_PASSWORD}    ${_CONN_STRING}    ${_JAR}
+    ...    ${_CLASS}    ${_INTRVL}    ${_RETRY}    ${_DB_NAME}    ${setup_login_name}    NO
+    ...    ${setup_login_name}    NO    NO    NO    NO    0
+    ...    ${ENDED_OK}
+    Create DB User    OK    NO_TIMESTAMP    ${_DB_USERNAME}    ${_DB_PASSWORD}    ${_CONN_STRING}    ${_JAR}
+    ...    ${_CLASS}    ${_INTRVL}    ${_RETRY}    ${_DB_NAME}    ${db_user}    ${setup_login_name}
+    ...    ${EMPTY}    NO    0    ${ENDED_OK}
+    Add Member To DB Role    OK    ${_DB_USERNAME}    ${_DB_PASSWORD}    ${_CONN_STRING}    ${_JAR}    ${_CLASS}
+    ...    ${_INTRVL}    ${_RETRY}    ${_DB_NAME}    ${_ROLE_NAME}    ${db_user}    0
+    ...    ${ENDED_OK}
