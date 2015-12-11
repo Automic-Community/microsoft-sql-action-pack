@@ -2,10 +2,14 @@
 Documentation     NOTE:
 ...               add note here
 Suite Setup       Setup_suite
+Suite Teardown    Teardown_suite
 Force Tags        windows
 Test Template     Drop a database
 Resource          ../../resources/keywords.txt
 Resource          ../../resources/context.txt
+
+*** Variables ***
+${TEMP_DB_NAME}    DB_TO_DROP
 
 *** Test Cases ***    Username             Password             JDBC Connection String    JDBC Driver JAR URI    JDBC Driver Class    Connection Interval    No of Connection Retries    DB Name to drop           Fail if not DB exits    RETCODE    STATUS
 Wrong User Input Should Fail
@@ -30,10 +34,6 @@ Wrong DB Name To Drop & Fail If Exist = YES Input Should Fail
 Drop a database
     [Arguments]    ${username}    ${password}    ${jdbc_conn}    ${jdbc_jar}    ${jdbc_class}    ${interval}
     ...    ${retries}    ${db_name}    ${fail_if_not_exists}    ${returnCode}    ${returnStatus}
-    Create Database    ${_DB_USERNAME}    ${_DB_PASSWORD}    ${_CONN_STRING}    ${_JAR}    ${_CLASS}    ${_INTRVL}
-    ...    ${_RETRY}    ${_DB_NAME}    ${EMPTY}    ${EMPTY}    ${EMPTY}    NO
-    ...    OFF    OFF    0    ${ENDED_OK}
-    Init Action    ${ACTION_DROP_DB}
     Init Action    ${ACTION_DROP_DB}
     Action Set    ${PRT_DROP_DB_USERNAME}    ${username}
     Action Set    ${PRT_DROP_DB_PASSWORD}    ${password}
@@ -52,3 +52,10 @@ Drop a database
 Setup_suite
     [Documentation]    TODO: Write all steps need prepare before testing here
     Log    Start testing for Drop a database backup
+    Create Database    ${_DB_USERNAME}    ${_DB_PASSWORD}    ${_CONN_STRING}    ${_JAR}    ${_CLASS}    ${_INTRVL}
+    ...    ${_RETRY}    ${TEMP_DB_NAME}    ${EMPTY}    ${EMPTY}    ${EMPTY}    NO
+    ...    OFF    OFF    0    ${ENDED_OK}
+
+Teardown_suite
+    Drop a database    ${_DB_USERNAME}    ${_DB_PASSWORD}    ${_CONN_STRING}    ${_JAR}    ${_CLASS}    ${_INTRVL}
+    ...    ${_RETRY}    ${TEMP_DB_NAME}    NO    1    ${ENDED_OK}
