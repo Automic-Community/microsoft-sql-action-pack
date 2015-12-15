@@ -10,30 +10,28 @@ Resource          ../../resources/context.txt
 *** Variables ***
 ${TEMP_DB_NAME}    DB_TEST_RENAME_NOK
 
-*** Test Cases ***    Username             Password             JDBC Connection String    JDBC Driver JAR URI    JDBC Driver Class    Connection Interval    No of Connection Retries    Old DB Name            New DB Name      Fail if old DB not exits    Fail if new DB exits    RETCODE    STATUS
+*** Test Cases ***    Username                                                       Password             JDBC Connection String    JDBC Driver JAR URI    JDBC Driver Class    Connection Interval    No of Connection Retries    Old DB Name            New DB Name      Fail if old DB not exits    Fail if new DB exits    RETCODE    STATUS
 Wrong User Input Should Fail
-                      ${_DB_USERNAME}_a    ${_DB_PASSWORD}      ${_CONN_STRING}           ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${TEMP_DB_NAME}        DB_RENAME_NEW    NO                          NO                      1          ${ENDED_NOK}
+                      ${_DB_USERNAME}_a                                              ${_DB_PASSWORD}      ${_CONN_STRING}           ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${TEMP_DB_NAME}        DB_RENAME_NEW    NO                          NO                      1          ${ENDED_NOK}
 
 Wrong Password Input Should Fail
-                      ${_DB_USERNAME}      ${_DB_PASSWORD}_b    ${_CONN_STRING}           ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${TEMP_DB_NAME}        DB_RENAME_NEW    NO                          NO                      1          ${ENDED_NOK}
+                      ${_DB_USERNAME}                                                ${_DB_PASSWORD}_b    ${_CONN_STRING}           ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${TEMP_DB_NAME}        DB_RENAME_NEW    NO                          NO                      1          ${ENDED_NOK}
 
 Wrong JDBC Conn String Input Should Fail
-                      ${_DB_USERNAME}      ${_DB_PASSWORD}      ${_CONN_STRING}_c         ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${TEMP_DB_NAME}        DB_RENAME_NEW    NO                          NO                      1          ${ENDED_NOK}
+                      ${_DB_USERNAME}                                                ${_DB_PASSWORD}      ${_CONN_STRING}_c         ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${TEMP_DB_NAME}        DB_RENAME_NEW    NO                          NO                      1          ${ENDED_NOK}
 
 Wrong JDBC Driver JAR Input Should Fail
-                      ${_DB_USERNAME}      ${_DB_PASSWORD}      ${_CONN_STRING}           ${_JAR}_d              ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${TEMP_DB_NAME}        DB_RENAME_NEW    NO                          NO                      1          ${ENDED_NOK}
+                      ${_DB_USERNAME}                                                ${_DB_PASSWORD}      ${_CONN_STRING}           ${_JAR}_d              ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${TEMP_DB_NAME}        DB_RENAME_NEW    NO                          NO                      1          ${ENDED_NOK}
 
 Wrong JDBC Driver Class Input Should Fail
-                      ${_DB_USERNAME}      ${_DB_PASSWORD}      ${_CONN_STRING}           ${_JAR}                ${_CLASS}_e          ${_INTRVL}             ${_RETRY}                   ${TEMP_DB_NAME}        DB_RENAME_NEW    NO                          NO                      1          ${ENDED_NOK}
+                      ${_DB_USERNAME}                                                ${_DB_PASSWORD}      ${_CONN_STRING}           ${_JAR}                ${_CLASS}_e          ${_INTRVL}             ${_RETRY}                   ${TEMP_DB_NAME}        DB_RENAME_NEW    NO                          NO                      1          ${ENDED_NOK}
 
 Wrong Old DB Name Input Should Fail
-                      ${_DB_USERNAME}      ${_DB_PASSWORD}      ${_CONN_STRING}           ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${TEMP_DB_NAME}_aaa    DB_RENAME_NEW    YES                         YES                     1          ${ENDED_NOK}
-
-Wrong New DB Name has special characters Input Should Fail
-                      ${_DB_USERNAME}      ${_DB_PASSWORD}      ${_CONN_STRING}           ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   DB_RENAME              $p3ci@l N@m3     YES                         YES                     1          ${ENDED_NOK}
-
-Wrong Old DB Name has special characters Input Should Fail
-                      ${_DB_USERNAME}      ${_DB_PASSWORD}      ${_CONN_STRING}           ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   DB_RENAME_g            $p3ci@l N@m3     YES                         YES                     1          ${ENDED_NOK}
+                      ${_DB_USERNAME}                                                ${_DB_PASSWORD}      ${_CONN_STRING}           ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${TEMP_DB_NAME}_aaa    DB_RENAME_NEW    YES                         YES                     1          ${ENDED_NOK}
+                      #Wrong New DB Name has special characters Input Should Fail
+                      #                                                              ${_DB_USERNAME}      ${_DB_PASSWORD}           ${_CONN_STRING}        ${_JAR}              ${_CLASS}              ${_INTRVL}                  ${_RETRY}              DB_RENAME        $p3ci@l N@m3                YES                     YES        1               ${ENDED_NOK}
+                      #Wrong Old DB Name has special characters Input Should Fail
+                      #                                                              ${_DB_USERNAME}      ${_DB_PASSWORD}           ${_CONN_STRING}        ${_JAR}              ${_CLASS}              ${_INTRVL}                  ${_RETRY}              DB_RENAME_g      $p3ci@l N@m3                YES                     YES        1               ${ENDED_NOK}
 
 *** Keywords ***
 Rename a database
