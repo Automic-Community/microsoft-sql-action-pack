@@ -7,17 +7,22 @@ Test Template     Drop a database
 Resource          ../../resources/keywords.txt
 Resource          ../../resources/context.txt
 
-*** Test Cases ***    Username           Password           JDBC Connection String    JDBC Driver JAR URI    JDBC Driver Class    Connection Interval    No of Connection Retries    DB Name to drop    Fail if not DB exits    RETCODE    STATUS
+*** Test Cases ***    Username           Password           JDBC Connection String    JDBC Driver JAR URI    JDBC Driver Class    Connection Interval    No of Connection Retries    DB Name to drop    Fail if not DB exits    RETCODE      STATUS
 1. Normal case success with only required fields
-                      ${_DB_USERNAME}    ${_DB_USERNAME}    ${_CONN_STRING}           ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   DB_DROP            NO                      0          ${ENDED_OK}
+                      [Setup]            Create Database    ${_DB_USERNAME}           ${_DB_USERNAME}        ${_CONN_STRING}      ${_JAR}                ${_CLASS}                   ${_INTRVL}         ${_RETRY}               DB_DROP_1    ${EMPTY}       ${EMPTY}    ${EMPTY}    NO    OFF    OFF    0    ${ENDED_OK}
+                      ${_DB_USERNAME}    ${_DB_USERNAME}    ${_CONN_STRING}           ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   DB_DROP_1          NO                      0            ${ENDED_OK}
+
+2. Normal case success with Database name contains space
+                      [Setup]            Create Database    ${_DB_USERNAME}           ${_DB_USERNAME}        ${_CONN_STRING}      ${_JAR}                ${_CLASS}                   ${_INTRVL}         ${_RETRY}               DB DROP 2    ${EMPTY}       ${EMPTY}    ${EMPTY}    NO    OFF    OFF    0    ${ENDED_OK}
+                      ${_DB_USERNAME}    ${_DB_USERNAME}    ${_CONN_STRING}           ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   DB DROP 2          NO                      0            ${ENDED_OK}
 
 *** Keywords ***
 Drop a database
     [Arguments]    ${username}    ${password}    ${jdbc_conn}    ${jdbc_jar}    ${jdbc_class}    ${interval}
     ...    ${retries}    ${db_name}    ${fail_if_not_exists}    ${returnCode}    ${returnStatus}
-    Create Database    ${_DB_USERNAME}    ${_DB_USERNAME}    ${_CONN_STRING}    ${_JAR}    ${_CLASS}    ${_INTRVL}
-    ...    ${_RETRY}    DB_DROP    ${EMPTY}    ${EMPTY}    ${EMPTY}    NO
-    ...    OFF    OFF    0    ${ENDED_OK}
+    # Create Database    ${_DB_USERNAME}    ${_DB_USERNAME}    ${_CONN_STRING}    ${_JAR}    ${_CLASS}    ${_INTRVL}
+    #...    ${_RETRY}    DB_DROP    ${EMPTY}    ${EMPTY}    ${EMPTY}    NO
+    #...    OFF    OFF    0    ${ENDED_OK}
     Init Action    ${ACTION_DROP_DB}
     Action Set    ${PRT_DROP_DB_USERNAME}    ${username}
     Action Set    ${PRT_DROP_DB_PASSWORD}    ${password}

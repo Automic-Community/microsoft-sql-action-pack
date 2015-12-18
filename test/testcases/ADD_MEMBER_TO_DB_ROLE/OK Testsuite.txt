@@ -7,15 +7,19 @@ Test Template     Add Member To DB Role
 Resource          ../../resources/keywords.txt
 Resource          ../../resources/context.txt
 
-*** Test Cases ***    OK_NOK     Username           Password                  JDBC Connection String         JDBC Driver JAR URI    JDBC Driver Class    Connection Interval    No of Connection Retries    DB Name        Role Name        Member Name                    RETCODE    STATUS
+*** Test Cases ***    OK_NOK     Username           Password                  JDBC Connection String         JDBC Driver JAR URI       JDBC Driver Class    Connection Interval    No of Connection Retries    DB Name                   Role Name        Member Name                    RETCODE    STATUS
 1. Success with normal case
-                      [Setup]    Setup_test         TEST_ADD_MEM_DB_ROLE_1    TEST_ADD_MEM_DB_ROLE_USER_1
-                      OK         ${_DB_USERNAME}    ${_DB_PASSWORD}           ${_CONN_STRING}                ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}    ${_ROLE_NAME}    TEST_ADD_MEM_DB_ROLE_USER_1    0          ${ENDED_OK}
+                      [Setup]    Setup_test         TEST_ADD_MEM_DB_ROLE_1    TEST_ADD_MEM_DB_ROLE_USER_1    ${_DB_NAME}
+                      OK         ${_DB_USERNAME}    ${_DB_PASSWORD}           ${_CONN_STRING}                ${_JAR}                   ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}               ${_ROLE_NAME}    TEST_ADD_MEM_DB_ROLE_USER_1    0          ${ENDED_OK}
 
 2. Success with case member already is assigned the target role
-                      [Setup]    Setup_test         TEST_ADD_MEM_DB_ROLE_2    TEST_ADD_MEM_DB_ROLE_USER_2
-                      OK         ${_DB_USERNAME}    ${_DB_PASSWORD}           ${_CONN_STRING}                ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}    ${_ROLE_NAME}    TEST_ADD_MEM_DB_ROLE_USER_2    0          ${ENDED_OK}
-                      OK         ${_DB_USERNAME}    ${_DB_PASSWORD}           ${_CONN_STRING}                ${_JAR}                ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}    ${_ROLE_NAME}    TEST_ADD_MEM_DB_ROLE_USER_2    0          ${ENDED_OK}
+                      [Setup]    Setup_test         TEST_ADD_MEM_DB_ROLE_2    TEST_ADD_MEM_DB_ROLE_USER_2    ${_DB_NAME}
+                      OK         ${_DB_USERNAME}    ${_DB_PASSWORD}           ${_CONN_STRING}                ${_JAR}                   ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}               ${_ROLE_NAME}    TEST_ADD_MEM_DB_ROLE_USER_2    0          ${ENDED_OK}
+                      OK         ${_DB_USERNAME}    ${_DB_PASSWORD}           ${_CONN_STRING}                ${_JAR}                   ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME}               ${_ROLE_NAME}    TEST_ADD_MEM_DB_ROLE_USER_2    0          ${ENDED_OK}
+
+3. Success with case DB contains space
+                      [Setup]    Setup_test         TEST_ADD_MEM_DB_ROLE_4    TEST_ADD_MEM_DB_ROLE_USER_4    ${_DB_NAME_WITH_SPACE}
+                      OK         ${_DB_USERNAME}    ${_DB_PASSWORD}           ${_CONN_STRING}                ${_JAR}                   ${_CLASS}            ${_INTRVL}             ${_RETRY}                   ${_DB_NAME_WITH_SPACE}    ${_ROLE_NAME}    TEST_ADD_MEM_DB_ROLE_USER_4    0          ${ENDED_OK}
 
 *** Keywords ***
 Setup_suite
@@ -23,13 +27,13 @@ Setup_suite
     Log    Start testing for Add Member To DB Role Template
 
 Setup_test
-    [Arguments]    ${setup_login_name}    ${db_user}
+    [Arguments]    ${setup_login_name}    ${db_user}    ${db_name}
     Drop Login    OK    ${_DB_USERNAME}    ${_DB_PASSWORD}    ${_CONN_STRING}    ${_JAR}    ${_CLASS}
     ...    ${_INTRVL}    ${_RETRY}    ${setup_login_name}    NO    0    ${ENDED_OK}
     Create Login    OK    NO_TIMESTAMP    ${_DB_USERNAME}    ${_DB_PASSWORD}    ${_CONN_STRING}    ${_JAR}
-    ...    ${_CLASS}    ${_INTRVL}    ${_RETRY}    ${_DB_NAME}    ${setup_login_name}    NO
+    ...    ${_CLASS}    ${_INTRVL}    ${_RETRY}    ${db_name}    ${setup_login_name}    NO
     ...    ${setup_login_name}    NO    NO    NO    NO    0
     ...    ${ENDED_OK}
     Create DB User    OK    NO_TIMESTAMP    ${_DB_USERNAME}    ${_DB_PASSWORD}    ${_CONN_STRING}    ${_JAR}
-    ...    ${_CLASS}    ${_INTRVL}    ${_RETRY}    ${_DB_NAME}    ${db_user}    ${setup_login_name}
+    ...    ${_CLASS}    ${_INTRVL}    ${_RETRY}    ${db_name}    ${db_user}    ${setup_login_name}
     ...    ${EMPTY}    NO    0    ${ENDED_OK}
