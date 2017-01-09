@@ -1,6 +1,6 @@
 *** Settings ***
 Force Tags
-Default Tags
+Default Tags      SMOKE_TEST
 Resource          resources/context.txt
 
 *** Test Cases ***
