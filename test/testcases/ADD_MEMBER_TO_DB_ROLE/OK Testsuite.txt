@@ -3,7 +3,7 @@ Documentation     NOTE:
 ...               add note here
 Suite Setup       Setup_suite
 Force Tags        windows
-Default Tags      SMOKE_TEST
+Default Tags      SMOKE_TEST    ALL
 Test Template     Add Member To DB Role
 Resource          ../../resources/keywords.txt
 Resource          ../../resources/context.txt

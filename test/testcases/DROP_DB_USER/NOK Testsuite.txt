@@ -3,6 +3,7 @@ Documentation     NOTE:
 ...               add note here
 Suite Setup       Setup_suite    TEST_LOGIN_DROP_DB_USER_2    TEST_DROP_DB_USER_2
 Force Tags        windows
+Default Tags      ALL
 Test Template     Drop DB User
 Resource          ../../resources/keywords.txt
 Resource          ../../resources/context.txt

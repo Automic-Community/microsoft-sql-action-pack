@@ -4,6 +4,7 @@ Documentation     NOTE:
 Suite Setup       Setup_suite
 Suite Teardown    Teardown_suite
 Force Tags        windows
+Default Tags      ALL
 Test Template     Drop a database
 Resource          ../../resources/keywords.txt
 Resource          ../../resources/context.txt

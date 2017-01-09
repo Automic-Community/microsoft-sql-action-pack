@@ -3,6 +3,7 @@ Documentation     NOTE:
 ...               add note here
 Suite Setup       Setup_suite
 Force Tags        windows
+Default Tags      ALL
 Test Template     Create a database
 Resource          ../../resources/keywords.txt
 Resource          ../../resources/context.txt

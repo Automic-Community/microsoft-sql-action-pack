@@ -3,6 +3,7 @@ Documentation     NOTE:
 ...               add note here
 Suite Setup       Setup_suite    TEST_DROP_MEM_DB_ROLE_3    TEST_DROP_MEM_DB_ROLE_USER_3
 Force Tags        windows
+Default Tags      ALL
 Test Template     Drop Member From DB Role
 Resource          ../../resources/keywords.txt
 Resource          ../../resources/context.txt

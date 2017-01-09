@@ -3,7 +3,7 @@ Documentation     NOTE:
 ...               add note here
 Suite Setup       Setup_suite    TEST_ADD_MEM_DB_ROLE_3    TEST_ADD_MEM_DB_ROLE_USER_3
 Force Tags        windows
-Default Tags
+Default Tags      ALL
 Test Template     Add Member To DB Role
 Resource          ../../resources/keywords.txt
 Resource          ../../resources/context.txt
