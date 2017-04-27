@@ -307,10 +307,10 @@
             <entry name="xmlkey"/>
             <entry name="xmlpath"/>
          </properties>
-      </dynradiogroup><dynradiogroup alt="1" enabled="1" fill="b" focus="0" id="UC4RB_DB_TRUSTWORTHY_ONs.00" nl="1" quotes="" text="Thrustworthy" tooltip="Controls external access to and from the database." required="0">
+      </dynradiogroup><dynradiogroup alt="1" enabled="1" fill="b" focus="0" id="UC4RB_DB_TRUSTWORTHY_ONs.00" nl="1" quotes="" text="Trustworthy" tooltip="Controls external access to and from the database." required="0">
          <properties>
             <entry listparam="C" name="reference" reftype="STATIC">PCK.ITPA_SHARED.PRV.VARA.ON_OFF</entry>
-            <entry name="text">Thrustworthy</entry>
+            <entry name="text">Trustworthy</entry>
             <entry name="quotes"/>
             <entry name="id">UC4RB_DB_TRUSTWORTHY_ONs.00</entry>
             <entry name="enabled">0</entry>
