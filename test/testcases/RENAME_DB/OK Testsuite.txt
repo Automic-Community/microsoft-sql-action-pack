@@ -23,7 +23,7 @@ Rename a database
     [Arguments]    ${username}    ${password}    ${jdbc_conn}    ${jdbc_jar}    ${jdbc_class}    ${interval}
     ...    ${retries}    ${db_name}    ${db_new_name}    ${fail_if_new_exists}    ${fail_if_not_exists}    ${returnCode}
     ...    ${returnStatus}
-    Drop Database    ${_DB_USERNAME}    ${_DB_USERNAME}    ${_CONN_STRING}    ${_JAR}    ${_CLASS}    ${_INTRVL}
+    Drop Database    ${_DB_USERNAME}    ${_DB_PASSWORD}    ${_CONN_STRING}    ${_JAR}    ${_CLASS}    ${_INTRVL}
     ...    ${_RETRY}    ${db_new_name}    NO    0    ${ENDED_OK}
     Create Database    ${_DB_USERNAME}    ${_DB_PASSWORD}    ${_CONN_STRING}    ${_JAR}    ${_CLASS}    ${_INTRVL}
     ...    ${_RETRY}    ${db_name}    ${EMPTY}    ${EMPTY}    ${EMPTY}    NO
