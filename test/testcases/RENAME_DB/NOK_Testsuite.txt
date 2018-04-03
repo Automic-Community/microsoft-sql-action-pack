@@ -61,7 +61,7 @@ Rename a database
 Setup_suite
     [Documentation]    TODO: Write all steps need prepare before testing here
     Log    Start testing for Rename a database
-    Drop Database    ${_DB_USERNAME}    ${_DB_USERNAME}    ${_CONN_STRING}    ${_JAR}    ${_CLASS}    ${_INTRVL}
+    Drop Database    ${_DB_USERNAME}    ${_DB_PASSWORD}    ${_CONN_STRING}    ${_JAR}    ${_CLASS}    ${_INTRVL}
     ...    ${_RETRY}    ${TEMP_DB_NAME}    NO    0    ${ENDED_OK}
     Create Database    ${_DB_USERNAME}    ${_DB_PASSWORD}    ${_CONN_STRING}    ${_JAR}    ${_CLASS}    ${_INTRVL}
     ...    ${_RETRY}    ${TEMP_DB_NAME}    ${EMPTY}    ${EMPTY}    ${EMPTY}    NO
