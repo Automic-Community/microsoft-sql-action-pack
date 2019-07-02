@@ -38,7 +38,7 @@ Suite Setup
 Init MSSQL 2005
     [Documentation]    TODO: Write server description here
     Set Global Variable    ${_AGENT}    VVNFIBOTOOL01
-    Set Global Variable    ${_LOGIN}    UC4_RL.LOGIN.ALL
+    Set Global Variable    ${_LOGIN}    VVNSAT.LOGIN_ALL
     Set Global Variable    ${_WORKING_DIR}    C:/temp
     Set Global Variable    ${/}    \\
     Set Global Variable    ${_DB_USERNAME}    AT
@@ -58,7 +58,7 @@ Init MSSQL 2005
 Init MSSQL 2008
     [Documentation]    TODO: Write server description here
     Set Global Variable    ${_AGENT}    VVNARASQL04
-    Set Global Variable    ${_LOGIN}    UC4_RL.LOGIN.ALL
+    Set Global Variable    ${_LOGIN}    VVNSAT.LOGIN_ALL
     Set Global Variable    ${_WORKING_DIR}    C:/temp
     Set Global Variable    ${/}    \\
     Set Global Variable    ${_DB_USERNAME}    AT
@@ -77,7 +77,7 @@ Init MSSQL 2008
 Init MSSQL 2008 R2
     [Documentation]    TODO: Write server description here
     Set Global Variable    ${_AGENT}    VVNFIBOTOOL01
-    Set Global Variable    ${_LOGIN}    UC4_RL.LOGIN.ALL
+    Set Global Variable    ${_LOGIN}    VVNSAT.LOGIN_ALL
     Set Global Variable    ${_WORKING_DIR}    C:/temp
     Set Global Variable    ${/}    \\
     Set Global Variable    ${_DB_USERNAME}    AT
@@ -96,7 +96,7 @@ Init MSSQL 2008 R2
 Init MSSQL 2012
     [Documentation]    TODO: Write server description here
     Set Global Variable    ${_AGENT}    VVNARASQL04
-    Set Global Variable    ${_LOGIN}    UC4_RL.LOGIN.ALL
+    Set Global Variable    ${_LOGIN}    VVNSAT.LOGIN_ALL
     Set Global Variable    ${_WORKING_DIR}    C:/temp
     Set Global Variable    ${/}    \\
     Set Global Variable    ${_DB_USERNAME}    AT
