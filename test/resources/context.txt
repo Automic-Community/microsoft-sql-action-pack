@@ -29,6 +29,7 @@ Init Agent
     Run Keyword If    '${ENV}' == 'VVNARASQL04' and '${APP}' == 'MSSQL2008'    Init MSSQL 2008
     Run Keyword If    '${ENV}' == 'VVNFIBOTOOL01' and '${APP}' == 'MSSQL2008R2'    Init MSSQL 2008 R2
     Run Keyword If    '${ENV}' == 'VVNFIBOTOOL01' and '${APP}' == 'MSSQL2005'    Init MSSQL 2005
+    Run Keyword If    '${ENV}' == 'VVNDEMO08' and '${APP}' == 'VVNDEMO08'    Init VVNDEMO08
 
 Suite Setup
     Action Connect    ${_AE_HOST}    ${_AE_PORT}    ${_AE_USER}    ${_AE_PASS}    ${_AE_TEMP_FOLD}
@@ -112,3 +113,23 @@ Init MSSQL 2012
     Set Global Variable    ${ROLE_NAME}    db_datawriter
     Set Global Variable    ${_DB_NAME}    DEV_MSSQL
     Set Global Variable    ${_DATA_DIR}    C:\\Program Files\\Microsoft SQL Server\\MSSQL11.MSSQLSERVER\\MSSQL\\DATA\\
+
+Init VVNDEMO08
+    [Documentation]    TODO: Write server description here
+    Set Global Variable    ${_AGENT}    VVNDEMO08
+    Set Global Variable    ${_LOGIN}    VVNSAT.LOGIN_ALL
+    Set Global Variable    ${_WORKING_DIR}    C:/temp
+    Set Global Variable    ${/}    \\
+    Set Global Variable    ${_DB_USERNAME}    AT
+    Set Global Variable    ${_DB_PASSWORD}    AT
+    Set Global Variable    ${_CONN_STRING}    jdbc:sqlserver://VVNDEMO08:1433;
+    Set Global Variable    ${_CONN_STRING_AT}    jdbc:sqlserver://VVNDEMO08:1433;
+    Set Global Variable    ${_JAR}    file:///C:/ARAconfig/sqljdbc42.jar
+    Set Global Variable    ${_CLASS}    com.microsoft.sqlserver.jdbc.SQLServerDriver
+    Set Global Variable    ${_INTRVL}    10
+    Set Global Variable    ${_RETRY}    2
+    Set Global Variable    ${ERROR_CODE}    12
+    Set Global Variable    ${_SERVER}    VVNDEMO08
+    Set Global Variable    ${ROLE_NAME}    db_datawriter
+    Set Global Variable    ${_DB_NAME}    DEV_MSSQL
+    Set Global Variable    ${_DATA_DIR}    C:\\Program Files\\Microsoft SQL Server\\MSSQL13.MSSQLSERVER\\MSSQL\\DATA\\
