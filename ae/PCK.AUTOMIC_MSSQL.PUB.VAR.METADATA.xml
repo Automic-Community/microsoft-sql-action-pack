@@ -26,7 +26,7 @@
 <Variables>
 <row Name="Categories" Value="Database, Microsoft" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="Company" Value="Automic Software GmbH" Value1="" Value2="" Value3="" Value4=""/>
-<row Name="Dependencies" Value="PCK.ITPA_SHARED ~&gt; 1.1, PCK.AUTOMIC_JDBC ~&gt; 1.4; PCK.AUTOMIC_FILESYSTEM ~&gt; 1.3" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="Dependencies" Value="PCK.ITPA_SHARED ~&gt; 1.1, PCK.AUTOMIC_JDBC ~&gt; 1.4, PCK.AUTOMIC_FILESYSTEM ~&gt; 1.3" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="Description" Value="This package provide actions to cover basic deployment scenarios specific for MSSQL databases" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="Homepage" Value="" Value1="" Value2="" Value3="" Value4=""/>
 <row Name="License" Value="" Value1="" Value2="" Value3="" Value4=""/>
