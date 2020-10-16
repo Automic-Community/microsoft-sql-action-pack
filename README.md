@@ -10,11 +10,17 @@
 
 ###### Actions
  
- 1. Create/Drop/Rename Database
- 2. Create/Drop User
- 3. Assign/Drop Role to Member
- 4. Create/Restore Backup
- 5. Create/Drop Login
+ 1. ADD_MEMBER_TO_DB_ROLE
+ 2. CREATE_DB
+ 3. CREATE_DB_BACKUP
+ 4. CREATE_DB_USER
+ 5. CREATE_LOGIN
+ 6. DROP_DB
+ 7. DROP_DB_USER
+ 8. DROP_LOGIN
+ 9. DROP_MEMBER_FROM_DB_ROLE
+ 10. RENAME_DB
+ 11. RESTORE_DB_FROM_BACKUP
  
  ###### Compatibility:
  
