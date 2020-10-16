@@ -1,2 +1,0 @@
-*** Settings ***
-Force Tags        ADD_MEMBER_TO_DB_ROLE
